@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 100 100"><circle cx="50" cy="50" r="48" fill="#b01616"/><circle cx="50" cy="50" r="42" fill="#f4eadb"/><text x="50" y="47" text-anchor="middle" font-family="Arial" font-weight="700" font-size="12" fill="#b01616">Le Coup</text><text x="50" y="64" text-anchor="middle" font-family="Arial" font-weight="700" font-size="12" fill="#b01616">de Main</text></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="44" fill="#d9ad7c"/>
+  <g fill="#b21f24">
+    <text x="50" y="44" font-size="18" text-anchor="middle" font-family="Lobster, cursive">Le Coup</text>
+    <text x="50" y="66" font-size="18" text-anchor="middle" font-family="Lobster, cursive">de Main</text>
+  </g>
+</svg>
