@@ -1,7 +1,6 @@
-/ /index 200
-/prestations /prestations 200
-/tarifs /tarifs 200
-/a-propos /a-propos 200
-/contact /contact 200
-/success /success 200
-* /404 404
+/contact     /contact.html      200
+/prestations /prestations.html  200
+/tarifs      /tarifs.html       200
+/a-propos    /a-propos.html     200
+/success     /success.html      200
+/success.html /success.html     200
