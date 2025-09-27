@@ -1,5 +1,27 @@
 {
+  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "headers": []
+  "routes": [
+    {
+      "src": "^/prestations$",
+      "dest": "/prestations.html"
+    },
+    {
+      "src": "^/tarifs$",
+      "dest": "/tarifs.html"
+    },
+    {
+      "src": "^/a-propos$",
+      "dest": "/a-propos.html"
+    },
+    {
+      "src": "^/contact$",
+      "dest": "/contact.html"
+    },
+    {
+      "src": "^/success$",
+      "dest": "/success.html"
+    }
+  ]
 }
