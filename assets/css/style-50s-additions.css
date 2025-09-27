@@ -1,0 +1,12 @@
+/* --- Additions: duck blue theme --- */
+:root{ --duck-blue:#007B85; }
+.site-header, .site-footer{ background-color: var(--duck-blue) !important; }
+.nav .btn{
+  background-color: var(--duck-blue) !important;
+  color:#fff !important;
+  border:2px solid #fff;
+  border-radius:10px;
+}
+.nav .btn:hover{ filter:brightness(1.08); }
+/* Ensure links in footer remain readable */
+.site-footer a{ color:#fff; text-decoration: underline; }
