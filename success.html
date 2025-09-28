@@ -10,8 +10,11 @@
     .hands{font-size:3rem;animation:clap .6s infinite alternate}
     @keyframes clap{from{transform:scale(1)}to{transform:scale(1.2)}}
     .btn{display:inline-block;margin-top:16px;padding:12px 18px;border:2px solid #006d77;border-radius:8px;text-decoration:none}
-    .grid{{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}}
-    @media(max-width:760px){{.grid{{grid-template-columns:1fr}}}}
+    .btn.primary{background:#006d77;color:#fff;border-color:#006d77}
+    .btn.disabled{opacity:.55;cursor:not-allowed;pointer-events:none}
+    .grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+    @media(max-width:760px){.grid{grid-template-columns:1fr}}
+    .note{color:#666;font-size:.9rem;margin-top:8px}
   </style>
 </head>
 <body>
@@ -24,6 +27,14 @@
       <a class="btn" href="mailto:contact@lecoupdemain-services.fr">✉️ Envoyer un email</a>
     </div>
     <a class="btn" href="/index.html" style="margin-top:18px">⬅ Retourner à l’accueil</a>
+
+    <!-- Bouton Avis Google (placeholder jusqu'au SIRET / activation GBP) -->
+    <div style="margin-top:24px">
+      <a class="btn disabled" href="#" title="Disponible à l'ouverture">
+        ⭐ Laissez un avis Google (bientôt disponible)
+      </a>
+      <div class="note">Les avis Google seront activés à l’ouverture officielle de l’entreprise (après immatriculation SIRET).</div>
+    </div>
   </main>
 </body>
 </html>
