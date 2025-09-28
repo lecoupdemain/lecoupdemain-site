@@ -1,12 +1,27 @@
-/* --- Additions: duck blue theme --- */
-:root{ --duck-blue:#007B85; }
-.site-header, .site-footer{ background-color: var(--duck-blue) !important; }
-.nav .btn{
-  background-color: var(--duck-blue) !important;
-  color:#fff !important;
-  border:2px solid #fff;
-  border-radius:10px;
+
+/* ===== PERFECT HEADER ALIGNMENT =====
+   Brand (logo + text + flag) and navigation perfectly aligned on same baseline.
+   All grouped to the left, nav directly next to brand.
+*/
+header.site-header .container.bar{
+  display: flex !important;
+  align-items: center !important;    /* baseline alignment */
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 24px !important;              /* spacing between brand and nav */
+  padding-left: 0 !important;
 }
-.nav .btn:hover{ filter:brightness(1.08); }
-/* Ensure links in footer remain readable */
-.site-footer a{ color:#fff; text-decoration: underline; }
+header.site-header .brand{
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
+}
+header.site-header .nav{
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-left: 0 !important;         /* nav sits right next to brand */
+  flex: 0 0 auto !important;
+}
+header.site-header .nav .btn{ line-height: 1; padding: 8px 12px; }

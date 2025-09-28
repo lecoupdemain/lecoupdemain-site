@@ -1,52 +1,27 @@
-/* --- Additions: duck blue theme --- */
-:root{ --duck-blue:#007B85; }
-.site-header, .site-footer{ background-color: var(--duck-blue) !important; }
-.nav .btn{
-  background-color: var(--duck-blue) !important;
-  color:#fff !important;
-  border:2px solid #fff;
-  border-radius:10px;
-}
-.nav .btn:hover{ filter:brightness(1.08); }
-/* Ensure links in footer remain readable */
-.site-footer a{ color:#fff; text-decoration: underline; }
 
-/* --- Layout fixes for brand alignment and hero swap --- */
-.container.bar { display: flex; align-items: center; justify-content: space-between; }
-.brand { margin-right: auto; display: inline-flex; align-items: center; gap: 8px; }
-.hero .container.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; }
-@media (max-width: 900px){
-  .hero .container.hero-inner { grid-template-columns: 1fr; }
-}
-
-
-/* — Brand collé à gauche + nav à droite (header) — */
-header.site-header .container.bar{ justify-content: flex-start !important; padding-left: 0 !important; }
-header.site-header .brand{ margin-left: 0 !important; }
-header.site-header .nav{ margin-left: auto !important; }
-
-
-/* ===== Header alignment fixes ===== */
+/* ===== PERFECT HEADER ALIGNMENT =====
+   Brand (logo + text + flag) and navigation perfectly aligned on same baseline.
+   All grouped to the left, nav directly next to brand.
+*/
 header.site-header .container.bar{
-  display:flex !important;
-  align-items:center !important;   /* vertically center brand and nav */
-  justify-content:flex-start !important;
-  gap:12px !important;
-  flex-wrap:nowrap !important;     /* avoid wrapping brand above nav */
-  padding-left:0 !important;
+  display: flex !important;
+  align-items: center !important;    /* baseline alignment */
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 24px !important;              /* spacing between brand and nav */
+  padding-left: 0 !important;
 }
 header.site-header .brand{
-  display:flex !important;
-  align-items:center !important;
-  margin:0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
 }
 header.site-header .nav{
-  margin-left:auto !important;     /* push nav to the far right */
-  display:flex !important;
-  align-items:center !important;
-  gap:10px;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 10px !important;
+  margin-left: 0 !important;         /* nav sits right next to brand */
+  flex: 0 0 auto !important;
 }
-/* Optional: ensure header buttons have consistent height and baseline */
-header.site-header .nav .btn{
-  line-height:1; padding:8px 12px;
-}
+header.site-header .nav .btn{ line-height: 1; padding: 8px 12px; }
