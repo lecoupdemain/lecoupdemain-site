@@ -1,35 +1,114 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Le Coup de Main</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Le Coup de Main</title>
+  <link rel="stylesheet" href="/assets/css/style-50s.css">
+  <link rel="stylesheet" href="/assets/css/style-50s-additions.css">
+  <style>
+    /* Styles SCOPÉS à la page contact (ne touche pas le reste) */
+    .contact-wrap { max-width: 980px; margin: 32px auto; padding: 0 16px; }
+    .contact-card { background:#fff; border:2px solid #1a6d72; border-radius:10px; padding:20px; }
+    .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
+    .contact-grid .full { grid-column: 1 / -1; }
+    .contact-field label { display:block; font-weight:600; margin-bottom:6px; }
+    .contact-field input[type="text"],
+    .contact-field input[type="email"],
+    .contact-field input[type="tel"],
+    .contact-field input[type="url"],
+    .contact-field input[type="file"],
+    .contact-field textarea {
+      width:100%; padding:12px; border:1.5px solid #c7c7c7; border-radius:8px;
+      font: inherit; background:#fafafa;
+    }
+    .contact-actions { margin-top:12px; }
+    .contact-actions .btn {
+      display:inline-block; padding:10px 18px; border:2px solid #006d77; border-radius:8px;
+      text-decoration:none; cursor:pointer; background:transparent;
+    }
+    .contact-note { color:#666; font-size:.9rem; margin-top:8px; }
+    h1.cursive { margin: 8px 0 18px; }
+    @media (max-width: 860px) { .contact-grid { grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
-  <h1>Contactez-moi</h1>
-  <form action="https://formsubmit.co/285b0a5bda8ec0d6f4b531896fd2f9ba" method="POST" enctype="multipart/form-data">
-    <!-- Champs cachés -->
-    <input type="hidden" name="_subject" value="Nouveau message - Le Coup de Main">
-    <input type="hidden" name="_next" value="https://lecoupdemain-services.fr/success.html">
-    <input type="hidden" name="_captcha" value="false">
-    <input type="text" name="_honey" style="display:none">
-    
-    <!-- Champs visibles -->
-    <label for="name">Nom :</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+  <!-- On réutilise ton header existant via tes feuilles CSS -->
+  <header class="site-header rusted metal-edge">
+    <div class="container bar">
+      <a class="brand" href="/index.html">
+        <span class="brand-text cursive">Le Coup de Main</span>
+      </a>
+      <nav class="nav">
+        <a class="btn" href="/prestations.html">Prestations</a>
+        <a class="btn" href="/tarifs.html">Tarifs</a>
+        <a class="btn" href="/a-propos.html">À propos</a>
+        <a class="btn" href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
 
-    <label for="email">Email :</label><br>
-    <input type="email" id="email" name="email" required><br><br>
+  <main class="section contact-wrap">
+    <h1 class="cursive">Contact</h1>
+    <div class="contact-card">
+      <form class="contact-form" action="https://formsubmit.co/285b0a5bda8ec0d6f4b531896fd2f9ba" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+        <!-- Options FormSubmit -->
+        <input type="hidden" name="_subject" value="Nouveau message - Le Coup de Main">
+        <input type="hidden" name="_next" value="https://lecoupdemain-services.fr/success.html">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="text" name="_honey" style="display:none">
 
-    <label for="message">Message :</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
+        <div class="contact-grid">
+          <div class="contact-field">
+            <label for="nom">Nom *</label>
+            <input id="nom" name="Nom" required>
+          </div>
+          <div class="contact-field">
+            <label for="email">Email *</label>
+            <input id="email" type="email" name="Email" required>
+          </div>
 
-    <label for="file">Ajouter une photo (optionnel) :</label><br>
-    <input type="file" id="file" name="attachment"><br><br>
+          <div class="contact-field">
+            <label for="telephone">Téléphone</label>
+            <input id="telephone" type="tel" name="Téléphone">
+          </div>
+          <div class="contact-field">
+            <label for="liens">Lien vers photos (Drive/Dropbox) – optionnel</label>
+            <input id="liens" type="url" name="Lien vers photos" placeholder="https://...">
+          </div>
 
-    <button type="submit">Envoyer</button>
-  </form>
+          <div class="contact-field full">
+            <label for="photos">Ajouter des photos (optionnel)</label>
+            <input id="photos" type="file" name="attachment" accept=".jpg,.jpeg,.png,.webp" multiple>
+          </div>
 
-  <p><small>💡 Réponse uniquement les jours ouvrés.</small></p>
+          <div class="contact-field full">
+            <label for="message">Message *</label>
+            <textarea id="message" name="Message" rows="6" required></textarea>
+          </div>
+        </div>
+
+        <div class="contact-actions">
+          <button class="btn" type="submit">Envoyer</button>
+        </div>
+
+        <p class="contact-note">📅 Je réponds uniquement les jours ouvrés (lundi → vendredi).</p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer rusted metal-edge">
+    <div class="container footer-inner">
+      <div class="footer-col">
+        <h3 class="cursive">Le Coup de Main</h3>
+        <p>Petits travaux & dépannage — rapide, clair, soigné</p>
+      </div>
+      <div class="footer-col">
+        <h3>Navigation</h3>
+        <p><a href="/index.html">Accueil</a> • <a href="/prestations.html">Prestations</a> • <a href="/tarifs.html">Tarifs</a> • <a href="/a-propos.html">À propos</a></p>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
