@@ -24,3 +24,8 @@
 
 /* Redimensionner la mascotte de l'accueil */
 .hero .mascot img { max-width: 250px; height: auto; margin: 0 auto; }
+
+/* Forcer le bloc logo + texte + drapeau complètement à gauche */
+.site-header .brand { margin-left: 0 !important; justify-content: flex-start !important; }
+.container.bar { justify-content: flex-start !important; }
+.nav { margin-left: auto; }
