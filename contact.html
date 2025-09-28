@@ -1,102 +1,48 @@
-<!doctype html>
-<html lang="fr"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/svg+xml" href="assets/img/logo-badge.svg">
-<link rel="stylesheet" href="assets/css/style.css">
-<title>Le Coup de Main · Petits travaux & dépannage — rapide, clair, soigné.</title>
-<meta name="description" content="Le Coup de Main. Intervention dans un rayon de 20 km autour de Kembs. Petits travaux & dépannage — rapide, clair, soigné.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Georgia:wght@700&display=swap" rel="stylesheet">
-<title>Contact · Le Coup de Main</title>
-</head><body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="index.html" aria-label="Accueil">
-      <img src="assets/img/logo-badge.svg" alt="Le Coup de Main">
-      <img class="flag" src="assets/img/fr-flag.svg" alt="FR">
-    </a>
-    <nav aria-label="Navigation principale">
-      <div class="menu">
-        <a href="prestations.html">Prestations</a>
-        <a href="tarifs.html">Tarifs</a>
-        <a href="a-propos.html">À propos</a>
-        <a href="contact.html" aria-current="page">Contact</a>
-      </div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Le Coup de Main</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <div class="logo"><a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a> Le Coup de Main</div>
+    <nav>
+      <a href="prestations.html">Prestations</a>
+      <a href="tarifs.html">Tarifs</a>
+      <a href="a-propos.html">À propos</a>
+      <a href="contact.html">Contact</a>
+      <img src="assets/img/fr-flag.svg" alt="FR" class="flag">
     </nav>
-  </div>
-</header>
-<main class="container">
-  <section class="page">
-    <h2 class="section-title">Contact</h2>
-    <p class="note">Réponse rapide en journée ouvrée. Vous pouvez aussi appeler au <a href="tel:+33646664222">06 46 66 42 22</a> ou écrire à <a href="mailto:contact@lecoupdemain-services.fr">contact@lecoupdemain-services.fr</a>.</p>
+  </header>
 
-    <form class="form" action="https://formspree.io/f/xoqgwzkp" method="POST">
-      <div class="row">
-        <div>
-          <label for="nom">Nom</label>
-          <input id="nom" name="nom" required>
-        </div>
-        <div>
-          <label for="tel">Téléphone</label>
-          <input id="tel" name="telephone" required>
-        </div>
-      </div>
-      <div class="row">
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
-        </div>
-        <div>
-          <label for="ville">Ville</label>
-          <input id="ville" name="ville" placeholder="ex. Kembs">
-        </div>
-      </div>
+  <main>
+    <h1>Contact</h1>
+    <p>Réponse rapide en journée ouvrée.</p>
+    <form action="#" method="post">
+      <label>Nom <input type="text" name="nom" required></label>
+      <label>Téléphone <input type="tel" name="telephone" required></label>
+      <label>Email <input type="email" name="email" required></label>
+      <label>Ville <input type="text" name="ville" placeholder="ex. Kembs"></label>
 
-      <div>
-        <label>Type de demande</label>
-        <div class="radio-group" role="group" aria-label="Type de demande">
-          <label class="radio"><input type="radio" name="type" value="Devis" checked> Devis</label>
-          <label class="radio"><input type="radio" name="type" value="Intervention"> Intervention</label>
-          <label class="radio"><input type="radio" name="type" value="Autre"> Autre</label>
-        </div>
-      </div>
+      <fieldset>
+        <legend>Type de demande</legend>
+        <label><input type="radio" name="type" value="Devis" checked> Devis</label>
+        <label><input type="radio" name="type" value="Intervention"> Intervention</label>
+        <label><input type="radio" name="type" value="Autre"> Autre</label>
+      </fieldset>
 
-      <div class="row row-1">
-        <div>
-          <label for="message">Votre message</label>
-          <textarea id="message" name="message" placeholder="Décrivez votre besoin."></textarea>
-          <div class="help">Vous pouvez joindre des photos via le bouton ci‑dessous si besoin.</div>
-        </div>
-      </div>
-
-      <div class="row row-1">
-        <button class="btn" type="submit">Envoyer</button>
-        <a class="btn btn-outline" href="https://forms.gle/placeholder" target="_blank" rel="noopener">Envoyer des photos (Google Form)</a>
-      </div>
-      <input type="hidden" name="_subject" value="Demande via lecoupdemain-services.fr">
+      <label>Votre message <textarea name="message" rows="5"></textarea></label>
+      <button type="submit">Envoyer</button>
     </form>
-  </section>
-</main>
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="footer-brand">
-      <img src="assets/img/logo-badge.svg" alt="Le Coup de Main">
-      <div>
-        <div><strong>Le Coup de Main</strong></div>
-        <div class="small">Kembs et alentours (20 km)</div>
-      </div>
-    </div>
-    <div class="footer-col">
-      <div><strong>Contact</strong></div>
-      <div>Tél. <a href="tel:+33646664222">06 46 66 42 22</a></div>
-      <div>Email <a href="mailto:contact@lecoupdemain-services.fr">contact@lecoupdemain-services.fr</a></div>
-    </div>
-    <div class="footer-col">
-      <div><strong>Navigation</strong></div>
-      <div><a href="prestations.html">Prestations</a> • <a href="tarifs.html">Tarifs</a> • <a href="contact.html">Contact</a></div>
-    </div>
-  </div>
-</footer>
-</body></html>
+
+    <p><a href="https://forms.gle/votre-lien-google-form" target="_blank">Envoyer des photos (Google Form)</a></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Le Coup de Main | contact@lecoupdemain-services.fr | 06 46 66 42 22</p>
+  </footer>
+</body>
+</html>
