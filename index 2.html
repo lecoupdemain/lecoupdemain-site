@@ -8,21 +8,28 @@
     <link rel="stylesheet" href="/assets/css/style-50s.css">
   <link rel="stylesheet" href="assets/css/style-50s-additions.css">
 
-  <style>
-    /* Ajustements accueil */
-    .hero-hard .mascot img {
-      max-width: 300px;       /* mascotte plus grande */
-      margin: auto 0;         /* centrée verticalement */
-    }
-    .hero-hard .wrap {
-      align-items: center;    /* centre mascotte et texte */
-    }
-    .hero-hard h1 {
-      font-family: 'Lobster', cursive !important;
-      font-size: 2em !important;
-      color: #333 !important;
-    }
-  </style>
+<style>
+  /* Accueil uniquement */
+  .hero-hard{ padding: 28px 0; }
+  .hero-hard .wrap{
+    max-width: 1100px; margin: 0 auto; padding: 0 16px;
+    display: grid; grid-template-columns: 320px 1fr; gap: 24px;
+    align-items: center;             /* centre verticalement image & texte */
+    min-height: 52vh;                /* milieu entre bannières */
+  }
+  .hero-hard .mascot{ display:flex; justify-content:flex-start; }
+  .hero-hard .mascot img{ max-width: 320px; height:auto; display:block; }
+  .hero-hard .right{ display:grid; gap:16px; }
+  .hero-hard .right h1{ font-family: 'Lobster', cursive !important; font-size: 2.4em !important; line-height: 1.05; }
+  .hero-hard .grid{ display:grid; grid-template-columns: repeat(2, minmax(240px,1fr)); gap: 14px; }
+  .hero-hard .grid .card{ display:flex; flex-direction:column; min-height: 160px; }
+  @media (max-width: 900px){
+    .hero-hard .wrap{ grid-template-columns: 1fr; min-height: auto; align-items: start; }
+    .hero-hard .mascot{ justify-content:center; }
+    .hero-hard .mascot img{ max-width: 200px; }
+    .hero-hard .grid{ grid-template-columns: 1fr; }
+  }
+</style>
 
 </head><body>
 <header class="site-header rusted metal-edge">
@@ -40,27 +47,31 @@
   </div>
 </header>
 <main>
-<section class="hero">
-  <div class="container hero-inner">
-    <div class="mascot"><img src="/assets/img/mascotte.png" alt="Mascotte Le Coup de Main"></div><div class="plaque rusted"><div class="plaque-inner">
-      <h1 class="cursive">Le Coup de Main</h1>
+
+  <!-- HERO côté à côte, mascotte centrée verticalement -->
+  <section class="hero-hard">
+    <div class="wrap">
+      <div class="mascot">
+        <img src="/assets/img/mascotte.png" alt="Mascotte Le Coup de Main">
+      </div>
+      <div class="right">
+        <div class="plaque rusted"><div class="plaque-inner">
+      <h1 class="cursive">Le Coup de Main qu’il vous faut !</h1>
       <h2>Petits travaux & dépannage — rapide, clair, soigné</h2>
       
       <p class="note">Intervention dans un rayon de 20 km autour de Kembs.</p>
       
-    </div></div>
-    
-  </div>
-</section>
-
-<section class="section"><div class="container">
-  <div class="grid">
+    </div>
+        <div class="grid">
     <article class="card"><h3>Plomberie</h3><p>Fuites légères, robinets, siphons, chasse d’eau, joints silicone.</p></article>
     <article class="card"><h3>Électricité</h3><p>Luminaires, prises, interrupteurs (hors tableau), détecteurs.</p></article>
     <article class="card"><h3>Montage & pose</h3><p>Meubles en kit, étagères, tringles, cadres, plinthes.</p></article>
     <article class="card"><h3>Dépannage</h3><p>Diagnostic clair, intervention rapide selon disponibilité.</p></article>
   </div>
-</div></section>
+      </div>
+    </div>
+  </section>
+
 </main>
 <footer class="site-footer rusted metal-edge">
   <div class="container footer-inner">
