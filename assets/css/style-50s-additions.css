@@ -1,39 +1,14 @@
 
-/* === ULTRA PATCH: header brand in white, no underline, aligned === */
-header.site-header .container.bar { 
-  display:flex !important; align-items:center !important; flex-wrap:nowrap !important; gap:16px !important; 
-}
-/* Remove any underline/border/decoration on the brand anchor in ALL states */
-header.site-header a.brand,
-header.site-header a.brand:link,
-header.site-header a.brand:visited,
-header.site-header a.brand:hover,
-header.site-header a.brand:focus,
-header.site-header a.brand:active { 
-  text-decoration: none !important; 
-  -webkit-text-decoration: none !important;
-  text-decoration-color: transparent !important;
-  text-decoration-thickness: 0 !important;
-  border: 0 !important;
-  box-shadow: none !important;
-  background-image: none !important;
-  outline: 0 !important;
-  color: inherit !important;
-}
-
-/* Force the text to white, across states */
-header.site-header .brand-text,
-header.site-header a.brand .brand-text,
-header.site-header a.brand:visited .brand-text,
-header.site-header a.brand:hover .brand-text,
-header.site-header a.brand:focus .brand-text { 
-  color: #ffffff !important; 
+/* === Navigation in Lobster font, white, same style as brand === */
+header.site-header .nav .btn {
+  font-family: 'Lobster', cursive !important;
+  font-size: 1.4em !important;
+  font-weight: normal !important;
+  color: #ffffff !important;
+  background: transparent !important;
+  border: none !important;
   text-decoration: none !important;
-  display: inline-flex !important;
-  align-items: center !important;
-  line-height: 1 !important;
-  border: 0 !important;
 }
-
-/* Keep the nav on the same baseline to the right (or next to brand if you used the 'perfect' patch) */
-header.site-header .nav { display:flex !important; align-items:center !important; gap:10px !important; }
+header.site-header .nav .btn:hover {
+  color: #f0f0f0 !important; /* slight hover effect */
+}
