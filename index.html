@@ -1,41 +1,68 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Le Coup de Main - Accueil</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Coup de Main — Petits travaux & dépannage</title>
+  <link rel="stylesheet" href="assets/css/style-50s.css" />
 </head>
 <body>
-  <header>
-    <h1>Le Coup de Main</h1>
-    <nav>
-      <a href="index.html">Accueil</a>
-      <a href="prestations.html">Prestations</a>
-      <a href="tarifs.html">Tarifs</a>
-      <a href="a-propos.html">À propos</a>
-      <a href="contact.html">Contact</a>
-    </nav>
+  <header class="header">
+    <div class="header-inner">
+      <div class="brand">
+        <img src="assets/img/logo-badge.png" alt="Logo Le Coup de Main" />
+        <span>Le Coup de Main</span>
+      </div>
+      <nav class="nav">
+        <a class="btn" href="index.html">Accueil</a>
+        <a class="btn" href="prestations.html">Prestations</a>
+        <a class="btn" href="tarifs.html">Tarifs</a>
+        <a class="btn" href="a-propos.html">À propos</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </nav>
+    </div>
   </header>
-  <main>
-    <section class="hero">
-      <div class="mascotte-block">
-        <img src="assets/img/mascotte.png" alt="Mascotte Le Coup de Main">
-        <div class="hero-text">
-          <h2>Besoin d’un coup de main ?</h2>
-          <p>Petits travaux & dépannage — rapide, clair, soigné.<br>
-          Intervention dans un rayon de 20 km autour de Kembs.</p>
-          <div class="cta-buttons">
-            <a href="contact.html" class="btn">Me contacter</a>
-            <a href="prestations.html" class="btn">Prestations</a>
-            <a href="tarifs.html" class="btn">Tarifs</a>
-          </div>
+
+  <main class="main">
+    <section class="hero-card">
+      <img class="hero-img" src="assets/img/mascotte-2025.png" alt="Artisan mascotte" />
+      <div>
+        <h2>Besoin d’un coup de main ?</h2>
+        <p>Petits travaux & dépannage — rapide, clair, soigné.<br />
+        Intervention dans un rayon de 20 km autour de Kembs.</p>
+        <div class="hero-actions">
+          <a class="btn act" href="contact.html">Me contacter</a>
+          <a class="btn act" href="prestations.html">Prestations</a>
+          <a class="btn act" href="tarifs.html">Tarifs</a>
         </div>
       </div>
     </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Clair & rapide</h3>
+        <p>Diagnostic simple, devis détaillé après votre demande. Intervention en jours ouvrés, au plus vite.</p>
+      </article>
+      <article class="card">
+        <h3>Style vintage, sérieux actuel</h3>
+        <p>Un artisan de confiance, outillé et soigneux, avec un travail bien fait.</p>
+      </article>
+      <article class="card">
+        <h3>Contact facile</h3>
+        <p>Par téléphone, WhatsApp ou via le formulaire — je réponds rapidement.</p>
+      </article>
+    </section>
   </main>
-  <footer>
-    <p>&copy; 2025 Le Coup de Main</p>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>© 2025 Le Coup de Main</div>
+      <div class="mini-nav">
+        <a class="btn" href="prestations.html">Prestations</a>
+        <a class="btn" href="tarifs.html">Tarifs</a>
+        <a class="btn" href="contact.html">Contact</a>
+      </div>
+    </div>
   </footer>
 </body>
 </html>
