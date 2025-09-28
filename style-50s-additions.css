@@ -10,3 +10,11 @@
 .nav .btn:hover{ filter:brightness(1.08); }
 /* Ensure links in footer remain readable */
 .site-footer a{ color:#fff; text-decoration: underline; }
+
+/* --- Layout fixes for brand alignment and hero swap --- */
+.container.bar { display: flex; align-items: center; justify-content: space-between; }
+.brand { margin-right: auto; display: inline-flex; align-items: center; gap: 8px; }
+.hero .container.hero-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; align-items: center; }
+@media (max-width: 900px){
+  .hero .container.hero-inner { grid-template-columns: 1fr; }
+}
