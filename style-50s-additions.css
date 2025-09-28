@@ -19,82 +19,8 @@
   .hero .container.hero-inner { grid-template-columns: 1fr; }
 }
 
-/* Layout helper to stack plaque + grid on the right side of hero */
-.hero .right-col{display:grid; gap:20px;}
 
-/* Redimensionner la mascotte de l'accueil */
-.hero .mascot img { max-width: 250px; height: auto; margin: 0 auto; }
-
-/* Forcer le bloc logo + texte + drapeau complètement à gauche */
-.site-header .brand { margin-left: 0 !important; justify-content: flex-start !important; }
-.container.bar { justify-content: flex-start !important; }
-.nav { margin-left: auto; }
-
-
-/* — Alignement logo totalement collé à gauche dans la bannière — */
-header.site-header .container,
-header.site-header .container.bar{
-  padding-left: 0 !important;   /* enlève le padding gauche du container */
-}
-header.site-header .brand{
-  margin-left: 0 !important;    /* enlève toute marge à gauche */
-  left: 0;                       /* au cas où une position relative existe */
-}
-header.site-header{
-  padding-left: 0 !important;    /* enlève un éventuel padding du header */
-}
-/* Assure que la nav reste poussée à droite */
+/* — Brand collé à gauche + nav à droite (header) — */
+header.site-header .container.bar{ justify-content: flex-start !important; padding-left: 0 !important; }
+header.site-header .brand{ margin-left: 0 !important; }
 header.site-header .nav{ margin-left: auto !important; }
-
-
-/* ---- HERO layout: mascotte à gauche (300px), 4 cases à droite ---- */
-.hero .container.hero-inner{ 
-  display: grid; 
-  grid-template-columns: 300px 1fr !important; 
-  gap: 20px; 
-  align-items: start; 
-}
-.hero .mascot{ align-self: start; justify-self: start; }
-.hero .mascot img{ max-width: 220px !important; height: auto; margin-left: 8px; }
-/* responsive */
-@media (max-width: 980px){
-  .hero .container.hero-inner{ grid-template-columns: 1fr !important; }
-  .hero .mascot img{ max-width: 160px !important; margin: 0 auto; }
-}
-/* Empile la plaque + la grille à droite */
-.hero .right-col{ display: grid; gap: 16px; }
-
-
-/* --- HERO side-by-side fix --- */
-.hero{ display: block; }
-.hero .container.hero-inner{ 
-  display: grid !important; 
-  grid-template-columns: 300px 1fr !important; 
-  gap: 24px; 
-  align-items: flex-start; 
-}
-.hero .mascot{ grid-column: 1; }
-.hero .right-col{ grid-column: 2; display: grid; gap: 18px; }
-.hero .mascot img{ max-width: 200px !important; height: auto; }
-@media(max-width:900px){
-  .hero .container.hero-inner{ grid-template-columns: 1fr !important; }
-  .hero .mascot{ grid-column: 1; justify-self: center; }
-  .hero .mascot img{ max-width: 160px !important; }
-  .hero .right-col{ grid-column: 1; }
-}
-
-
-/* --- Side-by-side robust fallback (flex) --- */
-.hero .container.hero-inner{
-  display: flex !important;
-  gap: 24px;
-  align-items: flex-start;
-  flex-wrap: nowrap;
-}
-.hero .mascot{ flex: 0 0 280px; }
-.hero .mascot img{ max-width: 180px !important; height: auto; }
-.hero .right-col{ flex: 1 1 auto; display: grid; gap: 16px; }
-@media (max-width: 900px){
-  .hero .container.hero-inner{ flex-direction: column; }
-  .hero .mascot{ flex: 0 0 auto; }
-}
