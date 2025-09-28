@@ -7,14 +7,18 @@
   <link rel="stylesheet" href="/assets/css/style-50s.css">
   <link rel="stylesheet" href="/assets/css/style-50s-additions.css">
   <style>
-    main{max-width:800px;margin:60px auto;text-align:center;padding:0 16px}
-    .btn{display:inline-block;margin-top:14px;padding:10px 16px;border:2px solid #006d77;border-radius:8px}
+    main.success{max-width:800px;margin:60px auto;text-align:center;padding:0 16px}
+    .hands{font-size:3rem;animation:clap .6s infinite alternate}
+    @keyframes clap{from{transform:scale(1)}to{transform:scale(1.2)}}
+    .btn{display:inline-block;margin-top:14px;padding:10px 16px;border:2px solid #006d77;border-radius:8px;text-decoration:none}
   </style>
 </head>
 <body>
-  <main class="section">
+  <main class="section success">
+    <div class="hands" aria-hidden="true">👏 👏 👏</div>
     <h1 class="cursive">Merci !</h1>
-    <p>Votre message a bien été envoyé. Je vous réponds au plus vite.</p>
+    <p>Votre message a bien été envoyé.<br>
+    Je vous réponds uniquement les jours ouvrés (du lundi au vendredi).</p>
     <a class="btn" href="/index.html">Retourner à l’accueil</a>
   </main>
 </body>

@@ -11,38 +11,53 @@
     form{display:grid;gap:12px}
     label{font-weight:600}
     input, textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px}
-    .btn{display:inline-block;padding:10px 16px;border:2px solid #006d77;border-radius:8px}
+    .btn{display:inline-block;padding:10px 16px;border:2px solid #006d77;border-radius:8px;text-decoration:none}
   </style>
 </head>
 <body>
+  <!-- On conserve tes bannières globales via tes CSS -->
+  <header class="site-header rusted metal-edge">
+    <div class="container bar">
+      <a class="brand" href="/index.html"><span class="brand-text cursive">Le Coup de Main</span></a>
+      <nav class="nav"><a class="btn" href="/prestations.html">Prestations</a><a class="btn" href="/tarifs.html">Tarifs</a><a class="btn" href="/a-propos.html">À propos</a><a class="btn" href="/contact.html">Contact</a></nav>
+    </div>
+  </header>
+
   <main class="section">
     <h1 class="cursive">Contact</h1>
-    <p>Laissez votre message, je vous réponds rapidement.</p>
-    <!-- Remplace TON_ENDPOINT ci-dessous par l'URL fournie par Formspree, ex: https://formspree.io/f/xyzabcde -->
-    <form action="https://formspree.io/f/TON_ENDPOINT" method="POST">
+    <p>Laissez votre message, je vous réponds rapidement. <br><small>(Je réponds uniquement les jours ouvrés : lundi → vendredi)</small></p>
+
+    <!-- Envoi direct vers ta boîte pro via FormSubmit -->
+    <form action="https://formsubmit.co/contact@lecoupdemain-services.fr" method="POST">
+      <!-- options -->
       <input type="hidden" name="_subject" value="Nouveau message - Le Coup de Main">
-      <input type="hidden" name="_language" value="fr">
-      <input type="text" name="_gotcha" style="display:none">
       <input type="hidden" name="_next" value="/success.html">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="_honey" style="display:none"> <!-- anti-spam -->
 
       <label for="nom">Nom *</label>
-      <input id="nom" name="nom" required>
+      <input id="nom" name="Nom" required>
 
       <label for="email">Email *</label>
-      <input id="email" type="email" name="email" required>
+      <input id="email" type="email" name="Email" required>
 
       <label for="telephone">Téléphone</label>
-      <input id="telephone" type="tel" name="telephone">
+      <input id="telephone" type="tel" name="Téléphone">
 
       <label for="message">Message *</label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <!-- Pour que le bouton Répondre cible l'expéditeur -->
-      <input type="hidden" name="_replyto" value="">
+      <textarea id="message" name="Message" rows="6" required></textarea>
 
       <button class="btn" type="submit">Envoyer</button>
     </form>
+
     <p style="margin-top:10px;font-size:.9rem;color:#666">* champs requis</p>
   </main>
+
+  <footer class="site-footer rusted metal-edge">
+    <div class="container footer-inner">
+      <div class="footer-col"><h3 class="cursive">Le Coup de Main</h3><p>Petits travaux & dépannage — rapide, clair, soigné</p></div>
+      <div class="footer-col"><h3>Navigation</h3><p><a href="/index.html">Accueil</a> • <a href="/prestations.html">Prestations</a> • <a href="/tarifs.html">Tarifs</a> • <a href="/a-propos.html">À propos</a></p></div>
+    </div>
+  </footer>
 </body>
 </html>
