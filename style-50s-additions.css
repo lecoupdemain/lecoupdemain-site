@@ -1,49 +1,23 @@
 
-/* === Header alignment === */
-header.site-header .container.bar {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-start !important;
-  flex-wrap: nowrap !important;
-  gap: 16px !important;
-}
-
-/* "Le Coup de Main" : Lobster, white, no border */
-header.site-header .brand-text {
-  font-family: 'Lobster', cursive !important;
-  font-size: 1.2em !important;
-  font-weight: normal !important;
-  color: #ffffff !important;
+/* === Header: remove violet underline completely === */
+header.site-header a.brand,
+header.site-header a.brand:link,
+header.site-header a.brand:visited,
+header.site-header a.brand:hover,
+header.site-header a.brand:focus,
+header.site-header a.brand:active {
   text-decoration: none !important;
+  -webkit-text-decoration: none !important;
+  text-decoration-color: transparent !important;
+  text-decoration-thickness: 0 !important;
   border: none !important;
   background: transparent !important;
   box-shadow: none !important;
-  margin: 0 6px !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  outline: none !important;
+  color: inherit !important;
 }
 
-/* Nav buttons: Lobster with border */
-header.site-header .nav .btn {
-  font-family: 'Lobster', cursive !important;
-  font-size: 1.2em !important;
-  font-weight: normal !important;
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-  border-radius: 6px !important;
-  padding: 6px 14px !important;
-  margin: 0 6px !important;
-  background: transparent !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  transition: all 0.2s ease-in-out;
-  display: inline-flex !important;
-  align-items: center !important;
-}
-
-/* Hover for nav buttons */
-header.site-header .nav .btn:hover {
-  background: #ffffff !important;
-  color: #006d77 !important;
-  text-decoration: none !important;
+/* Mascotte offset: push 3cm lower */
+.hero-hard .mascot {
+  margin-top: 3cm !important;
 }
