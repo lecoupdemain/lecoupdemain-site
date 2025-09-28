@@ -1,5 +1,9 @@
 
-/* === Header brand text in white === */
+/* === Header brand text white, aligned, no underline === */
 header.site-header .brand-text {
   color: #ffffff !important;
+  text-decoration: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
 }
