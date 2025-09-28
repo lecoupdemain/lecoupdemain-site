@@ -63,3 +63,22 @@ header.site-header .nav{ margin-left: auto !important; }
 }
 /* Empile la plaque + la grille à droite */
 .hero .right-col{ display: grid; gap: 16px; }
+
+
+/* --- HERO side-by-side fix --- */
+.hero{ display: block; }
+.hero .container.hero-inner{ 
+  display: grid !important; 
+  grid-template-columns: 300px 1fr !important; 
+  gap: 24px; 
+  align-items: flex-start; 
+}
+.hero .mascot{ grid-column: 1; }
+.hero .right-col{ grid-column: 2; display: grid; gap: 18px; }
+.hero .mascot img{ max-width: 200px !important; height: auto; }
+@media(max-width:900px){
+  .hero .container.hero-inner{ grid-template-columns: 1fr !important; }
+  .hero .mascot{ grid-column: 1; justify-self: center; }
+  .hero .mascot img{ max-width: 160px !important; }
+  .hero .right-col{ grid-column: 1; }
+}
