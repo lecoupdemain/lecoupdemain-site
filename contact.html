@@ -1,85 +1,27 @@
-<!doctype html>
-<html lang="fr">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Contact — Le Coup de Main</title>
-  <link rel="stylesheet" href="assets/css/style-50s.css" />
-</head>
-<body>
-  <header class="header">
-    <div class="header-inner">
-      <div class="brand">
-        <img src="assets/img/logo-badge.png" alt="Logo Le Coup de Main" />
-        <span>Le Coup de Main</span>
-      </div>
-      <nav class="nav">
-        <a class="btn" href="index.html">Accueil</a>
-        <a class="btn" href="prestations.html">Prestations</a>
-        <a class="btn" href="tarifs.html">Tarifs</a>
-        <a class="btn" href="a-propos.html">À propos</a>
-        <a class="btn" href="contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="main">
-    <h1>Contact</h1>
-
-    <form action="https://formspree.io/f/xwprpdak" method="POST">
-      <div class="row">
-        <div>
-          <label for="name">Nom</label>
-          <input id="name" name="name" required />
-        </div>
-        <div>
-          <label for="phone">Téléphone</label>
-          <input id="phone" name="phone" inputmode="tel" />
-        </div>
-      </div>
-
-      <div class="row">
-        <div>
-          <label for="email">Email</label>
-          <input id="email" type="email" name="email" required />
-        </div>
-        <div>
-          <label for="subject">Sujet</label>
-          <select id="subject" name="subject">
-            <option value="Devis">Demande de devis</option>
-            <option value="Dépannage">Dépannage</option>
-            <option value="Installation">Installation / Montage</option>
-            <option value="Autre">Autre</option>
-          </select>
-        </div>
-      </div>
-
-      <div class="row-1">
-        <label for="message">Votre message</label>
-        <textarea id="message" name="message" required></textarea>
-      </div>
-
-      <div class="notice" style="margin-top:10px;">
-        Besoin d'envoyer des photos ? Vous pouvez <a href="mailto:contact@lecoupdemain-services.fr?subject=Photos%20pour%20devis">les joindre par email</a>.
-      </div>
-
-      <div class="form-actions">
-        <button class="btn primary" type="submit">Envoyer ma demande</button>
-      </div>
-      <input type="hidden" name="_subject" value="Nouveau message depuis le site" />
-      <input type="hidden" name="_language" value="fr" />
-    </form>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>© 2025 Le Coup de Main</div>
-      <div class="mini-nav">
-        <a class="btn" href="prestations.html">Prestations</a>
-        <a class="btn" href="tarifs.html">Tarifs</a>
-        <a class="btn" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </footer>
-</body>
-</html>
+<!doctype html><html lang="fr"><head>
+<meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contact — Le Coup de Main</title>
+<link rel="stylesheet" href="assets/css/style-50s.css"/><link rel="icon" href="assets/img/logo-badge.svg"/>
+</head><body><header><div class="container top">
+  <div class="brand"><img src="assets/img/logo-badge.svg" alt="Le Coup de Main"/><span>Le Coup de Main</span><img class="flag" src="assets/img/fr-flag.svg" alt="FR"/></div>
+  <nav>
+    <a href="index.html">Accueil</a><a href="prestations.html">Prestations</a><a href="tarifs.html">Tarifs</a><a href="a-propos.html">À propos</a><a href="contact.html">Contact</a>
+  </nav>
+</div></header><main class="container">
+<h1>Contact</h1>
+<form action="https://formspree.io/f/xexample" method="POST" class="card">
+  <div class="form-row">
+    <p><label>Nom<br/><input name="name" required></label></p>
+    <p><label>Téléphone<br/><input name="phone" required></label></p>
+  </div>
+  <p><label>Email<br/><input type="email" name="email" required></label></p>
+  <p><label>Votre message<br/><textarea name="message" rows="6" required></textarea></label></p>
+  <p><button class="btn" type="submit">Envoyer</button></p>
+</form>
+<p class="small">Ou au <a href="tel:+33646664222">06 46 66 42 22</a> • <a href="mailto:contact@lecoupdemain-services.fr">contact@lecoupdemain-services.fr</a></p>
+</main><footer><div class="container foot footer-cols">
+  <div><div class="brand"><img src="assets/img/logo-badge.svg" alt="Logo"/><strong>Le Coup de Main</strong></div>
+    <p class="small">Petits travaux & dépannage — rapide, clair, soigné.<br/>Intervention dans un rayon de 20 km autour de Kembs (Haut-Rhin).</p></div>
+  <div><h3>Contact</h3><p class="small">Tél. <a href="tel:+33646664222">06 46 66 42 22</a><br/>Email <a href="mailto:contact@lecoupdemain-services.fr">contact@lecoupdemain-services.fr</a></p></div>
+  <div><h3>Navigation</h3><div class="btns"><a class="btn" href="prestations.html">Prestations</a><a class="btn" href="tarifs.html">Tarifs</a><a class="btn" href="contact.html">Contact</a></div></div>
+</div><div class="container"><div class="hr"></div><p class="small">© 2025 Le Coup de Main</p></div></footer></body></html>

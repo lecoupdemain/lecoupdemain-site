@@ -1,7 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <circle cx="50" cy="50" r="48" fill="#fff"/><circle cx="50" cy="50" r="44" fill="#d9ad7c"/>
-  <g fill="#b21f24">
-    <text x="50" y="44" font-size="18" text-anchor="middle" font-family="Lobster, cursive">Le Coup</text>
-    <text x="50" y="66" font-size="18" text-anchor="middle" font-family="Lobster, cursive">de Main</text>
-  </g>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96">
+  <defs><radialGradient id="g" cx="50%" cy="50%" r="60%"><stop offset="0" stop-color="#ffd9a8"/><stop offset="1" stop-color="#c88b4a"/></radialGradient></defs>
+  <circle cx="48" cy="48" r="46" fill="url(#g)" stroke="#5e3b1a" stroke-width="4"/>
+  <text x="48" y="55" font-size="28" text-anchor="middle" font-family="Georgia, serif" fill="#5e3b1a">LM</text>
 </svg>
