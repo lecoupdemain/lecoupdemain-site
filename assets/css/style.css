@@ -1,8 +1,35 @@
-body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f9f5ef; }
-header, footer { background:#006d77; color:#fff; padding:10px; text-align:center; }
-nav a { margin: 0 10px; color:white; text-decoration:none; font-weight:bold; }
-.hero { display:flex; justify-content:center; align-items:center; padding:20px; }
-.mascotte-block { display:flex; align-items:center; gap:20px; }
-.mascotte-block img { max-width:200px; }
-.btn { background:#006d77; color:white; padding:10px 15px; margin:5px; text-decoration:none; border-radius:5px; }
-footer { margin-top:20px; }
+
+:root{--cream:#f0e7d5;--ink:#0a1d1c;--teal:#0e5b5b;--teal-dark:#0a4545;--paper:#fff7e6;--line:#cfae7a;--box:#f8eedb}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--cream);color:var(--ink);font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";line-height:1.5}
+img{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration:none}
+.container{max-width:1150px;margin:0 auto;padding:20px}
+.header{background:var(--teal);color:#fff;border-bottom:4px solid var(--teal-dark)}
+.header .row{display:flex;align-items:center;gap:14px;padding:12px 20px}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:42px;width:42px;object-fit:cover;border-radius:999px;box-shadow:0 0 0 3px #e9dcc7,inset 0 0 0 2px #fff}
+.brand .name{font-weight:700}
+.nav{margin-left:auto;display:flex;gap:12px;flex-wrap:wrap}
+.nav a{background:transparent;color:#e9fffb;border:2px solid #cfe6e6;padding:8px 14px;border-radius:999px;font-weight:600;letter-spacing:.2px}
+.nav a:hover{background:#e6fffb;color:var(--teal);border-color:#e6fffb}
+.hero{display:grid;grid-template-columns:330px 1fr;gap:26px;align-items:center;background:var(--paper);border:3px solid var(--line);border-radius:14px;margin:24px 0;padding:22px;box-shadow:inset 0 0 0 2px #fff}
+.hero .frame{border:4px solid #9b6a35;border-radius:12px;background:#a34323;padding:10px;box-shadow:0 8px 18px rgba(0,0,0,.12),inset 0 0 0 2px #e9c59a}
+.hero h1{font-size:2.1rem;margin:0 0 8px 0}.hero p{margin:0 0 12px 0}
+.badge{display:inline-block;border:2px solid var(--line);padding:2px 10px;border-radius:999px;background:#fff}
+.lead{font-size:1.05rem}
+.blocks{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{background:var(--box);border:3px solid var(--line);border-radius:12px;padding:14px;box-shadow:inset 0 0 0 2px #fff}
+.card h3{margin:0 0 6px 0}.card p{margin:0}
+.section{margin:26px 0}
+.footer{background:var(--teal);color:#eaffff;border-top:4px solid var(--teal-dark);margin-top:30px}
+.footer .row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;flex-wrap:wrap}
+.footer .left{display:flex;align-items:center;gap:10px}
+.footer img{height:36px;width:36px;border-radius:999px;box-shadow:0 0 0 3px #e9dcc7,inset 0 0 0 2px #fff}
+.h1{font-size:2rem;margin:0 0 6px 0}.h2{font-size:1.4rem;margin:0 0 6px 0}
+.table{width:100%;border-collapse:collapse;background:var(--paper);border:3px solid var(--line);border-radius:12px;overflow:hidden}
+.table th,.table td{padding:10px;border-bottom:1px solid #e3caa0;text-align:left}
+.table th{background:#f5e6c8}.table tr:last-child td{border-bottom:0}
+.notice{background:#fff3bf;border:2px solid #ffd43b;border-radius:10px;padding:10px}
+.form{display:grid;gap:12px;max-width:640px}
+input,textarea{width:100%;padding:12px;border:2px solid #cfae7a;border-radius:12px;background:#fff7e6}
+button{cursor:pointer;background:#0e5b5b;color:#fff;border:0;padding:12px 14px;border-radius:999px;font-weight:700}
+button:hover{filter:brightness(1.05)}

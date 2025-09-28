@@ -1,0 +1,1 @@
+console.log('Le Coup de Main v3 - style vintage chargé');
