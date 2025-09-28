@@ -1,21 +1,49 @@
 
-/* === PAGE ACCUEIL (hero) === */
+/* ===== 1) HEADER: texte blanc sans soulignement ===== */
+header.site-header a.brand,
+header.site-header a.brand:link,
+header.site-header a.brand:visited,
+header.site-header a.brand:hover,
+header.site-header a.brand:focus,
+header.site-header a.brand:active {
+  color: inherit !important;
+  text-decoration: none !important;
+  background-image: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+header.site-header .brand-text {
+  color: #ffffff !important;          /* blanc */
+  text-decoration: none !important;   /* pas de soulignement */
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+/* ===== 2) ACCUEIL: mascotte agrandie et centrée ===== */
+.hero-hard { padding: 36px 0 !important; }
 .hero-hard .wrap {
-  display: grid;
-  grid-template-columns: 320px 1fr; /* mascotte + contenu */
-  gap: 24px;
-  align-items: center;             /* centre verticalement */
-  min-height: 52vh;                /* milieu entre bannière haut et bas */
+  display: grid !important;
+  grid-template-columns: 320px 1fr !important;  /* photo + contenu */
+  gap: 24px !important;
+  align-items: center !important;               /* centre verticalement */
 }
-
+.hero-hard .mascot { align-self: center !important; }
 .hero-hard .mascot img {
-  max-width: 320px;                /* mascotte agrandie */
-  height: auto;
-  display: block;
+  max-width: 320px !important;
+  height: auto !important;
+  display: block !important;
 }
 
-.hero-hard .right h1 {
-  font-family: 'Lobster', cursive !important;
-  font-size: 2.4em !important;     /* slogan plus grand */
-  line-height: 1.05;
+/* Responsive */
+@media (max-width: 900px){
+  .hero-hard .wrap {
+    grid-template-columns: 1fr !important;
+    align-items: start !important;
+  }
+  .hero-hard .mascot img {
+    max-width: 200px !important;
+    margin: 0 auto !important;
+  }
 }
