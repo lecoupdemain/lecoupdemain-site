@@ -1,5 +1,5 @@
 
-/* === Unified header: brand + nav same style, aligned === */
+/* === Header alignment === */
 header.site-header .container.bar {
   display: flex !important;
   align-items: center !important;
@@ -8,11 +8,25 @@ header.site-header .container.bar {
   gap: 16px !important;
 }
 
-/* Unified style for brand text and nav buttons */
-header.site-header .brand-text,
+/* "Le Coup de Main" : Lobster, white, no border */
+header.site-header .brand-text {
+  font-family: 'Lobster', cursive !important;
+  font-size: 1.2em !important;
+  font-weight: normal !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  border: none !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  margin: 0 6px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+/* Nav buttons: Lobster with border */
 header.site-header .nav .btn {
   font-family: 'Lobster', cursive !important;
-  font-size: 1.2em !important;      /* identical size */
+  font-size: 1.2em !important;
   font-weight: normal !important;
   color: #ffffff !important;
   border: 2px solid #ffffff !important;
@@ -27,10 +41,9 @@ header.site-header .nav .btn {
   align-items: center !important;
 }
 
-/* Hover inversion */
-header.site-header .brand-text:hover,
+/* Hover for nav buttons */
 header.site-header .nav .btn:hover {
   background: #ffffff !important;
-  color: #006d77 !important; /* teal */
+  color: #006d77 !important;
   text-decoration: none !important;
 }
