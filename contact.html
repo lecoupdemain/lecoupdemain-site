@@ -3,46 +3,35 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact - Le Coup de Main</title>
+  <title>Le Coup de Main - Contact</title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
   <header>
-    <div class="logo"><a href="index.html"><img src="assets/img/logo.png" alt="Logo"></a> Le Coup de Main</div>
+    <h1>Le Coup de Main</h1>
     <nav>
+      <a href="index.html">Accueil</a>
       <a href="prestations.html">Prestations</a>
       <a href="tarifs.html">Tarifs</a>
       <a href="a-propos.html">À propos</a>
       <a href="contact.html">Contact</a>
-      <img src="assets/img/fr-flag.svg" alt="FR" class="flag">
     </nav>
   </header>
-
   <main>
-    <h1>Contact</h1>
-    <p>Réponse rapide en journée ouvrée.</p>
-    <form action="#" method="post">
-      <label>Nom <input type="text" name="nom" required></label>
-      <label>Téléphone <input type="tel" name="telephone" required></label>
-      <label>Email <input type="email" name="email" required></label>
-      <label>Ville <input type="text" name="ville" placeholder="ex. Kembs"></label>
-
-      <fieldset>
-        <legend>Type de demande</legend>
-        <label><input type="radio" name="type" value="Devis" checked> Devis</label>
-        <label><input type="radio" name="type" value="Intervention"> Intervention</label>
-        <label><input type="radio" name="type" value="Autre"> Autre</label>
-      </fieldset>
-
-      <label>Votre message <textarea name="message" rows="5"></textarea></label>
+    <h2>Contact</h2>
+    <form action="https://formspree.io/f/mzzprgvl" method="POST" enctype="multipart/form-data">
+      <label>Nom:<input type="text" name="nom" required></label><br>
+      <label>Email:<input type="email" name="email" required></label><br>
+      <label>Message:<textarea name="message" required></textarea></label><br>
+      <label>Joindre une photo (facultatif):<input type="file" name="photo"></label><br>
       <button type="submit">Envoyer</button>
     </form>
-
-    <p><a href="https://forms.gle/votre-lien-google-form" target="_blank">Envoyer des photos (Google Form)</a></p>
   </main>
-
   <footer>
-    <p>© 2025 Le Coup de Main | contact@lecoupdemain-services.fr | 06 46 66 42 22</p>
+    <div class="footer-info">
+      <p>&copy; 2025 Le Coup de Main</p>
+      <p>Tél. 06 46 66 42 22 | contact@lecoupdemain-services.fr</p>
+    </div>
   </footer>
 </body>
 </html>
