@@ -1,71 +1,48 @@
-<!doctype html><html lang="fr"><head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact · Le Coup de Main</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style-50s.css">
-<link rel="stylesheet" href="assets/css/style-50s-additions.css">
-<link rel="icon" type="image/png" href="/assets/img/logo-badge.png">
-</head><body>
-<header class="site-header rusted metal-edge">
-  <div class="container bar">
-    <a class="brand" href="/index.html">
-      <img src="/assets/img/logo-badge.png" alt="Logo Le Coup de Main">
-      <span class="brand-text cursive">Le Coup de Main</span><img src="/assets/img/fr-flag.svg" alt="France" style="width:18px;height:auto;margin-left:8px;border-radius:2px;border:1px solid #fff;">
-    </a>
-    <nav class="nav">
-      <a class="btn" href="/prestations.html">Prestations</a>
-      <a class="btn" href="/tarifs.html">Tarifs</a>
-      <a class="btn" href="/a-propos.html">À propos</a>
-      <a class="btn" href="/contact.html">Contact</a>
-    </nav>
-  </div>
-</header>
-<main class="container">
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact – Le Coup de Main</title>
+  <link rel="stylesheet" href="/assets/css/style-50s.css">
+  <link rel="stylesheet" href="/assets/css/style-50s-additions.css">
+  <style>
+    main{max-width:900px;margin:40px auto;padding:0 16px}
+    form{display:grid;gap:12px}
+    label{font-weight:600}
+    input, textarea{width:100%;padding:10px;border:1px solid #ccc;border-radius:6px}
+    .btn{display:inline-block;padding:10px 16px;border:2px solid #006d77;border-radius:8px}
+  </style>
+</head>
+<body>
+  <main class="section">
+    <h1 class="cursive">Contact</h1>
+    <p>Laissez votre message, je vous réponds rapidement.</p>
+    <!-- Remplace TON_ENDPOINT ci-dessous par l'URL fournie par Formspree, ex: https://formspree.io/f/xyzabcde -->
+    <form action="https://formspree.io/f/TON_ENDPOINT" method="POST">
+      <input type="hidden" name="_subject" value="Nouveau message - Le Coup de Main">
+      <input type="hidden" name="_language" value="fr">
+      <input type="text" name="_gotcha" style="display:none">
+      <input type="hidden" name="_next" value="/success.html">
 
-<section class="section">
-  <h1 class="cursive center">Contact</h1>
-  <form class="mt-3" action="https://formspree.io/f/xwprpdak" method="POST">
-    <label>Nom</label>
-    <input name="name" required>
-    <label>Téléphone</label>
-    <input name="phone" required>
-    <label>Email</label>
-    <input type="email" name="email" required>
-    <label>Votre message</label>
-    <textarea name="message" required></textarea>
-    <button class="primary mt-3" type="submit">Envoyer ma demande</button>
-    <p class="form-help note">En envoyant ce formulaire, vous acceptez d’être recontacté pour votre demande.</p>
-  </form>
+      <label for="nom">Nom *</label>
+      <input id="nom" name="nom" required>
 
-  <div class="mt-4">
-    <p class="note">Vous pouvez aussi joindre des <strong>photos</strong> pour un devis plus précis :</p>
-    <a class="btn" href="https://forms.gle/XXXXXXXXXXXX" target="_blank" rel="noopener">Envoyer des photos (Google Form)</a>
-  </div>
-</section>
+      <label for="email">Email *</label>
+      <input id="email" type="email" name="email" required>
 
-</main>
-<footer class="site-footer">
-  <div class="container inner">
-    <div>
-      <div class="footer-title">Le Coup de Main</div>
-      <p>Petits travaux &amp; dépannage — rapide, clair, soigné<br>
-      Intervention dans un rayon de 20 km autour de Kembs.</p>
-    </div>
-    <div>
-      <div class="footer-title">Contact</div>
-      <p>Tél. <a href="tel:+33646664222">06 46 66 42 22</a><br>
-      Email <a href="mailto:contact@lecoupdemain-services.fr">contact@lecoupdemain-services.fr</a></p>
-    </div>
-    <div class="footer-nav">
-      <div class="footer-title">Navigation</div>
-      <div class="nav-pills">
-        <a class="btn" href="prestations.html">Prestations</a>
-        <a class="btn" href="tarifs.html">Tarifs</a>
-        <a class="btn" href="contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-</footer>
-</body></html>
+      <label for="telephone">Téléphone</label>
+      <input id="telephone" type="tel" name="telephone">
+
+      <label for="message">Message *</label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <!-- Pour que le bouton Répondre cible l'expéditeur -->
+      <input type="hidden" name="_replyto" value="">
+
+      <button class="btn" type="submit">Envoyer</button>
+    </form>
+    <p style="margin-top:10px;font-size:.9rem;color:#666">* champs requis</p>
+  </main>
+</body>
+</html>
