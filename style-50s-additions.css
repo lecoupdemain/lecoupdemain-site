@@ -18,3 +18,6 @@
 @media (max-width: 900px){
   .hero .container.hero-inner { grid-template-columns: 1fr; }
 }
+
+/* Layout helper to stack plaque + grid on the right side of hero */
+.hero .right-col{display:grid; gap:20px;}
