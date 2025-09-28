@@ -1,87 +1,21 @@
 
-/* === HEADER UNIFIED ACROSS PAGES === */
-
-/* Container: brand + nav perfectly aligned on one row */
-header.site-header .container.bar {
-  display: flex !important;
-  align-items: center !important;   /* vertical align */
-  justify-content: flex-start !important;
-  flex-wrap: nowrap !important;     /* avoid wrap (brand above nav) */
-  gap: 16px !important;
-  padding-left: 0 !important;
+/* === PAGE ACCUEIL (hero) === */
+.hero-hard .wrap {
+  display: grid;
+  grid-template-columns: 320px 1fr; /* mascotte + contenu */
+  gap: 24px;
+  align-items: center;             /* centre verticalement */
+  min-height: 52vh;                /* milieu entre bannière haut et bas */
 }
 
-/* Brand link: remove any underline in all states */
-header.site-header a.brand,
-header.site-header a.brand:link,
-header.site-header a.brand:visited,
-header.site-header a.brand:hover,
-header.site-header a.brand:focus,
-header.site-header a.brand:active {
-  text-decoration: none !important;
-  -webkit-text-decoration: none !important;
-  text-decoration-color: transparent !important;
-  text-decoration-thickness: 0 !important;
-  border: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  outline: 0 !important;
-  color: inherit !important;
-  display: inline-flex !important;
-  align-items: center !important;
+.hero-hard .mascot img {
+  max-width: 320px;                /* mascotte agrandie */
+  height: auto;
+  display: block;
 }
 
-/* Brand text: Lobster, white, NO border */
-header.site-header .brand-text {
+.hero-hard .right h1 {
   font-family: 'Lobster', cursive !important;
-  font-size: 1.2em !important;
-  font-weight: normal !important;
-  color: #ffffff !important;
-  text-decoration: none !important;
-  border: none !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  line-height: 1 !important;
-  margin: 0 6px !important;
-  display: inline-flex !important;
-  align-items: center !important;
+  font-size: 2.4em !important;     /* slogan plus grand */
+  line-height: 1.05;
 }
-
-/* Keep brand block behaving like a button height-wise but without border */
-header.site-header .brand {
-  display: inline-flex !important;
-  align-items: center !important;
-  margin: 0 !important;
-  padding: 6px 0 !important;    /* vertical padding only */
-  line-height: 1 !important;
-}
-
-/* Nav buttons: Lobster with white border (buttons look) */
-header.site-header .nav {
-  display: inline-flex !important;
-  align-items: center !important;
-  gap: 8px !important;
-  margin-left: 0 !important;
-}
-header.site-header .nav .btn {
-  font-family: 'Lobster', cursive !important;
-  font-size: 1.2em !important;
-  font-weight: normal !important;
-  color: #ffffff !important;
-  border: 2px solid #ffffff !important;
-  border-radius: 6px !important;
-  padding: 6px 14px !important;
-  background: transparent !important;
-  text-decoration: none !important;
-  box-shadow: none !important;
-  transition: all .2s ease-in-out;
-  display: inline-flex !important;
-  align-items: center !important;
-}
-header.site-header .nav .btn:hover {
-  background: #ffffff !important;
-  color: #006d77 !important;
-}
-
-/* Flag tiny alignment help (if present inside .brand) */
-header.site-header .brand img[alt*="France"] { margin-left: 8px; display:inline-block; vertical-align: middle; }
