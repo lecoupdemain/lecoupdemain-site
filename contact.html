@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/assets/css/style-50s-additions.css">
   <style>
     .contact-wrap { max-width: 980px; margin: 32px auto; padding: 0 16px; }
-    .contact-card { background:#fff; border:2px solid #1a6d72; border-radius:10px; padding:20px; }
+    .contact-card { background:#fff; border:2px solid #1a6d72; border-radius:12px; padding:22px; }
     .contact-grid { display:grid; grid-template-columns: 1fr 1fr; gap:16px; }
     .contact-grid .full { grid-column: 1 / -1; }
     .contact-field label { display:block; font-weight:600; margin-bottom:6px; }
@@ -22,6 +22,9 @@
     .brand-block { display:flex; align-items:center; gap:10px; }
     .brand-block img.logo { width:34px; height:34px; border-radius:50%; display:block; }
     .brand-block img.flag { width:18px; height:auto; border-radius:2px; border:1px solid #fff; }
+    .btn-primary { background:#0b6d77;color:#fff;font-weight:800;font-size:18px;padding:14px 24px;border:none;border-radius:8px;cursor:pointer;width:100%;display:block;text-align:center; }
+    .btn-primary:hover { opacity:.92; }
+    .notice { color:#666;font-size:.9rem;margin-top:8px }
   </style>
 </head>
 <body>
@@ -44,13 +47,16 @@
   <main class="section contact-wrap">
     <h1 class="cursive">Contact</h1>
     <div class="contact-card">
-      <form class="contact-form" action="https://formsubmit.co/285b0a5bda8ec0d6f4b531896fd2f9ba" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
+      <form id="contactForm" action="https://formsubmit.co/285b0a5bda8ec0d6f4b531896fd2f9ba" method="POST" enctype="multipart/form-data" accept-charset="UTF-8">
         <!-- Options FormSubmit -->
-        <input type="hidden" name="_subject" value="Nouveau message - Le Coup de Main">
+        <input type="hidden" name="_subject" value="Nouveau message – Le Coup de Main">
         <input type="hidden" name="_next" value="https://lecoupdemain-services.fr/success.html">
         <input type="hidden" name="_captcha" value="false">
         <input type="hidden" name="_template" value="table">
-        <input type="text" name="_honey" style="display:none">
+        <!-- Met 'Reply-To' sur l'email saisi par l'utilisateur -->
+        <input type="hidden" name="_replyto" id="replyToProxy">
+        <!-- Accusé de réception automatique (au client) -->
+        <input type="hidden" name="_autoresponse" value="Merci pour votre message ! Nous répondons sous 24–48h les jours ouvrés (lundi→vendredi). — Le Coup de Main">
 
         <div class="contact-grid">
           <div class="contact-field">
@@ -59,37 +65,35 @@
           </div>
           <div class="contact-field">
             <label for="email">Email *</label>
-            <input id="email" type="email" name="Email" required>
+            <!-- IMPORTANT: name='email' pour que certains webmails fassent directement 'Répondre à' -->
+            <input id="email" type="email" name="email" required>
           </div>
+
           <div class="contact-field">
             <label for="telephone">Téléphone</label>
             <input id="telephone" type="tel" name="Téléphone">
           </div>
           <div class="contact-field">
             <label for="liens">Lien vers photos (optionnel)</label>
-            <input id="liens" type="url" name="Lien vers photos" placeholder="https://...">
+            <input id="liens" type="url" name="Lien_vers_photos" placeholder="https://...">
           </div>
+
           <div class="contact-field full">
             <label for="photos">Ajouter des photos (optionnel)</label>
             <input id="photos" type="file" name="attachment" accept=".jpg,.jpeg,.png,.webp" multiple>
           </div>
+
           <div class="contact-field full">
             <label for="message">Message *</label>
             <textarea id="message" name="Message" rows="6" required></textarea>
           </div>
         </div>
 
-        <!-- BOUTON ENVOYER — 100% visible, inline styles pour contourner tout CSS -->
         <div style="margin-top:14px">
-          <button type="submit"
-            style="background-color:#0b6d77;color:#fff;font-weight:800;font-size:18px;
-                   padding:14px 24px;border:none;border-radius:8px;cursor:pointer;
-                   width:100%;display:block;text-align:center;">
-            Envoyer
-          </button>
+          <button class="btn-primary" type="submit">Envoyer</button>
         </div>
 
-        <p style="color:#666;font-size:.9rem;margin-top:8px">📅 Je réponds uniquement les jours ouvrés (lundi → vendredi).</p>
+        <p class="notice">📅 Je réponds uniquement les jours ouvrés (lundi → vendredi).</p>
       </form>
     </div>
   </main>
@@ -100,5 +104,14 @@
       <div class="footer-col"><h3>Navigation</h3><p><a href="/index.html">Accueil</a> • <a href="/prestations.html">Prestations</a> • <a href="/tarifs.html">Tarifs</a> • <a href="/a-propos.html">À propos</a></p></div>
     </div>
   </footer>
+
+  <script>
+    // Met à jour _replyto avec la valeur du champ email
+    const emailInput = document.getElementById('email');
+    const replyTo = document.getElementById('replyToProxy');
+    emailInput.addEventListener('input', () => replyTo.value = emailInput.value);
+    // init
+    replyTo.value = emailInput.value;
+  </script>
 </body>
 </html>
