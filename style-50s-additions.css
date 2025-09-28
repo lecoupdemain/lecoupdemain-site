@@ -29,3 +29,19 @@
 .site-header .brand { margin-left: 0 !important; justify-content: flex-start !important; }
 .container.bar { justify-content: flex-start !important; }
 .nav { margin-left: auto; }
+
+
+/* — Alignement logo totalement collé à gauche dans la bannière — */
+header.site-header .container,
+header.site-header .container.bar{
+  padding-left: 0 !important;   /* enlève le padding gauche du container */
+}
+header.site-header .brand{
+  margin-left: 0 !important;    /* enlève toute marge à gauche */
+  left: 0;                       /* au cas où une position relative existe */
+}
+header.site-header{
+  padding-left: 0 !important;    /* enlève un éventuel padding du header */
+}
+/* Assure que la nav reste poussée à droite */
+header.site-header .nav{ margin-left: auto !important; }
