@@ -1,14 +1,36 @@
 
-/* === Navigation in Lobster font, white, same style as brand === */
+/* === Unified header: brand + nav same style, aligned === */
+header.site-header .container.bar {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  flex-wrap: nowrap !important;
+  gap: 16px !important;
+}
+
+/* Unified style for brand text and nav buttons */
+header.site-header .brand-text,
 header.site-header .nav .btn {
   font-family: 'Lobster', cursive !important;
-  font-size: 1.4em !important;
+  font-size: 1.2em !important;      /* identical size */
   font-weight: normal !important;
   color: #ffffff !important;
+  border: 2px solid #ffffff !important;
+  border-radius: 6px !important;
+  padding: 6px 14px !important;
+  margin: 0 6px !important;
   background: transparent !important;
-  border: none !important;
   text-decoration: none !important;
+  box-shadow: none !important;
+  transition: all 0.2s ease-in-out;
+  display: inline-flex !important;
+  align-items: center !important;
 }
+
+/* Hover inversion */
+header.site-header .brand-text:hover,
 header.site-header .nav .btn:hover {
-  color: #f0f0f0 !important; /* slight hover effect */
+  background: #ffffff !important;
+  color: #006d77 !important; /* teal */
+  text-decoration: none !important;
 }
