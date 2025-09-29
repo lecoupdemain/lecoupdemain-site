@@ -1,0 +1,49 @@
+/* === NAV: Align brand + nav & draw button borders === */
+.site-header .container.bar{
+  display:flex;
+  align-items:center;           /* aligne verticalement logo/texte/drapeau & nav */
+  justify-content:space-between;
+  gap:16px;
+}
+
+.site-header .brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  text-decoration:none;
+}
+
+.site-header .brand img.logo{ height:36px; width:auto; display:block; }
+.site-header .brand img.flag{ height:16px; width:auto; display:block; border-radius:2px; }
+
+.site-header .nav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+/* Style "touche": bordure blanche, sans fond */
+.site-header .nav a,
+.site-header .nav .btn,
+.topbar .nav a{
+  display:inline-block;
+  padding:8px 14px;
+  border:2px solid #fff;
+  border-radius:8px;
+  color:#fff;
+  text-decoration:none;
+  line-height:1;
+  transition:background-color .25s ease, opacity .25s ease;
+}
+
+.site-header .nav a:hover,
+.site-header .nav .btn:hover,
+.topbar .nav a:hover{
+  background-color: rgba(255,255,255,.18);
+}
+
+/* Petits écrans : espace vertical correct */
+@media (max-width:720px){
+  .site-header .nav{ gap:8px; }
+}
