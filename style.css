@@ -75,7 +75,7 @@ nav a:hover {
         linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url('hero-background.png'); 
     background-size: cover;
-    background-position: center center; 
+    background-position: center 40; 
     padding: 120px 0; 
     color: white; 
     /* L'ombre de texte reste pour renforcer la lisibilité */
