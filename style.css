@@ -72,7 +72,7 @@ nav a:hover {
     background-color: var(--color-primary); 
     background-image: url('hero-background.png'); /* TON IMAGE EST ICI ! */
     background-size: cover;
-   background-position: center top 25%; /* Centre horizontalement, mais décale le point focal vers le haut à 25% */
+   background-position: center 25%; /* Ajuste la position verticale pour mieux cadrer les personnages */
     padding: 120px 0; 
     color: white; 
     text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
