@@ -74,8 +74,8 @@ nav a:hover {
     /* Chemin de l'image corrigé en .png */
     background-image: url('hero-background.png'); 
     background-size: cover;
-    /* Cadrage ajusté pour mieux montrer les visages */
-    background-position: center 15%; 
+    /* Cadrage ajusté pour mieux montrer le sujet */
+    background-position: center center; 
     padding: 120px 0; 
     color: white; 
     text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
@@ -200,12 +200,9 @@ table th {
    ======================================================== */
 /* Conteneur pour centrer et styliser le formulaire iframe */
 .contact-form {
-    max-width: 650px; /* Légèrement plus large pour Google Forms */
-    margin: 30px auto;
-    padding: 30px; 
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 650px; 
+    /* CORRECTION MARGE : Réduit l'espace vertical autour du formulaire */
+    margin: 10px auto; 
     
     /* Ces styles annulent le padding/shadow par défaut pour laisser l'iframe prendre le relais */
     padding: 0 !important; 
@@ -218,7 +215,18 @@ table th {
 footer {
     background-color: var(--color-primary);
     color: white;
-    padding: 30px 0;
+    /* CORRECTION ESPACEMENT : Réduit l'espace vertical du footer */
+    padding: 20px 0; 
     text-align: center;
     font-size: 0.9em;
+}
+
+/* ========================================================
+   9. CORRECTION ESPACEMENT (AJOUTÉ POUR RÉDUIRE L'ESPACE)
+   ======================================================== */
+   
+/* Réduit l'espace vertical de la section contact pour minimiser l'espace sous le formulaire */
+#contact {
+    padding-top: 50px;
+    padding-bottom: 30px; 
 }
