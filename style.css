@@ -2,8 +2,9 @@
    1. VARIABLES & RESET DE BASE
    ======================================================== */
 :root {
-    --color-primary: #008080; /* Bleu Canard */
-    --color-secondary: #f4f4f4; /* Arrière-plan clair, léger beige */
+    /* Couleur Primaire Changée en Bleu Canard */
+    --color-primary: #008080; 
+    --color-secondary: #f4f4f4; /* Arrière-plan clair */
     --color-text: #333;
     --color-cta: #3498db; /* Bleu vif pour le CTA principal */
     --padding-section: 60px 0;
@@ -70,9 +71,11 @@ nav a:hover {
    ======================================================== */
 .hero {
     background-color: var(--color-primary); 
-    background-image: url('hero-background.png'); /* TON IMAGE EST ICI ! */
+    /* Chemin de l'image corrigé en .png */
+    background-image: url('hero-background.png'); 
     background-size: cover;
-   background-position: center 30%; /* Ajuste la position verticale pour mieux cadrer les personnages */
+    /* Cadrage ajusté pour mieux montrer les visages */
+    background-position: center 25%; 
     padding: 120px 0; 
     color: white; 
     text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
@@ -193,34 +196,20 @@ table th {
 
 
 /* ========================================================
-   7. CONTACT ET FORMULAIRE
+   7. CONTACT ET FORMULAIRE (Spécifique pour Google Forms)
    ======================================================== */
+/* Conteneur pour centrer et styliser le formulaire iframe */
 .contact-form {
-    max-width: 600px;
+    max-width: 650px; /* Légèrement plus large pour Google Forms */
     margin: 30px auto;
-    padding: 30px;
+    padding: 30px; 
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.contact-form label {
-    display: block;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form input[type="tel"],
-.contact-form textarea,
-.contact-form select {
-    width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; 
+    
+    /* Ces styles annulent le padding/shadow par défaut pour laisser l'iframe prendre le relais */
+    padding: 0 !important; 
+    box-shadow: none !important;
 }
 
 /* ========================================================
