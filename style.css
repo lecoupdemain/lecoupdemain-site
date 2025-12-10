@@ -210,8 +210,58 @@ table th {
     padding: 0 !important; 
     box-shadow: none !important;
 }
-
 /* ========================================================
+   7. PROCESSUS (Mise en page pro)
+   ======================================================== */
+
+.process-grid {
+    display: grid;
+    /* Crée 4 colonnes sur les grands écrans */
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 30px;
+    margin-top: 50px;
+    text-align: center;
+}
+
+.process-step {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.process-step h3 {
+    color: var(--color-primary);
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+.step-number {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: var(--color-cta); /* Utilisez le bleu vif pour le numéro */
+    line-height: 1;
+    margin-bottom: 10px;
+}
+
+/* Réponse pour les écrans plus petits (mobile/tablette) */
+@media (max-width: 900px) {
+    .process-grid {
+        /* Passe en 2 colonnes sur les écrans moyens */
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+@media (max-width: 550px) {
+    .process-grid {
+        /* Passe en 1 colonne sur les très petits écrans */
+        grid-template-columns: 1fr; 
+    }
+}/* ========================================================
    8. FOOTER
    ======================================================== */
 footer {
