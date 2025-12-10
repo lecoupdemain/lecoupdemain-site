@@ -2,7 +2,7 @@
    1. VARIABLES & RESET DE BASE
    ======================================================== */
 :root {
-    --color-primary: #1e5a40; /* Vert foncé/Bouteille */
+    --color-primary: #008080; /* Bleu Canard */
     --color-secondary: #f4f4f4; /* Arrière-plan clair, léger beige */
     --color-text: #333;
     --color-cta: #3498db; /* Bleu vif pour le CTA principal */
