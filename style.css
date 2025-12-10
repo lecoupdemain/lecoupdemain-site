@@ -70,7 +70,7 @@ nav a:hover {
    ======================================================== */
 .hero {
     background-color: var(--color-primary); 
-    background-image: url('hero-background.jpg'); /* TON IMAGE EST ICI ! */
+    background-image: url('hero-background.png'); /* TON IMAGE EST ICI ! */
     background-size: cover;
     background-position: center;
     padding: 120px 0; 
