@@ -76,7 +76,7 @@ nav a:hover {
         url('hero-background.png'); 
     background-size: cover;
     /* Nous allons ajuster cette ligne à l'étape 2 */
-    background-position: center 60%;; 
+    background-position: center 40%;
     padding: 120px 0; 
     color: white; 
     /* L'ombre de texte est renforcée pour plus de contraste */
