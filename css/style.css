@@ -1,1 +1,235 @@
-body{font-family:Inter,system-ui,sans-serif;background:#f3e8d3;margin:0}
+/* ========================================================
+   1. VARIABLES & RESET DE BASE
+   ======================================================== */
+:root {
+    --color-primary: #1e5a40; /* Vert foncé/Bouteille */
+    --color-secondary: #f4f4f4; /* Arrière-plan clair, léger beige */
+    --color-text: #333;
+    --color-cta: #3498db; /* Bleu vif pour le CTA principal */
+    --padding-section: 60px 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--color-text);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ========================================================
+   2. HEADER & NAVIGATION
+   ======================================================== */
+header {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    padding: 10px 0;
+    position: sticky; 
+    top: 0;
+    z-index: 1000;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo span {
+    font-weight: bold;
+    color: var(--color-primary);
+    font-size: 1.5em;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--color-text);
+    padding: 10px 15px;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: var(--color-primary);
+}
+
+/* ========================================================
+   3. SECTION HERO (Avec ton image)
+   ======================================================== */
+.hero {
+    background-color: var(--color-primary); 
+    background-image: url('hero-background.jpg'); /* TON IMAGE EST ICI ! */
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0; 
+    color: white; 
+    text-shadow: 0 1px 3px rgba(0,0,0,0.5); 
+}
+
+.hero h1 {
+    font-size: 2.8em;
+    margin-top: 0;
+    line-height: 1.2;
+}
+
+.hero-subtitle, .hero-intro {
+    font-size: 1.2em;
+    max-width: 600px; 
+}
+
+.hero-cta a {
+    text-decoration: none;
+    padding: 15px 30px;
+    margin-right: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s;
+    margin-top: 20px;
+}
+
+.btn-primary {
+    background-color: var(--color-cta); 
+    color: white;
+    border: 2px solid var(--color-cta);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+}
+
+/* ========================================================
+   4. SECTIONS GÉNÉRALES
+   ======================================================== */
+.section {
+    padding: var(--padding-section);
+}
+
+.section-alt {
+    background-color: var(--color-secondary); 
+}
+
+h2 {
+    color: var(--color-primary);
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+/* ========================================================
+   5. BLOCS SERVICES 
+   ======================================================== */
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.service-block {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.service-block:hover {
+    transform: translateY(-5px);
+}
+
+.service-block h3 {
+    color: var(--color-primary);
+    font-size: 1.3em;
+}
+
+/* ========================================================
+   6. TABLES (Tarifs)
+   ======================================================== */
+table {
+    width: 100%;
+    margin: 20px 0;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+table th {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.note-tarif {
+    background-color: #e6f7ff;
+    border-left: 5px solid #3498db;
+    padding: 15px;
+    margin-top: 20px;
+    font-style: italic;
+    color: var(--color-text);
+}
+
+
+/* ========================================================
+   7. CONTACT ET FORMULAIRE
+   ======================================================== */
+.contact-form {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+/* ========================================================
+   8. FOOTER
+   ======================================================== */
+footer {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.9em;
+}
