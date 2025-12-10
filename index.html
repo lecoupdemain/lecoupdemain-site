@@ -53,25 +53,21 @@
         </p>
 
         <div class="service-grid" style="margin-top: 50px;">
-            
-            <article class="service-block" onclick="openModal('modal-plomberie')">
-                <img src="icon-plomberie.png" alt="Plomberie légère" style="width: 60px;">
-                <h3>Plomberie Légère</h3>
-                <p>Remplacement de robinets, joints, mécanismes WC, petites fuites. Pour retrouver rapidement un évier fonctionnel.</p>
-            </article>
-
-            <article class="service-block" onclick="openModal('modal-electricite')">
-                <img src="icon-electricite.png" alt="Électricité légère" style="width: 60px;">
-                <h3>Électricité (hors tableau)</h3>
-                <p>Remplacement de luminaires, prises, interrupteurs. Sécurité et lumière pour votre quotidien.</p>
-            </article>
-
-            <article class="service-block" onclick="openModal('modal-montage')">
-                <img src="icon-montage.png" alt="Montage et pose" style="width: 60px;">
-                <h3>Montage & Pose</h3>
-                <p>Montage de meubles en kit, pose d'étagères, tringles à rideaux, supports TV, etc. Gain de temps, sans effort.</p>
-            </article>
-            
+          <article class="service-block">
+            <img src="icon-plomberie.png" alt="Plomberie légère" style="width: 60px;">
+            <h3>Plomberie Légère</h3>
+            <p>Remplacement de robinets, joints, mécanismes WC, petites fuites. Pour retrouver rapidement un évier fonctionnel.</p>
+          </article>
+          <article class="service-block">
+            <img src="icon-electricite.png" alt="Électricité légère" style="width: 60px;">
+            <h3>Électricité (hors tableau)</h3>
+            <p>Remplacement de luminaires, prises, interrupteurs. Sécurité et lumière pour votre quotidien.</p>
+          </article>
+          <article class="service-block">
+            <img src="icon-montage.png" alt="Montage et pose" style="width: 60px;">
+            <h3>Montage & Pose</h3>
+            <p>Montage de meubles en kit, pose d'étagères, tringles à rideaux, supports TV, etc. Gain de temps, sans effort.</p>
+          </article>
         </div>
         <div style="text-align: center; margin-top: 30px;">
             <a href="#services" class="btn btn-primary">Voir toutes les prestations détaillées</a>
@@ -195,7 +191,7 @@
           Le Coup de Main est fier d'être une entreprise récente. Cette page sera mise à jour régulièrement dès réception des premiers témoignages vérifiés. <strong>Nous avons hâte d'avoir votre retour&nbsp;!</strong>
         </p>
         <div style="text-align: center; margin-top: 30px;">
-             <a href="#about" class="btn btn-primary">Découvrir l'artisan (Julien)</a>
+            <a href="#contact" class="btn btn-primary">Soyez le premier à laisser un avis !</a>
         </div>
       </div>
     </section>
@@ -230,58 +226,6 @@
         Site vitrine – petits travaux, dépannage et aménagement de la maison.<br>
       </p>
     </div>
-  </footer>
-
-  <div id="modal-plomberie" class="modal" onclick="closeModal(event, 'modal-plomberie')">
-      <div class="modal-content">
-          <span class="close-btn" onclick="closeModal(event, 'modal-plomberie')">&times;</span>
-          <h3>Photos - Plomberie Légère</h3>
-          <div class="photo-gallery">
-              <img src="photo-plomberie-1.jpg" alt="Remplacement de joint sous évier">
-              <img src="photo-plomberie-2.jpg" alt="Mécanisme WC remplacé">
-          </div>
-      </div>
-  </div>
-
-  <div id="modal-electricite" class="modal" onclick="closeModal(event, 'modal-electricite')">
-      <div class="modal-content">
-          <span class="close-btn" onclick="closeModal(event, 'modal-electricite')">&times;</span>
-          <h3>Photos - Électricité (hors tableau)</h3>
-          <div class="photo-gallery">
-              <img src="photo-electricite-1.jpg" alt="Pose de luminaire">
-              <img src="photo-electricite-2.jpg" alt="Remplacement de prise">
-          </div>
-      </div>
-  </div>
-
-  <div id="modal-montage" class="modal" onclick="closeModal(event, 'modal-montage')">
-      <div class="modal-content">
-          <span class="close-btn" onclick="closeModal(event, 'modal-montage')">&times;</span>
-          <h3>Photos - Montage & Pose</h3>
-          <div class="photo-gallery">
-              <img src="photo-montage-1.jpg" alt="Meuble en kit monté">
-              <img src="photo-montage-2.jpg" alt="Étagères fixées">
-          </div>
-      </div>
-  </div>
-
-  <script>
-      function openModal(modalId) {
-          document.getElementById(modalId).style.display = "block";
-          document.body.style.overflow = "hidden"; // Empêche le défilement en arrière-plan
-      }
-
-      function closeModal(event, modalId) {
-          // Ferme uniquement si on clique sur le bouton X ou en dehors du contenu
-          if (event.target.className === 'close-btn' || event.target.id === modalId) {
-               document.getElementById(modalId).style.display = "none";
-               document.body.style.overflow = "auto";
-          }
-      }
-  </script>
-
-</body>
-</html>
   </footer>
 
 </body>
