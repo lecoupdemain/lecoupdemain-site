@@ -256,11 +256,18 @@ nav ul li a:hover {
 }
 
 /* ==================== 10. RÉALISATIONS (GALERIE) ==================== */
+/* ==================== 10. RÉALISATIONS (GALERIE) ==================== */
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* FORCER 4 COLONNES ÉGALES */
+    grid-template-columns: repeat(4, 1fr); 
     gap: 20px;
     margin-top: 40px;
+}
+
+/* ATTENTION : Nous devons également ajouter une exception pour le mobile (moins de 768px), 
+sinon les images seront minuscules sur téléphone.
+*/
 }
                 
 .gallery-item {
