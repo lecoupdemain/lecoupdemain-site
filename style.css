@@ -337,14 +337,17 @@ sinon les images seront minuscules sur téléphone.
 
 
 /* ==================== 13. CONTACT ==================== */
+/* ==================== 13. CONTACT ==================== */
 #contact h2 {
     margin-bottom: 10px;
 }
 
 #contact iframe {
-    border: 1px solid var(--color-primary);
-    border-radius: 8px;
+    /* Suppression du cadre et de l'ombre */
+    border: none; /* Supprime la ligne de contour */
+    border-radius: 0; /* Optionnel, supprime l'arrondi */
     margin-top: 20px;
+    box-shadow: none; /* Assure qu'aucune ombre n'est appliquée */
 }
 
 /* ==================== 14. FOOTER ==================== */
