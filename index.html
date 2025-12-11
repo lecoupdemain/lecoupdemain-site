@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Coup de Main – L'artisan qu'il vous faut !</title>
-    <link rel="stylesheet" href="style.css"> 
-    
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <style>
+        :root {
+            --color-primary: #1C545E; /* Bleu Canard foncé */
+            --color-secondary: #EBF2F4; /* Gris très clair / Off-White */
+            --color-accent: #DAA520; /* Gold/Jaune pour l'accentuation */
+        }
+    </style>
 </head>
 <body>
     
@@ -112,6 +119,37 @@
                     Voici une illustration des types de travaux que **Le Coup de Main** est prêt à réaliser pour vous (montage de meubles, réparation de plomberie, etc.).<br>
                     *Les photos de nos chantiers seront mises à jour dès le lancement de notre activité.*
                 </p>
+
+                <style>
+                    .gallery-grid {
+                        display: grid;
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        gap: 20px;
+                        margin-top: 40px;
+                    }
+                    
+                    .gallery-item {
+                        background: white;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                        overflow: hidden; 
+                    }
+                    
+                    .gallery-item img {
+                        width: 100%;
+                        height: 300px; /* Ajusté à 300px pour moins de zoom */
+                        object-fit: cover; 
+                        display: block;
+                    }
+                    
+                    .caption {
+                        padding: 15px;
+                        text-align: center;
+                        font-weight: bold;
+                        color: var(--color-primary);
+                        background-color: var(--color-secondary); 
+                    }
+                </style>
 
                 <div class="gallery-grid">
                     <div class="gallery-item">
