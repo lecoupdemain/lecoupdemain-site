@@ -64,14 +64,40 @@ header .container {
     align-items: center;
 }
 
+/* LOGO ET TITRE */
+.logo-container {
+    display: flex;
+    align-items: center; 
+}
+
+.logo-img {
+    height: 40px; /* Ajustez la taille du logo ici */
+    width: auto;
+    margin-right: 10px;
+}
+
 .logo {
     font-size: 1.8em;
     font-weight: 900;
 }
 
+/* NAVIGATION (DRAPEAU ET LIENS) */
+nav {
+    display: flex;
+    align-items: center; /* Pour aligner le drapeau avec les liens */
+}
+
+.drapeau-fr {
+    height: 20px; /* Ajustez la taille du drapeau ici */
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0; 
+    padding: 0;
 }
 
 nav ul li a {
@@ -133,17 +159,17 @@ nav ul li a:hover {
 }
 
 /* ==================== 6. HERO (ACCUEIL) ==================== */
-/* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
-    /* MODIFICATION : Le second 'center' devient '20%' (ou '30%', '50%', etc.) pour le décalage vertical. */
-    background: url('hero-background.png') no-repeat center 20%/cover; 
+    /* Ajustez 20% si vous voulez remonter ou descendre l'image (center 20%) */
+    background: url('hero-background.png') no-repeat center center/cover;
     color: var(--color-primary); 
     padding: 120px 0;
     text-align: center;
 }
 
 .hero .hero-content {
-    background-color: rgba(255, 255, 255, 0.2); /* CHANGÉ : Rendu plus transparent */
+    /* Opacité réduite à 70% (0.7) pour mieux voir l'arrière-plan */
+    background-color: rgba(255, 255, 255, 0.7); 
     padding: 40px;
     border-radius: 10px;
     display: inline-block;
@@ -257,18 +283,11 @@ nav ul li a:hover {
 }
 
 /* ==================== 10. RÉALISATIONS (GALERIE) ==================== */
-/* ==================== 10. RÉALISATIONS (GALERIE) ==================== */
 .gallery-grid {
     display: grid;
-    /* FORCER 4 COLONNES ÉGALES */
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(4, 1fr); /* FORCÉ EN 4 COLONNES */
     gap: 20px;
     margin-top: 40px;
-}
-
-/* ATTENTION : Nous devons également ajouter une exception pour le mobile (moins de 768px), 
-sinon les images seront minuscules sur téléphone.
-*/
 }
                 
 .gallery-item {
@@ -338,17 +357,16 @@ sinon les images seront minuscules sur téléphone.
 
 
 /* ==================== 13. CONTACT ==================== */
-/* ==================== 13. CONTACT ==================== */
 #contact h2 {
     margin-bottom: 10px;
 }
 
 #contact iframe {
-    /* Suppression du cadre et de l'ombre */
-    border: none; /* Supprime la ligne de contour */
-    border-radius: 0; /* Optionnel, supprime l'arrondi */
+    /* SUPPRESSION DU CADRE ET DE L'OMBRE */
+    border: none; 
+    border-radius: 0;
     margin-top: 20px;
-    box-shadow: none; /* Assure qu'aucune ombre n'est appliquée */
+    box-shadow: none; 
 }
 
 /* ==================== 14. FOOTER ==================== */
@@ -374,6 +392,22 @@ footer p {
     header .container {
         flex-direction: column;
         text-align: center;
+    }
+
+    /* Le logo et le titre restent alignés */
+    .logo-container {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        flex-direction: column; /* Aligne le drapeau au-dessus des liens sur mobile */
+        width: 100%;
+    }
+
+    .drapeau-fr {
+        margin-bottom: 10px;
+        margin-right: 0; /* Centre le drapeau */
     }
 
     nav ul {
@@ -405,7 +439,7 @@ footer p {
     }
     
     .features-grid, .services-grid, .gallery-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /* Galerie repasse à 1 colonne sur mobile */
     }
 
     .process-list {
