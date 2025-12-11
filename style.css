@@ -1,39 +1,80 @@
 /* ========================================================
-   1. VARIABLES & RESET DE BASE
+   0. VARIABLES GLOBALES & RÉINITIALISATION
    ======================================================== */
 :root {
-    /* Couleur Primaire Changée en Bleu Canard */
-    --color-primary: #008080; 
-    --color-secondary: #f4f4f4; /* Arrière-plan clair */
+    --color-primary: #1C545E; /* Bleu Canard foncé */
+    --color-secondary: #EBF2F4; /* Gris très clair / Off-White */
+    --color-accent: #DAA520; /* Gold/Jaune pour l'accentuation */
     --color-text: #333;
-    --color-cta: #3498db; /* Bleu vif pour le CTA principal */
-    --padding-section: 60px 0;
+    --font-family: 'Arial', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    color: var(--color-text);
+    font-family: var(--font-family);
     line-height: 1.6;
+    color: var(--color-text);
+    background-color: white;
 }
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
 }
 
+/* Typographie de base */
+h1, h2, h3 {
+    margin-bottom: 20px;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.2em;
+    padding-top: 50px;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+.intro-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    font-size: 1.1em;
+}
+
+.section {
+    padding: 80px 0;
+}
+
+.section-alt {
+    padding: 80px 0;
+    background-color: var(--color-secondary);
+}
+
 /* ========================================================
-   2. HEADER & NAVIGATION
+   1. EN-TÊTE & NAVIGATION
    ======================================================== */
 header {
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-    padding: 10px 0;
-    position: sticky; 
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 0;
+    position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
 header .container {
@@ -42,75 +83,84 @@ header .container {
     align-items: center;
 }
 
-.logo span {
-    font-weight: bold;
-    color: var(--color-primary);
-    font-size: 1.5em;
+.logo {
+    font-size: 1.8em;
+    margin: 0;
 }
 
 nav ul {
     list-style: none;
-    margin: 0;
-    padding: 0;
     display: flex;
 }
 
-nav a {
+nav ul li a {
+    color: white;
     text-decoration: none;
-    color: var(--color-text);
     padding: 10px 15px;
-    transition: color 0.3s;
+    display: block;
+    transition: background-color 0.3s;
 }
 
-nav a:hover {
-    color: var(--color-primary);
+nav ul li a:hover {
+    background-color: #154249; /* Légèrement plus foncé */
 }
+
 
 /* ========================================================
-   3. SECTION HERO (Avec ton image)
+   2. BANNIÈRE HERO (ACCUEIL)
    ======================================================== */
 .hero {
-    /* Ceci ajoute le filtre noir transparent PAR DESSUS l'image */
+    /* Ceci est le style qui inclut le filtre noir et le cadrage */
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)),
         url('hero-background.png'); 
     background-size: cover;
-    /* Nous allons ajuster cette ligne à l'étape 2 */
-    background-position: center 14%;
+    /* Cadrage ajusté pour bien montrer les visages */
+    background-position: center 60%; 
     padding: 120px 0; 
     color: white; 
-    /* L'ombre de texte est renforcée pour plus de contraste */
     text-shadow: 0 1px 3px rgba(0,0,0,0.7); 
 }
-}
+
+.hero-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .hero h1 {
-    font-size: 2.8em;
-    margin-top: 0;
-    line-height: 1.2;
+    font-size: 3em;
+    margin-bottom: 10px;
+    color: white; /* Titre en blanc */
 }
 
-.hero-subtitle, .hero-intro {
-    font-size: 1.2em;
-    max-width: 600px; 
+.subtitle {
+    font-size: 1.3em;
+    margin-bottom: 25px;
 }
 
-.hero-cta a {
+.hero-buttons {
+    margin-top: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
     text-decoration: none;
-    padding: 15px 30px;
-    margin-right: 15px;
     border-radius: 5px;
     font-weight: bold;
-    display: inline-block;
-    transition: background-color 0.3s;
-    margin-top: 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s, opacity 0.3s;
 }
 
 .btn-primary {
-    background-color: var(--color-cta); 
-    color: white;
-    border: 2px solid var(--color-cta);
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    border: 2px solid var(--color-accent);
+}
+
+.btn-primary:hover {
+    background-color: #d19e1a;
 }
 
 .btn-secondary {
@@ -119,168 +169,244 @@ nav a:hover {
     border: 2px solid white;
 }
 
-.btn-primary:hover {
-    background-color: #2980b9;
+.btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* ========================================================
-   4. SECTIONS GÉNÉRALES
+   3. SECTION À PROPOS (FEATURES)
    ======================================================== */
-.section {
-    padding: var(--padding-section);
-}
-
-.section-alt {
-    background-color: var(--color-secondary); 
-}
-
-h2 {
-    color: var(--color-primary);
-    text-align: center;
-    margin-bottom: 40px;
-    font-size: 2em;
-}
-
-/* ========================================================
-   5. BLOCS SERVICES 
-   ======================================================== */
-.service-grid {
+.features-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 20px;
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.service-block {
-    background: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
-}
-
-.service-block:hover {
-    transform: translateY(-5px);
-}
-
-.service-block h3 {
-    color: var(--color-primary);
-    font-size: 1.3em;
-}
-
-/* ========================================================
-   6. TABLES (Tarifs)
-   ======================================================== */
-table {
-    width: 100%;
-    margin: 20px 0;
-    border-collapse: collapse;
-}
-
-table th, table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-
-table th {
-    background-color: var(--color-primary);
-    color: white;
-}
-
-.note-tarif {
-    background-color: #e6f7ff;
-    border-left: 5px solid #3498db;
-    padding: 15px;
-    margin-top: 20px;
-    font-style: italic;
-    color: var(--color-text);
-}
-
-
-/* ========================================================
-   7. CONTACT ET FORMULAIRE (Spécifique pour Google Forms)
-   ======================================================== */
-/* Conteneur pour centrer et styliser le formulaire iframe */
-.contact-form {
-    max-width: 650px; 
-    /* CORRECTION MARGE : Réduit l'espace vertical autour du formulaire */
-    margin: 10px auto; 
-    
-    /* Ces styles annulent le padding/shadow par défaut pour laisser l'iframe prendre le relais */
-    padding: 0 !important; 
-    box-shadow: none !important;
-}
-/* ========================================================
-   7. PROCESSUS (Mise en page pro)
-   ======================================================== */
-
-.process-grid {
-    display: grid;
-    /* Crée 4 colonnes sur les grands écrans */
-    grid-template-columns: repeat(4, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
-    margin-top: 50px;
     text-align: center;
+    margin-top: 40px;
 }
 
-.process-step {
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s;
+.feature-item i {
+    font-size: 3em;
+    color: var(--color-accent);
+    margin-bottom: 15px;
 }
 
-.process-step:hover {
-    transform: translateY(-5px);
-}
-
-.process-step h3 {
+.feature-item h4 {
     color: var(--color-primary);
-    font-size: 1.1em;
-    margin-top: 5px;
-}
-
-.step-number {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: var(--color-cta); /* Utilisez le bleu vif pour le numéro */
-    line-height: 1;
     margin-bottom: 10px;
 }
 
-/* Réponse pour les écrans plus petits (mobile/tablette) */
-@media (max-width: 900px) {
-    .process-grid {
-        /* Passe en 2 colonnes sur les écrans moyens */
-        grid-template-columns: repeat(2, 1fr); 
-    }
+
+/* ========================================================
+   4. SECTION SERVICES PRINCIPAUX (Les 4 Carrés)
+   ======================================================== */
+.services-grid {
+    display: grid;
+    /* Crée 4 colonnes sur grand écran, s'adapte à 2 ou 1 sur mobile */
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+    text-align: center;
 }
-@media (max-width: 550px) {
-    .process-grid {
-        /* Passe en 1 colonne sur les très petits écrans */
-        grid-template-columns: 1fr; 
-    }
-}/* ========================================================
-   8. FOOTER
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Style commun pour les icônes (Font Awesome ou PNG) */
+.icon-service {
+    font-size: 3em;
+    color: var(--color-primary);
+    margin-bottom: 15px;
+    /* Propriétés pour les icônes PNG */
+    width: 60px; /* Taille fixée pour les logos PNG */
+    height: 60px;
+    object-fit: contain; /* Assure que le logo PNG ne soit pas rogné */
+    display: block; /* Important pour l'alignement */
+    margin: 0 auto 15px;
+}
+
+.service-card h3 {
+    margin-top: 0;
+}
+
+
+/* ========================================================
+   5. SECTION TARIFS
+   ======================================================== */
+.tariffs-box {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.price-detail {
+    font-size: 2em;
+    color: var(--color-accent);
+    font-weight: bold;
+    text-align: center;
+    margin: 15px 0;
+}
+
+.note {
+    font-style: italic;
+    color: #666;
+    text-align: center;
+}
+
+
+/* ========================================================
+   6. SECTION PROCESSUS
+   ======================================================== */
+.process-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    text-align: center;
+}
+
+.process-item {
+    width: 22%;
+    min-width: 180px;
+    margin: 15px 0;
+}
+
+.process-item h4 {
+    color: var(--color-accent);
+    font-size: 1.2em;
+}
+
+/* ========================================================
+   7. SECTION AVIS CLIENTS
+   ======================================================== */
+.review-box {
+    background: var(--color-primary);
+    color: white;
+    padding: 40px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.placeholder-text {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+/* Ajustement du bouton dans la section Avis */
+.review-box .btn-primary {
+    background-color: white;
+    color: var(--color-primary);
+    border: 2px solid white;
+}
+.review-box .btn-primary:hover {
+    background-color: var(--color-secondary);
+}
+
+
+/* ========================================================
+   8. SECTION CONTACT
+   ======================================================== */
+#contact iframe {
+    border: 1px solid var(--color-primary);
+    border-radius: 8px;
+    margin-top: 30px;
+    height: 800px; /* Hauteur ajustée pour le formulaire */
+}
+
+
+/* ========================================================
+   9. GALERIE DE RÉALISATIONS
+   ======================================================== */
+.gallery-grid {
+    display: grid;
+    /* Crée 4 colonnes sur grand écran */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin-top: 40px;
+}
+
+.gallery-item {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden; 
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 300px; 
+    object-fit: cover; 
+    display: block;
+}
+
+.caption {
+    padding: 15px;
+    text-align: center;
+    font-weight: bold;
+    color: var(--color-primary);
+    background-color: var(--color-secondary); 
+}
+
+
+/* ========================================================
+   10. PIED DE PAGE (FOOTER)
    ======================================================== */
 footer {
     background-color: var(--color-primary);
     color: white;
-    /* CORRECTION ESPACEMENT : Réduit l'espace vertical du footer */
-    padding: 20px 0; 
+    padding: 40px 0 20px 0;
     text-align: center;
+    border-top: 5px solid var(--color-accent);
+}
+
+footer p {
+    margin-bottom: 10px;
     font-size: 0.9em;
 }
 
 /* ========================================================
-   9. CORRECTION ESPACEMENT (AJOUTÉ POUR RÉDUIRE L'ESPACE)
+   11. RESPONSIVE / ADAPTATION MOBILE
    ======================================================== */
-   
-/* Réduit l'espace vertical de la section contact pour minimiser l'espace sous le formulaire */
-#contact {
-    padding-top: 50px;
-    padding-bottom: 30px; 
+@media (max-width: 768px) {
+    
+    .hero h1 {
+        font-size: 2em;
+    }
+    
+    .subtitle {
+        font-size: 1.1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10px;
+    }
+
+    nav ul li a {
+        padding: 5px 15px;
+    }
+    
+    header .container {
+        flex-direction: column;
+    }
+
+    .process-item {
+        width: 45%;
+    }
 }
