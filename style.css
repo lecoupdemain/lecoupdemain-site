@@ -162,7 +162,7 @@ nav ul li a:hover {
 .hero {
     /* Ajustez 20% si vous voulez remonter ou descendre l'image (center 20%) */
   .hero {
-    background: url('hero-background.png') no-repeat center 80%/cover; 
+    background: url('hero-background.png') no-repeat center 14%/cover; 
     /* ... le reste du style ... */
 }
     color: var(--color-primary); 
