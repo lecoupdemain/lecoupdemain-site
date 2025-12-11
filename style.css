@@ -73,24 +73,20 @@ header .container {
     align-items: center; 
 }
 
-.logo-img {
-    height: 40px; 
-    width: auto;
-    margin-right: 0; /* Le drapeau sera collé ici */
-}
-
 .logo {
     font-size: 1.8em;
     font-weight: 900;
-    margin-left: 10px; /* Espace entre le drapeau et le titre */
+    /* Assurez-vous que la couleur est bien blanche ou visible dans l'en-tête bleu */
+    color: white; /* AJOUTER OU VÉRIFIER QUE LE TEXTE EST BLANC */
+    margin-left: 10px; 
 }
 
 /* NOUVEAU STYLE DU DRAPEAU DANS L'ENTÊTE */
 .drapeau-fr {
-    height: 50px; /* TAILLE DU DRAPEAU - Ajustez-le pour qu'il remplisse le bandeau */
+    height: 50px; 
     width: auto;
-    margin-right: 0; /* Collé au logo */
-    margin-left: 5px; /* Petit espace après le logo, si vous voulez un petit décalage */
+    margin-right: 0; 
+    margin-left: 5px; 
 }
 
 /* NAVIGATION (côté droit) */
