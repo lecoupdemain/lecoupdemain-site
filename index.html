@@ -158,6 +158,64 @@
             
         </div>
     </section>
+    <section id="realisations" class="section">
+        <div class="container">
+            <h2>Nos réalisations en images</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                Découvrez quelques exemples de travaux effectués (montage de meubles, pose de luminaires, réparations diverses, etc.).
+            </p>
+
+            <style>
+                /* Styles de la galerie intégrés ici */
+                .gallery-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                    gap: 20px;
+                    margin-top: 40px;
+                }
+                
+                .gallery-item {
+                    background: white;
+                    border-radius: 8px;
+                    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                    overflow: hidden; 
+                }
+                
+                .gallery-item img {
+                    width: 100%;
+                    height: 250px; 
+                    object-fit: cover; 
+                    display: block;
+                }
+                
+                .caption {
+                    padding: 15px;
+                    text-align: center;
+                    font-weight: bold;
+                    color: var(--color-primary);
+                    background-color: var(--color-secondary); 
+                }
+            </style>
+
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="realisation-1.jpg" alt="Montage meuble TV">
+                    <div class="caption">Montage meuble TV IKEA</div>
+                </div>
+                
+                <div class="gallery-item">
+                    <img src="realisation-2.jpg" alt="Pose étagères">
+                    <div class="caption">Pose d'étagères murales sur mesure</div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="realisation-3.jpg" alt="Remplacement robinet">
+                    <div class="caption">Remplacement de mitigeur de cuisine</div>
+                </div>
+
+                </div>
+        </div>
+    </section>
 
    <section id="process" class="section section-alt">
     <div class="container">
