@@ -162,11 +162,10 @@ nav ul li a:hover {
 
 /* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
-    /* Assurez-vous que le nom du fichier est CORRECT, y compris l'extension */
-    background: url('hero-background.png') no-repeat center 14%/cover; 
+    /* AJOUTER LA COULEUR GRIS CLAIR (color-secondary) COMME ARRIÈRE-PLAN DE SECOURS */
+    background: var(--color-secondary) url('hero-background.png') no-repeat center 14%/cover;
     color: var(--color-primary); 
-    /* VÉRIFIEZ LE PADDING : Il garantit la hauteur même sans image. */
-    padding: 120px 0; 
+    padding: 120px 0;
     text-align: center;
 }
 
