@@ -133,9 +133,10 @@ nav ul li a:hover {
 }
 
 /* ==================== 6. HERO (ACCUEIL) ==================== */
+/* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
-    /* CHEMIN CORRIGÉ EN .png vers votre fichier local */
-    background: url('hero-background.png') no-repeat center center/cover;
+    /* MODIFICATION : Le second 'center' devient '20%' (ou '30%', '50%', etc.) pour le décalage vertical. */
+    background: url('hero-background.png') no-repeat center 20%/cover; 
     color: var(--color-primary); 
     padding: 120px 0;
     text-align: center;
