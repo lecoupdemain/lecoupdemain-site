@@ -47,14 +47,12 @@ h2 {
     color: #555;
 }
 
-CSS
-
 /* ==================== 3. HEADER & NAVIGATION ==================== */
 header {
-    background-color: var(--color-primary);
+    background-color: var(--color-primary); /* COULEUR BLEUE CANARD */
     color: white;
     padding: 15px 0;
-    min-height: 70px; /* <--- AJOUTER CETTE LIGNE */ 
+    min-height: 70px; /* Assure une hauteur minimum */
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -63,7 +61,7 @@ header {
 
 header .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* ALIGNE LOGO À GAUCHE ET MENU À DROITE */
     align-items: center;
 }
 
@@ -73,20 +71,24 @@ header .container {
     align-items: center; 
 }
 
+.logo-img { 
+    height: 40px; /* HAUTEUR DU LOGO */
+    width: auto;
+    margin-right: 5px; 
+}
+
+.drapeau-fr {
+    height: 40px; /* HAUTEUR DU DRAPEAU (ALIGNÉ SUR LE LOGO) */
+    width: auto;
+    margin-right: 5px; 
+    margin-left: 5px; 
+}
+
 .logo {
     font-size: 1.8em;
     font-weight: 900;
-    /* Assurez-vous que la couleur est bien blanche ou visible dans l'en-tête bleu */
-    color: white; /* AJOUTER OU VÉRIFIER QUE LE TEXTE EST BLANC */
+    color: white; /* COULEUR BLANCHE POUR ÊTRE VISIBLE SUR LE FOND BLEU */
     margin-left: 10px; 
-}
-
-/* NOUVEAU STYLE DU DRAPEAU DANS L'ENTÊTE */
-.drapeau-fr {
-    height: 50px; 
-    width: auto;
-    margin-right: 0; 
-    margin-left: 5px; 
 }
 
 /* NAVIGATION (côté droit) */
@@ -96,7 +98,7 @@ nav {
 }
 nav ul {
     list-style: none;
-    display: flex;
+    display: flex; /* ALIGNE LES LIENS HORIZONTALEMENT */
     margin: 0; 
     padding: 0;
 }
@@ -161,7 +163,7 @@ nav ul li a:hover {
 
 /* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
-    /* AJOUTER LA COULEUR GRIS CLAIR (color-secondary) COMME ARRIÈRE-PLAN DE SECOURS */
+    /* Utilise l'image et une couleur de secours */
     background: var(--color-secondary) url('hero-background.png') no-repeat center 14%/cover;
     color: var(--color-primary); 
     padding: 120px 0;
@@ -363,7 +365,6 @@ nav ul li a:hover {
 }
 
 #contact iframe {
-    /* SUPPRESSION DU CADRE ET DE L'OMBRE */
     border: none; 
     border-radius: 0;
     margin-top: 20px;
@@ -402,13 +403,13 @@ footer p {
     }
 
     nav {
-        flex-direction: column; /* Aligne le drapeau au-dessus des liens sur mobile */
+        flex-direction: column; 
         width: 100%;
     }
 
     .drapeau-fr {
-        margin-bottom: 10px;
-        margin-right: 0; /* Centre le drapeau */
+        margin-bottom: 0px; /* Ajusté pour éviter trop d'espace */
+        margin-right: 0; 
     }
 
     nav ul {
