@@ -123,4 +123,142 @@
                 <style>
                     .gallery-grid {
                         display: grid;
-                        grid-template-columns: repeat(auto-fit,
+                        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                        gap: 20px;
+                        margin-top: 40px;
+                    }
+                    
+                    .gallery-item {
+                        background: white;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                        overflow: hidden; 
+                    }
+                    
+                    .gallery-item img {
+                        width: 100%;
+                        height: 300px; /* Ajusté à 300px pour moins de zoom */
+                        object-fit: cover; 
+                        display: block;
+                    }
+                    
+                    .caption {
+                        padding: 15px;
+                        text-align: center;
+                        font-weight: bold;
+                        color: var(--color-primary);
+                        background-color: var(--color-secondary); 
+                    }
+                </style>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="realisation-1.png" alt="Montage meuble TV">
+                        <div class="caption">Montage meuble TV IKEA</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="realisation-2.png" alt="Remplacement robinet">
+                        <div class="caption">Remplacement de mitigeur de cuisine</div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="realisation-3.png" alt="Installation de dressing">
+                        <div class="caption">Assemblage et fixation de dressing</div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="realisation-4.png" alt="Changement de poignée de porte et serrure">
+                        <div class="caption">Serrurerie : Changement de poignée et mécanisme de porte</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tarifs" class="section-alt">
+            <div class="container">
+                <h2>Transparence sur nos Tarifs</h2>
+                <p class="intro-text">
+                    La tarification est simple et honnête : vous payez uniquement pour le temps passé et les matériaux utilisés.
+                </p>
+                <div class="tariffs-box">
+                    <h3>Tarif Horaire :</h3>
+                    <p class="price-detail">**[À DÉFINIR]** € TTC / Heure</p>
+                    <p class="note">Minimum d'une heure facturé, puis à la demi-heure entamée.</p>
+
+                    <h3>Tarif Forfaitaire (sur devis) :</h3>
+                    <p class="note">
+                        Pour les tâches courantes (montage de meuble simple, pose de tringle), un forfait peut vous être proposé après analyse du travail à effectuer.
+                        Un devis est systématiquement envoyé avant tout engagement pour vous garantir une totale transparence.
+                    </p>
+                </div>
+                <p style="margin-top: 30px;"><a href="#contact" class="btn btn-primary">Demandez votre devis gratuit sans engagement</a></p>
+            </div>
+        </section>
+
+        <section id="processus" class="section">
+            <div class="container">
+                <h2>Simple, clair et sans surprise</h2>
+                <div class="process-list">
+                    <div class="process-item">
+                        <h4>1. Vous m'expliquez votre besoin</h4>
+                        <p>Par téléphone ou via le formulaire.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>2. Je vous fais une estimation</h4>
+                        <p>Devis détaillé sans mauvaise surprise.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>3. Nous fixons un rendez-vous</h4>
+                        <p>Créneau choisi ensemble et respecté.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>4. Travaux réalisés, endroit propre</h4>
+                        <p>Intervention terminée, lieux nettoyés.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section-alt">
+            <div class="container">
+                <h2>Avis Clients</h2>
+                <p class="intro-text">
+                    La satisfaction est ma priorité. Même si je n'ai pas encore d'avis ici, vous aurez l'occasion de noter mes prestations dès mon lancement !
+                </p>
+                <div class="review-box">
+                    <p class="placeholder-text">
+                        **"Un service impeccable et rapide. Je recommande vivement Julien !"** - (Futur Client Satisfait)
+                    </p>
+                    <a href="#about" class="btn btn-primary">Découvrir l'artisan (Julien)</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                
+                <p style="text-align: center; max-width: 700px; margin: 0 auto 30px;">
+                    **Votre besoin n'est pas listé ?** N'hésitez pas à le décrire dans le formulaire ! <br>
+                    De la petite fuite à l'aide au rangement, en passant par de l'entretien léger de jardin ou une intervention en serrurerie, je m'adapte à vos demandes.
+                </p>
+
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe3Ua8Q6m6I6E_6tO6YhY7mQv5uXkK_3rI_2q/viewform?embedded=true" width="100%" height="900" frameborder="0" marginheight="0" marginwidth="0">Chargement…</iframe>
+            </div>
+        </section>
+        
+    </main>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.5em; font-weight: bold; margin-bottom: 20px;">À bientôt !</p>
+            <p>&copy; 2026 Le Coup de Main. Tous droits réservés.</p>
+            <p>
+                Site vitrine – petits travaux, dépannage et aménagement de la maison.
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
