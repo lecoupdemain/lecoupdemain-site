@@ -134,8 +134,8 @@ nav ul li a:hover {
 
 /* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
-    /* Image temporaire pour l'arrière-plan */
-    background: url('http://googleusercontent.com/image_collection/image_retrieval/12576376095374954256_0') no-repeat center center/cover;
+    /* CHEMIN CORRIGÉ EN .png vers votre fichier local */
+    background: url('hero-background.png') no-repeat center center/cover;
     color: var(--color-primary); 
     padding: 120px 0;
     text-align: center;
