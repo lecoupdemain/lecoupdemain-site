@@ -134,11 +134,11 @@ nav ul li a:hover {
 
 /* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
-    background: url('hero-background.jpg') no-repeat center center/cover; /* REMPLACEZ PAR VOTRE IMAGE */
+    /* Image temporaire pour l'arrière-plan */
+    background: url('http://googleusercontent.com/image_collection/image_retrieval/12576376095374954256_0') no-repeat center center/cover;
     color: var(--color-primary); 
     padding: 120px 0;
     text-align: center;
-    background-color: #f7f7f7;
 }
 
 .hero .hero-content {
@@ -254,11 +254,6 @@ nav ul li a:hover {
     color: #666;
     margin-top: 5px;
 }
-
-/* Le style en ligne pour le frais kilométrique reste dans le HTML (pour l'urgence), 
-   mais vous pourriez le styliser ici si vous voulez : 
-   .tariffs-box p[style*="font-weight: bold"] { color: var(--color-primary); } 
-*/
 
 /* ==================== 10. RÉALISATIONS (GALERIE) ==================== */
 .gallery-grid {
