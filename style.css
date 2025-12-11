@@ -84,11 +84,11 @@ header .container {
 /* NAVIGATION (DRAPEAU ET LIENS) */
 nav {
     display: flex;
-    align-items: center; /* Pour aligner le drapeau avec les liens */
+    align-items: center; /* CECI EST ESSENTIEL POUR ALIGNER LE DRAPEAU ET LES LIENS */
 }
 
 .drapeau-fr {
-    height: 20px; /* Ajustez la taille du drapeau ici */
+    height: 20px; 
     margin-right: 15px;
     vertical-align: middle;
 }
@@ -161,7 +161,10 @@ nav ul li a:hover {
 /* ==================== 6. HERO (ACCUEIL) ==================== */
 .hero {
     /* Ajustez 20% si vous voulez remonter ou descendre l'image (center 20%) */
-    background: url('hero-background.png') no-repeat center center/cover;
+  .hero {
+    background: url('hero-background.png') no-repeat center 80%/cover; 
+    /* ... le reste du style ... */
+}
     color: var(--color-primary); 
     padding: 120px 0;
     text-align: center;
