@@ -238,7 +238,7 @@
             </div>
         </section>
 
-      <form name="contact-devis" method="POST" data-netlify="true" enctype="multipart/form-data" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+     <form name="contact-devis" method="POST" data-netlify="true" enctype="multipart/form-data" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
     <input type="hidden" name="form-name" value="contact-devis" />
     
     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
@@ -258,8 +258,19 @@
     </div>
 
     <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Adresse de l'intervention *</label>
-        <input type="text" name="adresse" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Numéro, rue et ville">
+        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rue et Numéro *</label>
+        <input type="text" name="rue" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="12 rue des Fleurs">
+    </div>
+
+    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px;">
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Code Postal *</label>
+            <input type="text" name="code_postal" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="68680">
+        </div>
+        <div>
+            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ville *</label>
+            <input type="text" name="ville" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Kembs">
+        </div>
     </div>
 
     <div style="margin-bottom: 15px;">
@@ -275,7 +286,7 @@
 
     <div style="margin-bottom: 15px;">
         <label style="display: block; margin-bottom: 5px; font-weight: bold;">Description détaillée du problème *</label>
-        <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px;" placeholder="Plus vous m'en dites, plus le devis sera précis (ex: marque de la serrure, type de fuite...)"></textarea>
+        <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px;" placeholder="Plus vous m'en dites, plus le devis sera précis..."></textarea>
     </div>
 
     <div style="margin-bottom: 20px; border: 2px dashed #007bff; padding: 15px; border-radius: 4px; background-color: #eef7ff; text-align: center;">
@@ -289,8 +300,6 @@
         <p style="font-size: 0.8em; margin-top: 10px; color: #888;">* Champs obligatoires - Réponse sous 24h</p>
     </div>
 </form>
-        
-    </main>
 
     <footer>
         <div class="container">
