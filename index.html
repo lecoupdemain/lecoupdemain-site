@@ -238,68 +238,75 @@
             </div>
         </section>
 
-     <form name="contact-devis" method="POST" data-netlify="true" enctype="multipart/form-data" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-    <input type="hidden" name="form-name" value="contact-devis" />
-    
-    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Votre Nom et Prénom *</label>
-            <input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: Jean Dupont">
-        </div>
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Téléphone *</label>
-            <input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="06 00 00 00 00">
-        </div>
-    </div>
+    <section id="contact" class="section">
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Décrivez votre projet, joignez une photo et recevez votre devis sous 24h.</p>
+        
+        <form name="contact-devis" method="POST" data-netlify="true" enctype="multipart/form-data" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+            <input type="hidden" name="form-name" value="contact-devis" />
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Votre Nom et Prénom *</label>
+                    <input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: Jean Dupont">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Téléphone *</label>
+                    <input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="06 00 00 00 00">
+                </div>
+            </div>
 
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Votre Email *</label>
-        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="nom@exemple.com">
-    </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Votre Email *</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="nom@exemple.com">
+            </div>
 
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rue et Numéro *</label>
-        <input type="text" name="rue" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="12 rue des Fleurs">
-    </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rue et Numéro *</label>
+                <input type="text" name="rue" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="12 rue des Fleurs">
+            </div>
 
-    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px;">
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Code Postal *</label>
-            <input type="text" name="code_postal" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="68680">
-        </div>
-        <div>
-            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ville *</label>
-            <input type="text" name="ville" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Kembs">
-        </div>
-    </div>
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Code Postal *</label>
+                    <input type="text" name="code_postal" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="68680">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ville *</label>
+                    <input type="text" name="ville" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Kembs">
+                </div>
+            </div>
 
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nature de la demande :</label>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
-            <label><input type="checkbox" name="type_travaux" value="Serrurerie"> Serrurerie</label>
-            <label><input type="checkbox" name="type_travaux" value="Plomberie"> Plomberie/Sanitaire</label>
-            <label><input type="checkbox" name="type_travaux" value="Meubles"> Montage de meubles</label>
-            <label><input type="checkbox" name="type_travaux" value="Electricité"> Électricité</label>
-            <label><input type="checkbox" name="type_travaux" value="Autre"> Autre besoin</label>
-        </div>
-    </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nature de la demande :</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+                    <label><input type="checkbox" name="type_travaux" value="Serrurerie"> Serrurerie</label>
+                    <label><input type="checkbox" name="type_travaux" value="Plomberie"> Plomberie/Sanitaire</label>
+                    <label><input type="checkbox" name="type_travaux" value="Meubles"> Montage de meubles</label>
+                    <label><input type="checkbox" name="type_travaux" value="Electricité"> Électricité</label>
+                    <label><input type="checkbox" name="type_travaux" value="Autre"> Autre besoin</label>
+                </div>
+            </div>
 
-    <div style="margin-bottom: 15px;">
-        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Description détaillée du problème *</label>
-        <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px;" placeholder="Plus vous m'en dites, plus le devis sera précis..."></textarea>
-    </div>
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Description détaillée du problème *</label>
+                <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px;" placeholder="Plus vous m'en dites, plus le devis sera précis..."></textarea>
+            </div>
 
-    <div style="margin-bottom: 20px; border: 2px dashed #007bff; padding: 15px; border-radius: 4px; background-color: #eef7ff; text-align: center;">
-        <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #007bff;">📸 Photo du problème (Conseillé)</label>
-        <input type="file" name="photo" accept="image/*" style="display: block; margin: 0 auto;">
-        <p style="font-size: 0.8em; color: #555; margin-top: 5px;">Indispensable pour un chiffrage rapide à distance !</p>
-    </div>
+            <div style="margin-bottom: 20px; border: 2px dashed #007bff; padding: 15px; border-radius: 4px; background-color: #eef7ff; text-align: center;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #007bff;">📸 Photo du problème (Conseillé)</label>
+                <input type="file" name="photo" accept="image/*" style="display: block; margin: 0 auto;">
+                <p style="font-size: 0.8em; color: #555; margin-top: 5px;">Indispensable pour un chiffrage rapide à distance !</p>
+            </div>
 
-    <div style="text-align: center;">
-        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1em; cursor: pointer; border: none; font-weight: bold;">ENVOYER MA DEMANDE GRATUITE</button>
-        <p style="font-size: 0.8em; margin-top: 10px; color: #888;">* Champs obligatoires - Réponse sous 24h</p>
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1em; cursor: pointer; border: none; font-weight: bold;">ENVOYER MA DEMANDE GRATUITE</button>
+                <p style="font-size: 0.8em; margin-top: 10px; color: #888;">* Champs obligatoires - Réponse sous 24h</p>
+            </div>
+        </form>
     </div>
-</form>
+</section>
 
     <footer>
         <div class="container">
