@@ -4,128 +4,327 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Coup de Main – L'artisan qu'il vous faut !</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* Conservation de ton style graphique original */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-        :root {
-            --blue: #1a4fcc;
-            --blue-dark: #0f2f80;
-            --blue-light: #e8eeff;
-            --accent: #f5a623;
-            --text: #1a1a2e;
-            --white: #ffffff;
-        }
-        body { font-family: 'DM Sans', sans-serif; color: var(--text); line-height: 1.6; }
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
-        .header-flex { display: flex; justify-content: space-between; align-items: center; }
-        .logo-wrap { display: flex; align-items: center; gap: 12px; }
-        .logo-img { width: 45px; height: 45px; border-radius: 10px; object-fit: cover; }
-        .logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--blue-dark); text-transform: uppercase; }
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav a { text-decoration: none; color: var(--text); font-weight: 600; }
-        .hero { padding: 100px 0; background: linear-gradient(135deg, var(--blue-light) 0%, #ffffff 100%); }
-        .hero h1 { font-family: 'Syne', sans-serif; font-size: 3.5rem; line-height: 1.1; color: var(--blue-dark); margin-bottom: 20px; }
-        .section { padding: 80px 0; }
-        .section-title { font-family: 'Syne', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
-        .tariff-card { background: var(--white); padding: 40px; border-radius: 24px; border: 1px solid #eee; }
-        .price-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
-        .price-val { font-weight: 800; color: var(--blue); }
-        .contact-card { background: var(--white); padding: 40px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: 600; }
-        input, textarea { width: 100%; padding: 12px; border: 2px solid #edf0f5; border-radius: 10px; font-family: inherit; }
-        .btn-primary { background: var(--blue); color: white; padding: 16px 32px; border-radius: 12px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; font-family: 'Syne', sans-serif; width: 100%; font-size: 1.1rem; }
-        .photo-upload { background: var(--blue-light); border: 2px dashed var(--blue); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
-        footer { background: var(--blue-dark); color: white; padding: 60px 0 30px; margin-top: 50px; }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-
+    
     <header>
-        <div class="container header-flex">
-            <div class="logo-wrap">
-                <img src="logo.jpg" alt="Logo" class="logo-img">
-                <span class="logo-text">Le Coup de Main</span>
-            </div>
+        <div class="container">
+            
+            <div class="logo-container">
+                <img src="logo.jpg" alt="Logo Le Coup de Main" class="logo-img">
+                <img src="FRANCE.jpg" alt="Drapeau France" class="drapeau-fr">
+                <h1 class="logo">Le Coup de Main</h1>
+            </div> 
+            
             <nav>
                 <ul>
+                    <li><a href="#about">Accueil</a></li>
+                    <li><a href="#prestations">Prestations</a></li>
                     <li><a href="#tarifs">Tarifs</a></li>
+                    <li><a href="#processus">Processus</a></li>
+                    <li><a href="#realisations">Exemples</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+
         </div>
     </header>
 
     <main>
-        <section class="hero">
+        <section id="accueil" class="hero">
             <div class="container">
-                <h1>L'artisan de confiance pour votre maison.</h1>
-                <p style="font-size: 1.2rem; max-width: 600px;">Maintenance, dépannage et petits travaux à Kembs et environs.</p>
-            </div>
-        </section>
-
-        <section id="tarifs" class="section">
-            <div class="container">
-                <h2 class="section-title">Tarification</h2>
-                <div class="tariff-card">
-                    <div class="price-row"><span>Première heure sur site</span><span class="price-val">60 € TTC</span></div>
-                    <div class="price-row"><span>Heures suivantes</span><span class="price-val">45 € TTC</span></div>
-                    <div class="price-row"><span>Déplacement (≤ 20km)</span><span class="price-val">OFFERT</span></div>
+                <div class="hero-content">
+                    <h1>Le Coup de Main – Le coup de main qu'il vous faut !</h1>
+                    <p class="subtitle">
+                        Petits travaux, dépannage et aménagement de votre maison : un artisan polyvalent, fiable et sympathique, qui vient chez vous avec le sourire... et les bons outils.
+                    </p>
+                    <p class="subtitle">
+                        Vous manquez de temps, d'outils ou tout simplement d'envie ? Je m'en occupe pour vous.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
+                        <a href="#prestations" class="btn btn-secondary">Découvrir les prestations</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section">
-            <div class="container" style="max-width: 700px;">
-                <h2 class="section-title">Demander un devis</h2>
-                <div class="contact-card">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/merci.html">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
-
-                        <div class="form-group">
-                            <label>Nom et Prénom *</label>
-                            <input type="text" name="nom" required>
-                        </div>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div class="form-group">
-                                <label>Téléphone *</label>
-                                <input type="tel" name="telephone" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Email *</label>
-                                <input type="email" name="email" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label>Votre projet / Problème *</label>
-                            <textarea name="message" required rows="4"></textarea>
-                        </div>
-                        <div class="photo-upload">
-                            <label style="color: var(--blue); cursor: pointer;">
-                                <strong>📸 Ajouter une photo (recommandé)</strong>
-                                <input type="file" name="photo" accept="image/*" style="margin-top: 10px; display: block; width: 100%;">
-                            </label>
-                        </div>
-                        <button type="submit" class="btn-primary">ENVOYER LA DEMANDE</button>
-                    </form>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>Un artisan de confiance, pour vos petits et moyens travaux</h2>
+                <p class="intro-text">
+                    Je m'appelle Julien et je suis votre Coup de Main local. Fort de mon expérience de 26 ans dans la maintenance aéroportuaire et diplômé en sanitaire, chauffage et serrurerie, j'ai développé une grande polyvalence et une capacité à réagir rapidement à tous les problèmes du quotidien. Je propose un service de dépannage rapide et de petits travaux à domicile, visant toujours la qualité et la satisfaction client. Je suis dès maintenant à votre service pour rendre votre maison plus confortable et fonctionnelle.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Réactivité</h4>
+                        <p>Intervention rapide et planification souple adaptée à votre emploi du temps.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>Polyvalence</h4>
+                        <p>Un seul contact pour une large gamme de travaux (montage, réparation, ajustement).</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Fiabilité</h4>
+                        <p>Devis respecté, travail soigné et sourire garanti à chaque intervention.</p>
+                    </div>
                 </div>
             </div>
         </section>
-    </main>
+
+        <section id="prestations" class="section-alt">
+            <div class="container">
+                <h2>Mes prestations phares</h2>
+                <div class="services-grid">
+                    
+                    <div class="service-card">
+                        <i class="fas fa-couch icon-service"></i> 
+                        <h3>Montage de Meubles</h3>
+                        <p>Assemblage de tous types de meubles (IKEA, Conforama, But...) : armoires, lits, bureaux, cuisines et étagères murales.</p>
+                    </div>
+                    
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb icon-service"></i> 
+                        <h3>Électricité</h3>
+                        <p>Petits travaux électriques : remplacement d'interrupteurs, pose de luminaires, installation de prises supplémentaires, raccordement d'appareils.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-faucet icon-service"></i> 
+                        <h3>Plomberie & Sanitaire</h3>
+                        <p><strong>Intervention par un artisan diplômé.</strong><br>Dépannage de fuites, remplacement de robinets et mitigeurs, joints d'étanchéité, raccordement de machines à laver et maintenance courante.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <i class="fas fa-key icon-service"></i> 
+                        <h3>Serrurerie</h3>
+                        <p><strong>Intervention par un artisan diplômé.</strong><br>Expertise technique pour sécuriser votre domicile : ouverture de portes claquées, remplacement de cylindres et serrures toutes marques, installation de verrous de sécurité, blindage de porte et réparation après effraction.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section id="realisations" class="section">
+            <div class="container">
+                <h2>Exemples de prestations en images</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 30px;">
+                    Voici une illustration des types de travaux que Le Coup de Main réalise pour vous (montage de meubles, réparation de plomberie, serrurerie, etc.).
+                </p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="realisation-1.png" alt="Montage meuble TV">
+                        <div class="caption">Montage meuble TV IKEA</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="realisation-2.png" alt="Remplacement robinet">
+                        <div class="caption">Remplacement de mitigeur de cuisine</div>
+                    </div>
+
+                    <div class="gallery-item">
+                        <img src="realisation-3.png" alt="Installation de dressing">
+                        <div class="caption">Assemblage et fixation de dressing</div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="réalisation-4.png" alt="Changement de poignée de porte et serrure">
+                        <div class="caption">Serrurerie : Changement de poignée et mécanisme de porte</div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+
+<section id="tarifs" class="section-alt">
+    <div class="container">
+        <h2>Transparence sur nos Tarifs</h2>
+        <p class="intro-text">
+            Le Coup de Main Services s'engage sur une tarification simple et honnête : vous payez uniquement pour le temps passé et les matériaux utilisés. Notre objectif est la transparence totale, sans aucune surprise pour le client.
+        </p>
+
+        <div class="tariffs-box">
+            
+            <div class="tariff-item-new">
+                <h3>Tarification Horaire (TTC)</h3>
+                
+                <div class="price-line">
+                    <span class="price-label">Première heure complète sur site :</span>
+                    <span class="price-value">60 €</span>
+                </div>
+                
+                <div class="price-line">
+                    <span class="price-label">Heure(s) supplémentaire(s) :</span>
+                    <span class="price-value">45 €</span>
+                </div>
+                
+            </div>
+            
+            <div class="tariff-item-new" style="border-top: 1px solid #ccc; padding-top: 30px; margin-top: 30px;">
+                <h3>Frais de Déplacement</h3>
+                
+                <div class="price-line">
+                    <span class="price-label">Rayon ≤ 20 km autour de Kembs :</span>
+                    <span class="price-value">Inclus (0 €)</span>
+                </div>
+                
+                <div class="price-line">
+                    <span class="price-label">Au-delà de 20 km :</span>
+                    <span class="price-value">0,60 € / km</span>
+                </div>
+                
+                <p class="note">
+                    *Les frais kilométriques sont calculés à partir du 21e km uniquement.*
+                </p>
+            </div>
+            
+            <div class="important-note">
+                <h3>Devis et Facturation</h3>
+                <p>
+                    Pour les tâches courantes (montage de meuble, pose de tringle, etc.), un forfait peut vous être proposé après analyse du travail. Un <strong>devis gratuit</strong> est systématiquement envoyé rapidement avant tout engagement.
+                </p>
+                <p style="color: var(--color-primary); margin-top: 15px;">
+                    Tous les tarifs sont affichés TTC (Toutes Taxes Comprises).
+                </p>
+            </div>
+
+        </div>
+        <p style="margin-top: 30px;"><a href="#contact" class="btn btn-primary">Demandez votre devis gratuit sans engagement</a></p>
+    </div>
+</section>
+
+        <section id="processus" class="section">
+            <div class="container">
+                <h2>Simple, clair et sans surprise</h2>
+                <div class="process-list">
+                    <div class="process-item">
+                        <h4>1. Vous m'expliquez votre besoin</h4>
+                        <p>Par téléphone ou via le formulaire.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>2. Je vous fais une estimation</h4>
+                        <p>Devis détaillé sans mauvaise surprise.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>3. Nous fixons un rendez-vous</h4>
+                        <p>Créneau choisi ensemble et respecté.</p>
+                    </div>
+                    <div class="process-item">
+                        <h4>4. Travaux réalisés, endroit propre</h4>
+                        <p>Intervention terminée, lieux nettoyés.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="section-alt">
+            <div class="container">
+                <h2>Avis Clients</h2>
+                <p class="intro-text">
+                    La satisfaction est ma priorité ! Laissez un avis sur ma page Google suite à votre intervention.
+                </p>
+                <div class="review-box">
+                    <p class="placeholder-text">
+                        "Un service impeccable et rapide. Je recommande vivement Julien !" - (Client Satisfait)
+                    </p>
+                    <a href="#about" class="btn btn-primary">Découvrir l'artisan (Julien)</a>
+                </div>
+            </div>
+        </section>
+
+    <section id="contact" class="section">
+    <div class="container">
+        <h2>Contactez-nous</h2>
+        <p style="text-align: center; margin-bottom: 20px;">Décrivez votre projet, joignez une photo et recevez votre devis sous 24h.</p>
+        
+       <form name="contact" method="POST" data-netlify="true" action="/index.html?success" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+    <input type="hidden" name="form-name" value="contact" />
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Votre Nom et Prénom *</label>
+                    <input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: Jean Dupont">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Téléphone *</label>
+                    <input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="06 00 00 00 00">
+                </div>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Votre Email *</label>
+                <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="nom@exemple.com">
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Rue et Numéro *</label>
+                <input type="text" name="rue" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="12 rue des Fleurs">
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 15px; margin-bottom: 15px;">
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Code Postal *</label>
+                    <input type="text" name="code_postal" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="68680">
+                </div>
+                <div>
+                    <label style="display: block; margin-bottom: 5px; font-weight: bold;">Ville *</label>
+                    <input type="text" name="ville" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Kembs">
+                </div>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nature de la demande :</label>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+                    <label><input type="checkbox" name="type_travaux" value="Serrurerie"> Serrurerie</label>
+                    <label><input type="checkbox" name="type_travaux" value="Plomberie"> Plomberie/Sanitaire</label>
+                    <label><input type="checkbox" name="type_travaux" value="Meubles"> Montage de meubles</label>
+                    <label><input type="checkbox" name="type_travaux" value="Electricité"> Électricité</label>
+                    <label><input type="checkbox" name="type_travaux" value="Autre"> Autre besoin</label>
+                </div>
+            </div>
+
+            <div style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 5px; font-weight: bold;">Description détaillée du problème *</label>
+                <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px;" placeholder="Plus vous m'en dites, plus le devis sera précis..."></textarea>
+            </div>
+
+            <div style="margin-bottom: 20px; border: 2px dashed #007bff; padding: 15px; border-radius: 4px; background-color: #eef7ff; text-align: center;">
+                <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #007bff;">📸 Photo du problème (Conseillé)</label>
+                <input type="file" name="photo" accept="image/*" style="display: block; margin: 0 auto;">
+                <p style="font-size: 0.8em; color: #555; margin-top: 5px;">Indispensable pour un chiffrage rapide à distance !</p>
+            </div>
+
+            <div style="text-align: center;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1em; cursor: pointer; border: none; font-weight: bold;">ENVOYER MA DEMANDE GRATUITE</button>
+                <p style="font-size: 0.8em; margin-top: 10px; color: #888;">* Champs obligatoires - Réponse sous 24h</p>
+            </div>
+        </form>
+    </div>
+</section>
 
     <footer>
-        <div class="container" style="text-align: center;">
-            <p>&copy; 2026 Le Coup de Main Services. Tous droits réservés.</p>
+        <div class="container">
+            <div class="footer-content" style="margin-bottom: 30px;">
+                <h3>Horaires d'intervention</h3>
+                <p>Lundi - Vendredi : <strong>08h00 - 19h00</strong></p>
+                <p>Samedi : <strong>09h00 - 17h00</strong></p>
+                <p>Dimanche & Jours fériés : <strong>Fermé</strong> (Repos bien mérité !)</p>
+            </div>
+
+            <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+
+            <p style="font-size: 1.5em; font-weight: bold; margin-bottom: 20px;">À bientôt !</p>
+            <p>&copy; Le Coup de Main. Tous droits réservés.</p>
+            <p>
+                Site vitrine – petits travaux, dépannage et aménagement de la maison.
+            </p>
         </div>
     </footer>
-
-</body>
+    </body>
 </html>
