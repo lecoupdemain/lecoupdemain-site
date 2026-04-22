@@ -4,25 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Coup de Main – L'artisan qu'il vous faut !</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* RESET & BASE */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --blue: #1a4fcc;
+            --blue-dark: #0f2f80;
+            --blue-light: #e8eeff;
+            --accent: #f5a623;
+            --text: #1a1a2e;
+            --white: #ffffff;
+            --gray-light: #f8f9fc;
+        }
+        body { font-family: 'DM Sans', sans-serif; color: var(--text); line-height: 1.6; background-color: var(--white); }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+        /* HEADER */
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; }
+        .logo-img { width: 45px; height: 45px; border-radius: 10px; object-fit: cover; }
+        .logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--blue-dark); text-transform: uppercase; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.95rem; }
+
+        /* HERO */
+        .hero { padding: 100px 0; background: linear-gradient(135deg, var(--blue-light) 0%, #ffffff 100%); }
+        .hero h1 { font-family: 'Syne', sans-serif; font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; color: var(--blue-dark); }
+        .btn { display: inline-block; padding: 16px 32px; border-radius: 12px; font-weight: 700; text-decoration: none; transition: all 0.3s; font-family: 'Syne', sans-serif; border: none; cursor: pointer; }
+        .btn-primary { background: var(--blue); color: white; }
+
+        /* SECTIONS */
+        .section { padding: 80px 0; }
+        .section-alt { padding: 80px 0; background-color: var(--gray-light); }
+        .section-title { font-family: 'Syne', sans-serif; font-size: 2.5rem; margin-bottom: 40px; text-align: center; color: var(--blue-dark); }
+
+        /* SERVICES GRID */
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+        .service-card { background: white; padding: 30px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.03); text-align: center; }
+        .service-card i { font-size: 2.5rem; color: var(--blue); margin-bottom: 20px; }
+
+        /* PROCESSUS & TARIFS */
+        .process-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 30px; }
+        .tariff-card { background: white; padding: 30px; border-radius: 20px; max-width: 600px; margin: 0 auto; }
+        .price-line { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #eee; }
+        .price-val { font-weight: 800; color: var(--blue); }
+
+        /* CONTACT */
+        .contact-card { background: white; padding: 40px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        input, textarea { width: 100%; padding: 12px; border: 2px solid #edf0f5; border-radius: 10px; font-family: inherit; }
+        .photo-box { background: var(--blue-light); border: 2px dashed var(--blue); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
+
+        /* GALLERY */
+        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+        .gallery-item img { width: 100%; border-radius: 15px; }
+
+        footer { background: var(--blue-dark); color: white; padding: 60px 0 20px; text-align: center; }
+    </style>
 </head>
 <body>
-    
+
     <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.jpg" alt="Logo Le Coup de Main" class="logo-img">
-                <img src="FRANCE.jpg" alt="Drapeau France" class="drapeau-fr">
-                <h1 class="logo">Le Coup de Main</h1>
-            </div> 
+        <div class="container header-flex">
+            <div class="logo-wrap">
+                <img src="logo.jpg" alt="Logo" class="logo-img">
+                <span class="logo-text">Le Coup de Main</span>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#about">Accueil</a></li>
-                    <li><a href="#prestations">Prestations</a></li>
+                    <li><a href="#prestations">Services</a></li>
                     <li><a href="#tarifs">Tarifs</a></li>
-                    <li><a href="#processus">Processus</a></li>
-                    <li><a href="#realisations">Exemples</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -32,108 +91,94 @@
     <main>
         <section id="accueil" class="hero">
             <div class="container">
-                <div class="hero-content">
-                    <h1>Le Coup de Main – Le coup de main qu'il vous faut !</h1>
-                    <p class="subtitle">Petits travaux, dépannage et aménagement de votre maison : un artisan polyvalent, fiable et sympathique.</p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
-                        <a href="#prestations" class="btn btn-secondary">Découvrir les prestations</a>
-                    </div>
-                </div>
+                <h1>Le coup de main qu'il vous faut.</h1>
+                <p style="font-size: 1.2rem; max-width: 600px; margin-bottom: 30px;">
+                    Maintenance, dépannage et petits travaux à domicile. 26 ans d'expérience au service de votre confort.
+                </p>
+                <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
             </div>
         </section>
 
         <section id="about" class="section">
             <div class="container">
-                <h2>Un artisan de confiance</h2>
-                <p class="intro-text">
-                    Je m'appelle Julien et je suis votre Coup de Main local. Fort de mon expérience de 26 ans dans la maintenance aéroportuaire et diplômé en sanitaire, chauffage et serrurerie.
+                <h2 class="section-title">Un artisan polyvalent et fiable</h2>
+                <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
+                    Je m'appelle Julien. Fort de mon expérience de 26 ans, je propose des interventions rapides en plomberie, serrurerie, électricité et montage de meubles à Kembs et ses environs.
                 </p>
-                <div class="features-grid">
-                    <div class="feature-item"><i class="fas fa-clock"></i><h4>Réactivité</h4><p>Intervention rapide adaptée à votre emploi du temps.</p></div>
-                    <div class="feature-item"><i class="fas fa-tools"></i><h4>Polyvalence</h4><p>Un seul contact pour tous vos travaux.</p></div>
-                    <div class="feature-item"><i class="fas fa-handshake"></i><h4>Fiabilité</h4><p>Devis respecté et travail soigné.</p></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="prestations" class="section-alt">
-            <div class="container">
-                <h2>Mes prestations phares</h2>
                 <div class="services-grid">
-                    <div class="service-card"><h3>Montage de Meubles</h3><p>Assemblage de tous types de meubles (IKEA, Conforama...).</p></div>
-                    <div class="service-card"><h3>Électricité</h3><p>Petits travaux : luminaires, prises, interrupteurs.</p></div>
-                    <div class="service-card"><h3>Plomberie & Sanitaire</h3><p>Artisan diplômé. Fuites, robinets, joints.</p></div>
-                    <div class="service-card"><h3>Serrurerie</h3><p>Artisan diplômé. Ouvertures, cylindres, verrous.</p></div>
+                    <div class="service-card"><i class="fas fa-faucet"></i><h3>Plomberie</h3><p>Dépannage fuites, robinetterie.</p></div>
+                    <div class="service-card"><i class="fas fa-key"></i><h3>Serrurerie</h3><p>Ouverture, changement de cylindre.</p></div>
+                    <div class="service-card"><i class="fas fa-couch"></i><h3>Montage</h3><p>Meubles, cuisines, dressings.</p></div>
+                    <div class="service-card"><i class="fas fa-lightbulb"></i><h3>Électricité</h3><p>Luminaires, prises, dépannage.</p></div>
                 </div>
             </div>
         </section>
 
-        <section id="realisations" class="section">
+        <section id="processus" class="section-alt">
             <div class="container">
-                <h2>Exemples en images</h2>
-                <div class="gallery-grid">
-                    <div class="gallery-item"><img src="realisation-1.png" alt="Montage meuble TV"><div class="caption">Meuble TV</div></div>
-                    <div class="gallery-item"><img src="realisation-2.png" alt="Remplacement robinet"><div class="caption">Plomberie</div></div>
-                    <div class="gallery-item"><img src="realisation-3.png" alt="Installation de dressing"><div class="caption">Dressing</div></div>
-                    <div class="gallery-item"><img src="réalisation-4.png" alt="Serrure"><div class="caption">Serrurerie</div></div>
-                </div>
-            </div>
-        </section>
-
-        <section id="tarifs" class="section-alt">
-            <div class="container">
-                <h2>Nos Tarifs</h2>
-                <div class="tariffs-box">
-                    <div class="tariff-item-new">
-                        <h3>Tarification Horaire (TTC)</h3>
-                        <div class="price-line"><span>1ère heure :</span><span class="price-value">60 €</span></div>
-                        <div class="price-line"><span>Suivantes :</span><span class="price-value">45 €</span></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="processus" class="section">
-            <div class="container">
-                <h2>Simple, clair et sans surprise</h2>
+                <h2 class="section-title">Mon Processus</h2>
                 <div class="process-list">
-                    <div class="process-item"><h4>1. Votre besoin</h4><p>Par téléphone ou formulaire.</p></div>
-                    <div class="process-item"><h4>2. Estimation</h4><p>Devis détaillé rapide.</p></div>
-                    <div class="process-item"><h4>3. Rendez-vous</h4><p>Créneau choisi ensemble.</p></div>
-                    <div class="process-item"><h4>4. Travaux propres</h4><p>Lieux nettoyés après intervention.</p></div>
+                    <div class="service-card"><h4>1. Demande</h4><p>Expliquez-moi votre besoin par le formulaire.</p></div>
+                    <div class="service-card"><h4>2. Devis</h4><p>Estimation précise envoyée sous 24h.</p></div>
+                    <div class="service-card"><h4>3. Chantier</h4><p>Intervention soignée à la date fixée.</p></div>
+                    <div class="service-card"><h4>4. Propreté</h4><p>Fin de travaux avec nettoyage des lieux.</p></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="tarifs" class="section">
+            <div class="container">
+                <h2 class="section-title">Tarifs</h2>
+                <div class="tariff-card">
+                    <div class="price-line"><span>1ère heure sur site</span><span class="price-val">60 € TTC</span></div>
+                    <div class="price-line"><span>Heures supplémentaires</span><span class="price-val">45 € TTC</span></div>
+                    <div class="price-line"><span>Déplacement (≤ 20km Kembs)</span><span class="price-val">OFFERT</span></div>
                 </div>
             </div>
         </section>
 
         <section id="contact" class="section-alt">
-            <div class="container">
-                <h2>Contactez-nous</h2>
-                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/merci.html" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
-                    <input type="hidden" name="form-name" value="contact" />
-                    <p style="display:none;"><label>Bot: <input name="bot-field"></label></p>
-                    
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-                        <input type="text" name="nom" required placeholder="Nom et Prénom *" style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
-                        <input type="tel" name="telephone" required placeholder="Téléphone *" style="padding: 10px; border-radius: 4px; border: 1px solid #ccc;">
-                    </div>
-                    <input type="email" name="email" required placeholder="Email *" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc;">
-                    <textarea name="message" required placeholder="Votre projet..." style="width: 100%; padding: 10px; height: 100px; margin-bottom: 15px; border-radius: 4px; border: 1px solid #ccc;"></textarea>
-                    
-                    <div style="margin-bottom: 20px; border: 2px dashed #007bff; padding: 15px; text-align: center;">
-                        <label>📸 Photo du problème</label>
-                        <input type="file" name="photo" accept="image/*" style="display: block; margin: 10px auto;">
-                    </div>
-                    <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-weight: bold;">ENVOYER MA DEMANDE</button>
-                </form>
+            <div class="container" style="max-width: 700px;">
+                <h2 class="section-title">Contact</h2>
+                <div class="contact-card">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/merci.html">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p style="display:none;"><label>Bot field: <input name="bot-field"></label></p>
+
+                        <div class="form-group">
+                            <label>Nom et Prénom *</label>
+                            <input type="text" name="nom" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" name="telephone" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Email *</label>
+                            <input type="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Description du projet *</label>
+                            <textarea name="message" rows="4" required></textarea>
+                        </div>
+                        <div class="photo-box">
+                            <label style="color: var(--blue); cursor: pointer; font-weight: bold;">
+                                📸 Ajouter une photo (Conseillé)
+                                <input type="file" name="photo" accept="image/*" style="display: block; margin: 10px auto;">
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">ENVOYER LA DEMANDE</button>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container" style="text-align: center; padding: 40px 0;">
-            <p>&copy; Le Coup de Main. Tous droits réservés.</p>
+        <div class="container">
+            <p>&copy; 2026 Le Coup de Main. Tous droits réservés.</p>
         </div>
     </footer>
+
 </body>
 </html>
