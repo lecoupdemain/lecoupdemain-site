@@ -4,162 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Le Coup de Main – L'artisan qu'il vous faut !</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-
-    <style>
-        /* RESET & BASE */
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-        :root {
-            --blue:        #1a4fcc;
-            --blue-dark:   #0f2f80;
-            --blue-light:  #e8eeff;
-            --accent:      #f5a623;
-            --text:        #1a1a2e;
-            --white:       #ffffff;
-            --gray-light:  #f8f9fc;
-            --gray-border: #edf0f5;
-        }
-
-        body {
-            font-family: 'DM Sans', sans-serif;
-            color: var(--text);
-            line-height: 1.6;
-            background-color: var(--white);
-            overflow-x: hidden;
-        }
-
-        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-
-        /* HEADER */
-        header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
-        }
-
-        .header-flex { display: flex; justify-content: space-between; align-items: center; }
-
-        .logo-wrap { display: flex; align-items: center; gap: 12px; }
-        .logo-img { width: 45px; height: 45px; border-radius: 10px; object-fit: cover; }
-        .logo-text {
-            font-family: 'Syne', sans-serif;
-            font-weight: 800;
-            font-size: 1.4rem;
-            color: var(--blue-dark);
-            text-transform: uppercase;
-            letter-spacing: -0.5px;
-        }
-
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav a {
-            text-decoration: none;
-            color: var(--text);
-            font-weight: 600;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        nav a:hover { color: var(--blue); }
-
-        /* HERO */
-        .hero {
-            padding: 100px 0;
-            background: linear-gradient(135deg, var(--blue-light) 0%, #ffffff 100%);
-            position: relative;
-        }
-        .hero h1 {
-            font-family: 'Syne', sans-serif;
-            font-size: 3.5rem;
-            line-height: 1.1;
-            margin-bottom: 25px;
-            color: var(--blue-dark);
-        }
-        .hero p { font-size: 1.2rem; margin-bottom: 35px; max-width: 650px; opacity: 0.9; }
-
-        .btn {
-            display: inline-block;
-            padding: 16px 32px;
-            border-radius: 12px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: all 0.3s;
-            font-family: 'Syne', sans-serif;
-        }
-        .btn-primary { background: var(--blue); color: white; box-shadow: 0 10px 20px rgba(26, 79, 204, 0.2); border: none; cursor: pointer; }
-        .btn-primary:hover { background: var(--blue-dark); transform: translateY(-2px); }
-
-        /* SECTIONS */
-        .section { padding: 80px 0; }
-        .section-alt { padding: 80px 0; background-color: var(--gray-light); }
-        .section-title { font-family: 'Syne', sans-serif; font-size: 2.5rem; margin-bottom: 40px; text-align: center; color: var(--blue-dark); }
-
-        /* TARIFS */
-        .tariff-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 24px;
-            border: 1px solid #eee;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
-        }
-        .price-line { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
-        .price-val { font-weight: 800; color: var(--blue); font-size: 1.2rem; }
-
-        /* CONTACT FORM */
-        .contact-card {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 24px;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.05);
-        }
-        .form-group { margin-bottom: 20px; }
-        label { display: block; margin-bottom: 8px; font-weight: 600; font-size: 0.9rem; }
-        input, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid var(--gray-border);
-            border-radius: 10px;
-            font-family: inherit;
-            transition: border-color 0.3s;
-        }
-        input:focus, textarea:focus { border-color: var(--blue); outline: none; }
-
-        .photo-upload {
-            background: var(--blue-light);
-            border: 2px dashed var(--blue);
-            padding: 20px;
-            border-radius: 12px;
-            text-align: center;
-            margin: 20px 0;
-            cursor: pointer;
-        }
-
-        /* FOOTER */
-        footer { background: var(--blue-dark); color: white; padding: 60px 0 30px; }
-        .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
-        .footer-grid h3 { font-family: 'Syne', sans-serif; margin-bottom: 20px; color: var(--accent); }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-
+    
     <header>
-        <div class="container header-flex">
-            <div class="logo-wrap">
+        <div class="container">
+            <div class="logo-container">
                 <img src="logo.jpg" alt="Logo Le Coup de Main" class="logo-img">
-                <span class="logo-text">Le Coup de Main</span>
-            </div>
+                <img src="FRANCE.jpg" alt="Drapeau France" class="drapeau-fr">
+                <h1 class="logo">Le Coup de Main</h1>
+            </div> 
+            
             <nav>
                 <ul>
                     <li><a href="#about">Accueil</a></li>
                     <li><a href="#prestations">Prestations</a></li>
                     <li><a href="#tarifs">Tarifs</a></li>
+                    <li><a href="#processus">Processus</a></li>
+                    <li><a href="#realisations">Exemples</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -167,136 +31,180 @@
     </header>
 
     <main>
-        <section class="hero">
+        <section id="accueil" class="hero">
             <div class="container">
-                <h1>L'artisan de confiance pour votre maison.</h1>
-                <p>
-                    Petits travaux, dépannage et aménagement à Kembs et environs. 
-                    Un artisan polyvalent, fiable et diplômé à votre service.
-                </p>
-                <div style="display: flex; gap: 15px;">
-                    <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
+                <div class="hero-content">
+                    <h1>Le Coup de Main – Le coup de main qu'il vous faut !</h1>
+                    <p class="subtitle">
+                        Petits travaux, dépannage et aménagement de votre maison : un artisan polyvalent, fiable et sympathique, qui vient chez vous avec le sourire... et les bons outils.
+                    </p>
+                    <p class="subtitle">
+                        Vous manquez de temps, d'outils ou tout simplement d'envie ? Je m'en occupe pour vous.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
+                        <a href="#prestations" class="btn btn-secondary">Découvrir les prestations</a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="about" class="section">
             <div class="container">
-                <h2 class="section-title">26 ans d'expérience à votre service</h2>
-                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                    <p style="font-size: 1.1rem; margin-bottom: 30px;">
-                        Je m'appelle Julien. Diplômé en sanitaire, chauffage et serrurerie, je mets mon savoir-faire au service de vos petits travaux du quotidien. 
-                        Réactivité, travail soigné et transparence sont les piliers de <strong>Le Coup de Main</strong>.
-                    </p>
+                <h2>Un artisan de confiance, pour vos petits et moyens travaux</h2>
+                <p class="intro-text">
+                    Je m'appelle Julien et je suis votre Coup de Main local. Fort de mon expérience de 26 ans dans la maintenance aéroportuaire et diplômé en sanitaire, chauffage et serrurerie, j'ai développé une grande polyvalence et une capacité à réagir rapidement à tous les problèmes du quotidien. Je propose un service de dépannage rapide et de petits travaux à domicile, visant toujours la qualité et la satisfaction client.
+                </p>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <i class="fas fa-clock"></i>
+                        <h4>Réactivité</h4>
+                        <p>Intervention rapide et planification souple adaptée à votre emploi du temps.</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-tools"></i>
+                        <h4>Polyvalence</h4>
+                        <p>Un seul contact pour une large gamme de travaux (montage, réparation, ajustement).</p>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Fiabilité</h4>
+                        <p>Devis respecté, travail soigné et sourire garanti à chaque intervention.</p>
+                    </div>
                 </div>
             </div>
         </section>
 
         <section id="prestations" class="section-alt">
             <div class="container">
-                <h2 class="section-title">Mes domaines d'intervention</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                    <div class="tariff-card" style="text-align: center;">
-                        <i class="fas fa-faucet" style="font-size: 2rem; color: var(--blue); margin-bottom: 15px;"></i>
-                        <h3>Plomberie</h3>
-                        <p>Fuites, robinetterie, raccordements.</p>
+                <h2>Mes prestations phares</h2>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <i class="fas fa-couch icon-service"></i> 
+                        <h3>Montage de Meubles</h3>
+                        <p>Assemblage de tous types de meubles (IKEA, Conforama, But...) : armoires, lits, bureaux, cuisines et étagères murales.</p>
                     </div>
-                    <div class="tariff-card" style="text-align: center;">
-                        <i class="fas fa-key" style="font-size: 2rem; color: var(--blue); margin-bottom: 15px;"></i>
-                        <h3>Serrurerie</h3>
-                        <p>Ouverture, changement de cylindre.</p>
-                    </div>
-                    <div class="tariff-card" style="text-align: center;">
-                        <i class="fas fa-couch" style="font-size: 2rem; color: var(--blue); margin-bottom: 15px;"></i>
-                        <h3>Montage</h3>
-                        <p>Meubles, cuisines, dressings.</p>
-                    </div>
-                    <div class="tariff-card" style="text-align: center;">
-                        <i class="fas fa-lightbulb" style="font-size: 2rem; color: var(--blue); margin-bottom: 15px;"></i>
+                    <div class="service-card">
+                        <i class="fas fa-lightbulb icon-service"></i> 
                         <h3>Électricité</h3>
-                        <p>Luminaires, prises, interrupteurs.</p>
+                        <p>Petits travaux électriques : remplacement d'interrupteurs, pose de luminaires, installation de prises supplémentaires.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-faucet icon-service"></i> 
+                        <h3>Plomberie & Sanitaire</h3>
+                        <p><strong>Artisan diplômé.</strong><br>Dépannage de fuites, remplacement de robinets, joints d'étanchéité et raccordements.</p>
+                    </div>
+                    <div class="service-card">
+                        <i class="fas fa-key icon-service"></i> 
+                        <h3>Serrurerie</h3>
+                        <p><strong>Artisan diplômé.</strong><br>Ouverture de portes claquées, remplacement de cylindres, installation de verrous et réparation après effraction.</p>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="tarifs" class="section">
+        
+        <section id="realisations" class="section">
             <div class="container">
-                <h2 class="section-title">Tarifs simples et clairs</h2>
-                <div class="tariff-card" style="max-width: 600px; margin: 0 auto;">
-                    <div class="price-line">
-                        <span>Première heure complète sur site</span>
-                        <span class="price-val">60 € TTC</span>
+                <h2>Exemples de prestations en images</h2>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="realisation-1.png" alt="Montage meuble TV">
+                        <div class="caption">Montage meuble TV IKEA</div>
                     </div>
-                    <div class="price-line">
-                        <span>Heure(s) suivante(s)</span>
-                        <span class="price-val">45 € TTC</span>
+                    <div class="gallery-item">
+                        <img src="realisation-2.png" alt="Remplacement robinet">
+                        <div class="caption">Remplacement de mitigeur de cuisine</div>
                     </div>
-                    <div class="price-line">
-                        <span>Déplacement (≤ 20 km autour de Kembs)</span>
-                        <span class="price-val">OFFERT</span>
+                    <div class="gallery-item">
+                        <img src="realisation-3.png" alt="Installation de dressing">
+                        <div class="caption">Assemblage et fixation de dressing</div>
                     </div>
-                    <p style="margin-top: 20px; font-size: 0.9rem; color: #666; text-align: center;">
-                        * Au-delà de 20 km : 0,60 € / km à partir du 21ème km.
-                    </p>
+                    <div class="gallery-item">
+                        <img src="réalisation-4.png" alt="Changement de serrure">
+                        <div class="caption">Serrurerie : Changement de mécanisme</div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="section-alt">
-            <div class="container" style="max-width: 700px;">
-                <h2 class="section-title">Contactez-moi</h2>
-                <div class="contact-card">
-                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/merci.html">
-                        <input type="hidden" name="form-name" value="contact" />
-                        <p style="display:none;"><label>Bot field: <input name="bot-field"></label></p>
-
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
-                            <div class="form-group">
-                                <label>Nom et Prénom *</label>
-                                <input type="text" name="nom" required>
-                            </div>
-                            <div class="form-group">
-                                <label>Téléphone *</label>
-                                <input type="tel" name="telephone" required>
-                            </div>
+        <section id="tarifs" class="section-alt">
+            <div class="container">
+                <h2>Transparence sur nos Tarifs</h2>
+                <div class="tariffs-box">
+                    <div class="tariff-item-new">
+                        <h3>Tarification Horaire (TTC)</h3>
+                        <div class="price-line">
+                            <span class="price-label">Première heure complète sur site :</span>
+                            <span class="price-value">60 €</span>
                         </div>
-
-                        <div class="form-group">
-                            <label>Votre Email *</label>
-                            <input type="email" name="email" required>
+                        <div class="price-line">
+                            <span class="price-label">Heure(s) supplémentaire(s) :</span>
+                            <span class="price-value">45 €</span>
                         </div>
-
-                        <div class="form-group">
-                            <label>Description du projet ou du problème *</label>
-                            <textarea name="message" rows="4" required></textarea>
+                    </div>
+                    <div class="tariff-item-new" style="border-top: 1px solid #ccc; padding-top: 30px; margin-top: 30px;">
+                        <h3>Frais de Déplacement</h3>
+                        <div class="price-line">
+                            <span class="price-label">Rayon ≤ 20 km autour de Kembs :</span>
+                            <span class="price-value">Inclus (0 €)</span>
                         </div>
-
-                        <div class="photo-upload">
-                            <label style="color: var(--blue); font-weight: bold; cursor: pointer;">
-                                📸 Ajouter une photo (Conseillé)
-                                <input type="file" name="photo" accept="image/*" style="display: block; margin: 10px auto;">
-                            </label>
+                        <div class="price-line">
+                            <span class="price-label">Au-delà de 20 km :</span>
+                            <span class="price-value">0,60 € / km</span>
                         </div>
-
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">ENVOYER MA DEMANDE</button>
-                    </form>
+                    </div>
                 </div>
+                <p style="margin-top: 30px; text-align: center;"><a href="#contact" class="btn btn-primary">Demander un devis gratuit</a></p>
+            </div>
+        </section>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Contactez-nous</h2>
+                <p style="text-align: center; margin-bottom: 20px;">Décrivez votre projet, joignez une photo et recevez votre devis sous 24h.</p>
+                
+                <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/merci.html" class="contact-form-netlify" style="background: #fdfdfd; padding: 20px; border-radius: 8px; border: 1px solid #eee;">
+                    <input type="hidden" name="form-name" value="contact" />
+                    <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Nom et Prénom *</label>
+                            <input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: Jean Dupont">
+                        </div>
+                        <div>
+                            <label style="display: block; margin-bottom: 5px; font-weight: bold;">Téléphone *</label>
+                            <input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="06 00 00 00 00">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Email *</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="nom@exemple.com">
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; margin-bottom: 5px; font-weight: bold;">Description détaillée *</label>
+                        <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px;" placeholder="Plus vous m'en dites, plus le devis sera précis..."></textarea>
+                    </div>
+
+                    <div style="margin-bottom: 20px; border: 2px dashed #007bff; padding: 15px; border-radius: 4px; background-color: #eef7ff; text-align: center;">
+                        <label style="display: block; margin-bottom: 8px; font-weight: bold; color: #007bff;">📸 Photo du problème (Conseillé)</label>
+                        <input type="file" name="photo" accept="image/*" style="display: block; margin: 0 auto;">
+                    </div>
+
+                    <div style="text-align: center;">
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; font-size: 1.1em; cursor: pointer; border: none; font-weight: bold;">ENVOYER MA DEMANDE GRATUITE</button>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
 
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>Horaires</h3>
-                    <p>Lundi – Vendredi : 08h00 – 19h00</p>
-                    <p>Samedi : 09h00 – 17h00</p>
-                </div>
-                <div>
-                    <h3>Zone d'action</h3>
-                    <p>Kembs, Sierentz, Saint-Louis et environs.</p>
-                </div>
-                <div>
-                    <h3>
+        <div class="container" style="text-align: center;">
+            <p>&copy; Le Coup de Main. Tous droits réservés.</p>
+        </div>
+    </footer>
+</body>
+</html>
