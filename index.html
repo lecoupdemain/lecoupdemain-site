@@ -11,741 +11,52 @@
     <link rel="stylesheet" href="style.css">
 
     <style>
-        /* =========================================================
-           RESET & BASE
-        ========================================================= */
+        /* Conservation de ton style graphique original */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
         :root {
-            --blue:        #1a4fcc;
-            --blue-dark:   #0f2f80;
-            --blue-light:  #e8eeff;
-            --accent:      #f5a623;
-            --text:        #1a1a2e;
-            --text-light:  #5a5a7a;
-            --bg:          #f7f8fc;
-            --white:       #ffffff;
-            --border:      #e0e3ef;
-            --radius:      10px;
-            --shadow:      0 4px 24px rgba(26,79,204,.10);
-            --shadow-lg:   0 8px 40px rgba(26,79,204,.15);
-            --font-head:   'Syne', sans-serif;
-            --font-body:   'DM Sans', sans-serif;
-        }
-
-        html { scroll-behavior: smooth; }
-
-        body {
-            font-family: var(--font-body);
-            font-size: 1rem;
-            color: var(--text);
-            background: var(--bg);
-            line-height: 1.7;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: var(--font-head);
-            line-height: 1.2;
-        }
-
-        a { color: inherit; text-decoration: none; }
-
-        img { max-width: 100%; display: block; }
-
-        /* =========================================================
-           HEADER
-        ========================================================= */
-        header {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: var(--white);
-            border-bottom: 1px solid var(--border);
-            box-shadow: 0 2px 12px rgba(26,79,204,.07);
-        }
-
-        header .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding-top: 14px;
-            padding-bottom: 14px;
-            gap: 20px;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex-shrink: 0;
-        }
-
-        .logo-img {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .drapeau-fr {
-            width: 28px;
-            height: auto;
-            border-radius: 3px;
-        }
-
-        .logo-text {
-            font-family: var(--font-head);
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--blue-dark);
-            letter-spacing: -0.5px;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            gap: 6px;
-            flex-wrap: wrap;
-        }
-
-        nav ul li a {
-            font-family: var(--font-body);
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: var(--text);
-            padding: 6px 12px;
-            border-radius: 6px;
-            transition: background .2s, color .2s;
-        }
-
-        nav ul li a:hover {
-            background: var(--blue-light);
-            color: var(--blue);
-        }
-
-        /* =========================================================
-           BUTTONS
-        ========================================================= */
-        .btn {
-            display: inline-block;
-            font-family: var(--font-head);
-            font-size: 0.95rem;
-            font-weight: 700;
-            padding: 13px 28px;
-            border-radius: var(--radius);
-            cursor: pointer;
-            transition: transform .15s, box-shadow .15s, background .2s;
-            text-align: center;
-        }
-
-        .btn:hover { transform: translateY(-2px); }
-
-        .btn-primary {
-            background: var(--blue);
-            color: var(--white);
-            box-shadow: 0 4px 16px rgba(26,79,204,.30);
-        }
-
-        .btn-primary:hover {
-            background: var(--blue-dark);
-            box-shadow: 0 6px 24px rgba(26,79,204,.40);
-        }
-
-        .btn-secondary {
-            background: var(--white);
-            color: var(--blue);
-            border: 2px solid var(--blue);
-        }
-
-        .btn-secondary:hover {
-            background: var(--blue-light);
-        }
-
-        /* =========================================================
-           HERO
-        ========================================================= */
-        .hero {
-            background: linear-gradient(135deg, var(--blue-dark) 0%, var(--blue) 60%, #3a6fe8 100%);
-            color: var(--white);
-            padding: 100px 0 80px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        }
-
-        .hero .container { position: relative; z-index: 1; }
-
-        .hero-badge {
-            display: inline-block;
-            background: rgba(255,255,255,.15);
-            border: 1px solid rgba(255,255,255,.3);
-            color: #fff;
-            font-size: 0.82rem;
-            font-weight: 600;
-            padding: 5px 14px;
-            border-radius: 99px;
-            margin-bottom: 24px;
-            letter-spacing: .5px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: clamp(2rem, 4vw, 3.2rem);
-            font-weight: 800;
-            margin-bottom: 22px;
-            max-width: 720px;
-            text-shadow: 0 2px 8px rgba(0,0,0,.2);
-        }
-
-        .hero .subtitle {
-            font-size: 1.1rem;
-            font-weight: 300;
-            opacity: .9;
-            max-width: 620px;
-            margin-bottom: 12px;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 16px;
-            margin-top: 36px;
-            flex-wrap: wrap;
-        }
-
-        /* =========================================================
-           SECTIONS
-        ========================================================= */
-        .section       { padding: 80px 0; background: var(--white); }
-        .section-alt   { padding: 80px 0; background: var(--bg); }
-
-        .section h2, .section-alt h2 {
-            font-size: clamp(1.6rem, 3vw, 2.2rem);
-            font-weight: 800;
-            color: var(--blue-dark);
-            margin-bottom: 18px;
-            text-align: center;
-        }
-
-        .intro-text {
-            text-align: center;
-            max-width: 780px;
-            margin: 0 auto 48px;
-            color: var(--text-light);
-            font-size: 1.05rem;
-            line-height: 1.75;
-        }
-
-        /* =========================================================
-           À PROPOS – FEATURES
-        ========================================================= */
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-        }
-
-        .feature-item {
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 32px 24px;
-            text-align: center;
-            transition: box-shadow .2s, transform .2s;
-        }
-
-        .feature-item:hover {
-            box-shadow: var(--shadow);
-            transform: translateY(-4px);
-        }
-
-        .feature-item i {
-            font-size: 2rem;
-            color: var(--blue);
-            margin-bottom: 14px;
-        }
-
-        .feature-item h4 {
-            font-size: 1.05rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-            color: var(--blue-dark);
-        }
-
-        .feature-item p {
-            color: var(--text-light);
-            font-size: 0.93rem;
-        }
-
-        /* =========================================================
-           PRESTATIONS
-        ========================================================= */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-        }
-
-        .service-card {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-top: 4px solid var(--blue);
-            border-radius: var(--radius);
-            padding: 32px 24px;
-            text-align: center;
-            box-shadow: var(--shadow);
-            transition: box-shadow .2s, transform .2s;
-        }
-
-        .service-card:hover {
-            box-shadow: var(--shadow-lg);
-            transform: translateY(-4px);
-        }
-
-        .icon-service {
-            font-size: 2.2rem;
-            color: var(--blue);
-            margin-bottom: 16px;
-        }
-
-        .service-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            color: var(--blue-dark);
-            margin-bottom: 10px;
-        }
-
-        .service-card p {
-            font-size: 0.93rem;
-            color: var(--text-light);
-            line-height: 1.65;
-        }
-
-        .service-card strong {
-            color: var(--blue);
-            display: block;
-            margin-bottom: 4px;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: .4px;
-        }
-
-        /* =========================================================
-           GALERIE
-        ========================================================= */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-            margin-top: 36px;
-        }
-
-        .gallery-item {
-            border-radius: var(--radius);
-            overflow: hidden;
-            box-shadow: var(--shadow);
-            background: var(--white);
-            border: 1px solid var(--border);
-            transition: transform .2s, box-shadow .2s;
-        }
-
-        .gallery-item:hover {
-            transform: translateY(-4px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .gallery-item img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .caption {
-            padding: 12px 16px;
-            font-size: 0.88rem;
-            color: var(--text-light);
-            font-weight: 500;
-            text-align: center;
-        }
-
-        /* =========================================================
-           TARIFS
-        ========================================================= */
-        .tariffs-box {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 48px;
-            box-shadow: var(--shadow);
-            max-width: 760px;
-            margin: 48px auto 0;
-        }
-
-        .tariff-item-new h3 {
-            font-size: 1.15rem;
-            font-weight: 700;
-            color: var(--blue-dark);
-            margin-bottom: 20px;
-        }
-
-        .price-line {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px 0;
-            border-bottom: 1px dashed var(--border);
-            gap: 16px;
-            flex-wrap: wrap;
-        }
-
-        .price-label { color: var(--text-light); font-size: 0.97rem; }
-
-        .price-value {
-            font-family: var(--font-head);
-            font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--blue);
-            white-space: nowrap;
-        }
-
-        .note {
-            font-size: 0.83rem;
-            color: var(--text-light);
-            margin-top: 12px;
-            font-style: italic;
-        }
-
-        .tariff-divider {
-            border: 0;
-            border-top: 1px solid var(--border);
-            margin: 32px 0;
-        }
-
-        .important-note {
-            background: var(--blue-light);
-            border-left: 4px solid var(--blue);
-            border-radius: 0 var(--radius) var(--radius) 0;
-            padding: 20px 24px;
-            margin-top: 32px;
-        }
-
-        .important-note h3 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--blue-dark);
-            margin-bottom: 8px;
-        }
-
-        .important-note p { font-size: 0.95rem; color: var(--text); }
-
-        .important-note .ttc-note {
-            color: var(--blue);
-            font-weight: 600;
-            margin-top: 10px;
-        }
-
-        .tarifs-cta { text-align: center; margin-top: 36px; }
-
-        /* =========================================================
-           PROCESSUS
-        ========================================================= */
-        .process-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            margin-top: 48px;
-            counter-reset: step;
-        }
-
-        .process-item {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 28px 22px;
-            position: relative;
-            box-shadow: var(--shadow);
-            transition: transform .2s;
-        }
-
-        .process-item:hover { transform: translateY(-4px); }
-
-        .process-item::before {
-            counter-increment: step;
-            content: counter(step);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            background: var(--blue);
-            color: #fff;
-            font-family: var(--font-head);
-            font-weight: 800;
-            font-size: 1rem;
-            border-radius: 50%;
-            margin-bottom: 14px;
-        }
-
-        .process-item h4 {
-            font-size: 1rem;
-            font-weight: 700;
-            color: var(--blue-dark);
-            margin-bottom: 6px;
-        }
-
-        .process-item p { font-size: 0.92rem; color: var(--text-light); }
-
-        /* =========================================================
-           AVIS
-        ========================================================= */
-        .review-box {
-            background: var(--white);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 36px;
-            text-align: center;
-            max-width: 640px;
-            margin: 0 auto;
-            box-shadow: var(--shadow);
-        }
-
-        .stars {
-            color: var(--accent);
-            font-size: 1.3rem;
-            margin-bottom: 14px;
-            letter-spacing: 3px;
-        }
-
-        .placeholder-text {
-            font-size: 1.05rem;
-            font-style: italic;
-            color: var(--text);
-            margin-bottom: 22px;
-            line-height: 1.7;
-        }
-
-        .review-source {
-            font-size: 0.85rem;
-            color: var(--text-light);
-            margin-bottom: 20px;
-        }
-
-        /* =========================================================
-           FORMULAIRE CONTACT
-        ========================================================= */
-        .contact-form-netlify {
-            background: var(--white);
-            padding: 40px;
-            border-radius: 14px;
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow);
-            max-width: 760px;
-            margin: 0 auto;
-        }
-
-        .form-row {
-            display: grid;
-            gap: 16px;
-            margin-bottom: 16px;
-        }
-
-        .form-row-2 { grid-template-columns: 1fr 1fr; }
-        .form-row-zip { grid-template-columns: 1fr 2fr; }
-
-        .form-group { display: flex; flex-direction: column; gap: 6px; }
-
-        .form-label {
-            font-weight: 600;
-            font-size: 0.9rem;
-            color: var(--text);
-        }
-
-        .form-input, .form-textarea {
-            padding: 11px 14px;
-            border: 1.5px solid var(--border);
-            border-radius: 8px;
-            font-family: var(--font-body);
-            font-size: 0.95rem;
-            color: var(--text);
-            background: var(--bg);
-            transition: border-color .2s, box-shadow .2s;
-            width: 100%;
-        }
-
-        .form-input:focus, .form-textarea:focus {
-            outline: none;
-            border-color: var(--blue);
-            box-shadow: 0 0 0 3px rgba(26,79,204,.12);
-            background: var(--white);
-        }
-
-        .form-textarea { height: 110px; resize: vertical; }
-
-        .checkbox-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-            background: var(--bg);
-            padding: 14px;
-            border: 1.5px solid var(--border);
-            border-radius: 8px;
-        }
-
-        .checkbox-label {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.93rem;
-            cursor: pointer;
-        }
-
-        .checkbox-label input[type="checkbox"] {
-            accent-color: var(--blue);
-            width: 16px;
-            height: 16px;
-        }
-
-        .photo-zone {
-            border: 2px dashed var(--blue);
-            padding: 20px;
-            border-radius: 10px;
-            background: var(--blue-light);
-            text-align: center;
-            margin-bottom: 16px;
-        }
-
-        .photo-zone-label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 700;
-            color: var(--blue);
-            font-size: 0.95rem;
-        }
-
-        .photo-zone input[type="file"] {
-            display: block;
-            margin: 0 auto;
-            font-size: 0.88rem;
-        }
-
-        .photo-zone p {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            margin-top: 8px;
-        }
-
-        .form-submit {
-            width: 100%;
-            padding: 15px;
-            font-size: 1rem;
-            border: none;
-            cursor: pointer;
-            font-weight: 800;
-            letter-spacing: .5px;
-        }
-
-        .form-note {
-            font-size: 0.8rem;
-            color: var(--text-light);
-            text-align: center;
-            margin-top: 10px;
-        }
-
-        /* =========================================================
-           FOOTER
-        ========================================================= */
-        footer {
-            background: var(--blue-dark);
-            color: rgba(255,255,255,.85);
-            padding: 56px 0 36px;
-        }
-
-        footer .footer-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            margin-bottom: 40px;
-        }
-
-        footer h3 {
-            font-family: var(--font-head);
-            font-size: 1rem;
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 14px;
-            text-transform: uppercase;
-            letter-spacing: .5px;
-        }
-
-        footer p { font-size: 0.92rem; margin-bottom: 6px; }
-
-        footer strong { color: #fff; }
-
-        footer .footer-bottom {
-            border-top: 1px solid rgba(255,255,255,.15);
-            padding-top: 24px;
-            text-align: center;
-            font-size: 0.85rem;
-            color: rgba(255,255,255,.5);
-        }
-
-        footer .footer-bottom p + p { margin-top: 4px; }
-
-        .footer-greeting {
-            font-family: var(--font-head);
-            font-size: 1.4rem;
-            font-weight: 700;
-            color: var(--accent);
-            margin-bottom: 6px;
-        }
-
-        /* =========================================================
-           RESPONSIVE
-        ========================================================= */
-        @media (max-width: 680px) {
-            header .container { flex-direction: column; align-items: flex-start; gap: 12px; }
-            nav ul { gap: 4px; }
-            nav ul li a { padding: 5px 9px; font-size: 0.82rem; }
-            .form-row-2, .form-row-zip { grid-template-columns: 1fr; }
-            .tariffs-box { padding: 28px 20px; }
-            .contact-form-netlify { padding: 24px 16px; }
-            .hero { padding: 64px 0 52px; }
-            .hero-buttons { flex-direction: column; }
-            .checkbox-grid { grid-template-columns: 1fr; }
-        }
+            --blue: #1a4fcc;
+            --blue-dark: #0f2f80;
+            --blue-light: #e8eeff;
+            --accent: #f5a623;
+            --text: #1a1a2e;
+            --white: #ffffff;
+        }
+        body { font-family: 'DM Sans', sans-serif; color: var(--text); line-height: 1.6; }
+        .container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+        header { background: rgba(255, 255, 255, 0.95); backdrop-filter: blur(10px); padding: 15px 0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.05); }
+        .header-flex { display: flex; justify-content: space-between; align-items: center; }
+        .logo-wrap { display: flex; align-items: center; gap: 12px; }
+        .logo-img { width: 45px; height: 45px; border-radius: 10px; object-fit: cover; }
+        .logo-text { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.4rem; color: var(--blue-dark); text-transform: uppercase; }
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav a { text-decoration: none; color: var(--text); font-weight: 600; }
+        .hero { padding: 100px 0; background: linear-gradient(135deg, var(--blue-light) 0%, #ffffff 100%); }
+        .hero h1 { font-family: 'Syne', sans-serif; font-size: 3.5rem; line-height: 1.1; color: var(--blue-dark); margin-bottom: 20px; }
+        .section { padding: 80px 0; }
+        .section-title { font-family: 'Syne', sans-serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; }
+        .tariff-card { background: var(--white); padding: 40px; border-radius: 24px; border: 1px solid #eee; }
+        .price-row { display: flex; justify-content: space-between; padding: 15px 0; border-bottom: 1px solid #f0f0f0; }
+        .price-val { font-weight: 800; color: var(--blue); }
+        .contact-card { background: var(--white); padding: 40px; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: 600; }
+        input, textarea { width: 100%; padding: 12px; border: 2px solid #edf0f5; border-radius: 10px; font-family: inherit; }
+        .btn-primary { background: var(--blue); color: white; padding: 16px 32px; border-radius: 12px; font-weight: 700; text-decoration: none; border: none; cursor: pointer; font-family: 'Syne', sans-serif; width: 100%; font-size: 1.1rem; }
+        .photo-upload { background: var(--blue-light); border: 2px dashed var(--blue); padding: 20px; border-radius: 12px; text-align: center; margin-bottom: 20px; }
+        footer { background: var(--blue-dark); color: white; padding: 60px 0 30px; margin-top: 50px; }
     </style>
 </head>
 <body>
 
-    <!-- ===================== HEADER ===================== -->
     <header>
-        <div class="container">
-            <div class="logo-container">
-                <img src="logo.jpg" alt="Logo Le Coup de Main" class="logo-img">
-                <img src="FRANCE.jpg" alt="Drapeau France" class="drapeau-fr">
+        <div class="container header-flex">
+            <div class="logo-wrap">
+                <img src="logo.jpg" alt="Logo" class="logo-img">
                 <span class="logo-text">Le Coup de Main</span>
             </div>
             <nav>
                 <ul>
-                    <li><a href="#about">Accueil</a></li>
-                    <li><a href="#prestations">Prestations</a></li>
                     <li><a href="#tarifs">Tarifs</a></li>
-                    <li><a href="#processus">Processus</a></li>
-                    <li><a href="#realisations">Exemples</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
@@ -753,341 +64,68 @@
     </header>
 
     <main>
-
-        <!-- ===================== HERO ===================== -->
-        <section id="accueil" class="hero">
+        <section class="hero">
             <div class="container">
-                <span class="hero-badge">🔧 Artisan local – Kembs & environs</span>
-                <h1>Le coup de main qu'il vous faut !</h1>
-                <p class="subtitle">
-                    Petits travaux, dépannage et aménagement à domicile : un artisan polyvalent, fiable et sympathique, qui vient chez vous avec le sourire… et les bons outils.
-                </p>
-                <p class="subtitle">
-                    Vous manquez de temps, d'outils ou tout simplement d'envie ? Je m'en occupe pour vous.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Demander un devis gratuit</a>
-                    <a href="#prestations" class="btn btn-secondary" style="color:#fff; border-color:rgba(255,255,255,.6); background:rgba(255,255,255,.1);">Découvrir les prestations</a>
+                <h1>L'artisan de confiance pour votre maison.</h1>
+                <p style="font-size: 1.2rem; max-width: 600px;">Maintenance, dépannage et petits travaux à Kembs et environs.</p>
+            </div>
+        </section>
+
+        <section id="tarifs" class="section">
+            <div class="container">
+                <h2 class="section-title">Tarification</h2>
+                <div class="tariff-card">
+                    <div class="price-row"><span>Première heure sur site</span><span class="price-val">60 € TTC</span></div>
+                    <div class="price-row"><span>Heures suivantes</span><span class="price-val">45 € TTC</span></div>
+                    <div class="price-row"><span>Déplacement (≤ 20km)</span><span class="price-val">OFFERT</span></div>
                 </div>
             </div>
         </section>
 
-        <!-- ===================== À PROPOS ===================== -->
-        <section id="about" class="section">
-            <div class="container">
-                <h2>Un artisan de confiance pour vos petits et moyens travaux</h2>
-                <p class="intro-text">
-                    Je m'appelle Julien et je suis votre Coup de Main local. Fort de 26&nbsp;ans d'expérience dans la maintenance aéroportuaire et diplômé en sanitaire, chauffage et serrurerie, j'ai développé une grande polyvalence et une capacité à intervenir rapidement sur tous les problèmes du quotidien. Je propose un service de dépannage rapide et de petits travaux à domicile, en visant toujours la qualité et la satisfaction du client. Je suis dès maintenant à votre service pour rendre votre maison plus confortable et fonctionnelle.
-                </p>
-                <div class="features-grid">
-                    <div class="feature-item">
-                        <i class="fas fa-clock"></i>
-                        <h4>Réactivité</h4>
-                        <p>Intervention rapide et planification souple, adaptée à votre emploi du temps.</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-tools"></i>
-                        <h4>Polyvalence</h4>
-                        <p>Un seul contact pour une large gamme de travaux : montage, réparation, ajustement…</p>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-handshake"></i>
-                        <h4>Fiabilité</h4>
-                        <p>Devis respecté, travail soigné et sourire garanti à chaque intervention.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== PRESTATIONS ===================== -->
-        <section id="prestations" class="section-alt">
-            <div class="container">
-                <h2>Mes prestations phares</h2>
-                <div class="services-grid">
-
-                    <div class="service-card">
-                        <i class="fas fa-couch icon-service"></i>
-                        <h3>Montage de meubles</h3>
-                        <p>Assemblage de tous types de meubles (IKEA, Conforama, BUT…) : armoires, lits, bureaux, cuisines et étagères murales.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <i class="fas fa-lightbulb icon-service"></i>
-                        <h3>Électricité</h3>
-                        <p>Petits travaux électriques : remplacement d'interrupteurs, pose de luminaires, installation de prises supplémentaires, raccordement d'appareils.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <i class="fas fa-faucet icon-service"></i>
-                        <h3>Plomberie & sanitaire</h3>
-                        <p><strong>Artisan diplômé</strong>Dépannage de fuites, remplacement de robinets et mitigeurs, joints d'étanchéité, raccordement de machines à laver et maintenance courante.</p>
-                    </div>
-
-                    <div class="service-card">
-                        <i class="fas fa-key icon-service"></i>
-                        <h3>Serrurerie</h3>
-                        <p><strong>Artisan diplômé</strong>Ouverture de portes claquées, remplacement de cylindres et serrures toutes marques, installation de verrous de sécurité, blindage de porte et réparation après effraction.</p>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== RÉALISATIONS ===================== -->
-        <section id="realisations" class="section">
-            <div class="container">
-                <h2>Exemples de prestations en images</h2>
-                <p class="intro-text">
-                    Voici une illustration des types de travaux que Le Coup de Main réalise pour vous (montage de meubles, réparation de plomberie, serrurerie, etc.).
-                </p>
-                <div class="gallery-grid">
-                    <div class="gallery-item">
-                        <img src="realisation-1.png" alt="Montage meuble TV IKEA">
-                        <div class="caption">Montage meuble TV IKEA</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="realisation-2.png" alt="Remplacement de mitigeur de cuisine">
-                        <div class="caption">Remplacement de mitigeur de cuisine</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="realisation-3.png" alt="Installation de dressing">
-                        <div class="caption">Assemblage et fixation de dressing</div>
-                    </div>
-                    <div class="gallery-item">
-                        <img src="realisation-4.png" alt="Serrurerie – changement de poignée et mécanisme">
-                        <div class="caption">Serrurerie : changement de poignée et mécanisme de porte</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== TARIFS ===================== -->
-        <section id="tarifs" class="section-alt">
-            <div class="container">
-                <h2>Transparence sur les tarifs</h2>
-                <p class="intro-text">
-                    Le Coup de Main s'engage sur une tarification simple et honnête : vous payez uniquement pour le temps passé et les matériaux utilisés. Notre objectif est la transparence totale, sans aucune mauvaise surprise.
-                </p>
-
-                <div class="tariffs-box">
-
-                    <div class="tariff-item-new">
-                        <h3>Tarification horaire (TTC)</h3>
-                        <div class="price-line">
-                            <span class="price-label">Première heure complète sur site :</span>
-                            <span class="price-value">60 €</span>
-                        </div>
-                        <div class="price-line">
-                            <span class="price-label">Heure(s) supplémentaire(s) :</span>
-                            <span class="price-value">45 €</span>
-                        </div>
-                    </div>
-
-                    <hr class="tariff-divider">
-
-                    <div class="tariff-item-new">
-                        <h3>Frais de déplacement</h3>
-                        <div class="price-line">
-                            <span class="price-label">Rayon ≤ 20 km autour de Kembs :</span>
-                            <span class="price-value">Inclus (0 €)</span>
-                        </div>
-                        <div class="price-line">
-                            <span class="price-label">Au-delà de 20 km :</span>
-                            <span class="price-value">0,60 € / km</span>
-                        </div>
-                        <p class="note">* Les frais kilométriques sont calculés à partir du 21<sup>e</sup> kilomètre uniquement.</p>
-                    </div>
-
-                    <div class="important-note">
-                        <h3>Devis et facturation</h3>
-                        <p>
-                            Pour les tâches courantes (montage de meuble, pose de tringle, etc.), un forfait peut vous être proposé après analyse du travail. Un <strong>devis gratuit</strong> est systématiquement envoyé avant tout engagement.
-                        </p>
-                        <p class="ttc-note">Tous les tarifs sont affichés TTC (toutes taxes comprises).</p>
-                    </div>
-
-                </div>
-                <div class="tarifs-cta">
-                    <a href="#contact" class="btn btn-primary">Demandez votre devis gratuit sans engagement</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== PROCESSUS ===================== -->
-        <section id="processus" class="section">
-            <div class="container">
-                <h2>Simple, clair et sans surprise</h2>
-                <div class="process-list">
-                    <div class="process-item">
-                        <h4>Vous m'expliquez votre besoin</h4>
-                        <p>Par téléphone ou via le formulaire de contact.</p>
-                    </div>
-                    <div class="process-item">
-                        <h4>Je vous fais une estimation</h4>
-                        <p>Devis détaillé, envoyé rapidement, sans mauvaise surprise.</p>
-                    </div>
-                    <div class="process-item">
-                        <h4>Nous fixons un rendez-vous</h4>
-                        <p>Un créneau choisi ensemble, et respecté.</p>
-                    </div>
-                    <div class="process-item">
-                        <h4>Travaux réalisés, endroit propre</h4>
-                        <p>Intervention terminée et lieux nettoyés avant de partir.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== AVIS ===================== -->
-        <section id="reviews" class="section-alt">
-            <div class="container">
-                <h2>Avis clients</h2>
-                <p class="intro-text">
-                    La satisfaction est ma priorité ! N'hésitez pas à laisser un avis sur ma page Google suite à votre intervention.
-                </p>
-                <div class="review-box">
-                    <div class="stars">★★★★★</div>
-                    <p class="placeholder-text">
-                        « Un service impeccable et rapide. Je recommande vivement Julien ! »
-                    </p>
-                    <p class="review-source">— Client satisfait</p>
-                    <a href="#about" class="btn btn-primary">Découvrir l'artisan (Julien)</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- ===================== CONTACT ===================== -->
         <section id="contact" class="section">
-            <div class="container">
-                <h2>Contactez-nous</h2>
-                <p class="intro-text" style="margin-bottom: 36px;">
-                    Décrivez votre projet, joignez une photo si possible et recevez votre devis sous 24&nbsp;h.
-                </p>
+            <div class="container" style="max-width: 700px;">
+                <h2 class="section-title">Demander un devis</h2>
+                <div class="contact-card">
+                    <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" enctype="multipart/form-data" action="/merci.html">
+                        <input type="hidden" name="form-name" value="contact" />
+                        <p style="display:none;"><label>Ne pas remplir : <input name="bot-field"></label></p>
 
-                <!-- 
-                    IMPORTANT NETLIFY :
-                    - enctype="multipart/form-data" requis pour l'upload de photo
-                    - action="/merci.html" → créer une page merci.html à la racine du site
-                    - Le champ hidden "form-name" est indispensable
-                -->
-                <form
-                    name="contact"
-                    method="POST"
-                    data-netlify="true"
-                    netlify-honeypot="bot-field"
-                    action="/merci.html"
-                    enctype="multipart/form-data"
-                    class="contact-form-netlify"
-                >
-                    <input type="hidden" name="form-name" value="contact">
-                    <!-- Champ honeypot anti-spam (caché visuellement) -->
-                    <p style="display:none;">
-                        <label>Ne pas remplir : <input name="bot-field"></label>
-                    </p>
-
-                    <div class="form-row form-row-2">
                         <div class="form-group">
-                            <label class="form-label" for="nom">Nom et prénom *</label>
-                            <input class="form-input" type="text" id="nom" name="nom" required placeholder="Ex : Jean Dupont">
+                            <label>Nom et Prénom *</label>
+                            <input type="text" name="nom" required>
                         </div>
-                        <div class="form-group">
-                            <label class="form-label" for="telephone">Téléphone *</label>
-                            <input class="form-input" type="tel" id="telephone" name="telephone" required placeholder="06 00 00 00 00">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="email">Adresse e-mail *</label>
-                            <input class="form-input" type="email" id="email" name="email" required placeholder="nom@exemple.com">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label" for="rue">Rue et numéro *</label>
-                            <input class="form-input" type="text" id="rue" name="rue" required placeholder="12 rue des Fleurs">
-                        </div>
-                    </div>
-
-                    <div class="form-row form-row-zip">
-                        <div class="form-group">
-                            <label class="form-label" for="code_postal">Code postal *</label>
-                            <input class="form-input" type="text" id="code_postal" name="code_postal" required placeholder="68680">
-                        </div>
-                        <div class="form-group">
-                            <label class="form-label" for="ville">Ville *</label>
-                            <input class="form-input" type="text" id="ville" name="ville" required placeholder="Kembs">
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label class="form-label">Nature de la demande :</label>
-                            <div class="checkbox-grid">
-                                <label class="checkbox-label"><input type="checkbox" name="type_travaux" value="Serrurerie"> Serrurerie</label>
-                                <label class="checkbox-label"><input type="checkbox" name="type_travaux" value="Plomberie"> Plomberie / Sanitaire</label>
-                                <label class="checkbox-label"><input type="checkbox" name="type_travaux" value="Meubles"> Montage de meubles</label>
-                                <label class="checkbox-label"><input type="checkbox" name="type_travaux" value="Electricite"> Électricité</label>
-                                <label class="checkbox-label"><input type="checkbox" name="type_travaux" value="Autre"> Autre besoin</label>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div class="form-group">
+                                <label>Téléphone *</label>
+                                <input type="tel" name="telephone" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email *</label>
+                                <input type="email" name="email" required>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="form-row">
                         <div class="form-group">
-                            <label class="form-label" for="message">Description détaillée *</label>
-                            <textarea class="form-textarea" id="message" name="message" required placeholder="Plus vous m'en dites, plus le devis sera précis…"></textarea>
+                            <label>Votre projet / Problème *</label>
+                            <textarea name="message" required rows="4"></textarea>
                         </div>
-                    </div>
-
-                    <div class="photo-zone">
-                        <label class="photo-zone-label">📸 Photo du problème (conseillé)</label>
-                        <input type="file" name="photo" accept="image/*">
-                        <p>Indispensable pour un chiffrage rapide à distance !</p>
-                    </div>
-
-                    <button type="submit" class="btn btn-primary form-submit">
-                        ENVOYER MA DEMANDE GRATUITE
-                    </button>
-                    <p class="form-note">* Champs obligatoires — Réponse sous 24&nbsp;h</p>
-
-                </form>
+                        <div class="photo-upload">
+                            <label style="color: var(--blue); cursor: pointer;">
+                                <strong>📸 Ajouter une photo (recommandé)</strong>
+                                <input type="file" name="photo" accept="image/*" style="margin-top: 10px; display: block; width: 100%;">
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary">ENVOYER LA DEMANDE</button>
+                    </form>
+                </div>
             </div>
         </section>
-
     </main>
 
-    <!-- ===================== FOOTER ===================== -->
     <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div>
-                    <h3>Horaires d'intervention</h3>
-                    <p>Lundi – Vendredi : <strong>08h00 – 19h00</strong></p>
-                    <p>Samedi : <strong>09h00 – 17h00</strong></p>
-                    <p>Dimanche & jours fériés : <strong>Fermé</strong></p>
-                </div>
-                <div>
-                    <h3>Zone d'intervention</h3>
-                    <p>Kembs et ses environs (≤ 20&nbsp;km inclus)</p>
-                    <p>Au-delà : 0,60&nbsp;€ / km (à partir du 21<sup>e</sup> km)</p>
-                </div>
-                <div>
-                    <h3>Le Coup de Main</h3>
-                    <p>Artisan polyvalent local – Julien</p>
-                    <p>Plomberie · Serrurerie · Meubles · Électricité</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="footer-greeting">À bientôt !</p>
-                <p>&copy; Le Coup de Main. Tous droits réservés.</p>
-                <p>Site vitrine – petits travaux, dépannage et aménagement de la maison.</p>
-            </div>
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 Le Coup de Main Services. Tous droits réservés.</p>
         </div>
     </footer>
 
 </body>
 </html>
-
-index(3).html
