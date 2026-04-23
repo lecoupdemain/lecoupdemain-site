@@ -16,7 +16,7 @@
 
 
 <style>
-  /* Unification de la police sans forcer sur la structure */
+  /* Unification de la police sans gras */
   body, h1, h2, h3, p, a, li {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
@@ -27,37 +27,43 @@
     background-color: #ECE3BD !important;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
     background-repeat: repeat !important;
-  }
-
-  /* AJOUT ET RÉGLAGE DE TA PHOTO D'ACCUEIL */
-  /* J'ai augmenté les paddings (haut et bas) pour baisser la photo
-     et ajouté un linear-gradient plus sombre pour le contraste. */
-  #accueil {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-background.png') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    /* J'augmente le padding-bottom pour "faire descendre" la photo */
-    padding-top: 100px !important;
-    padding-bottom: 200px !important; 
     position: relative;
     z-index: 1;
   }
 
-  /* --- L'ASTUCE POUR LE TEXTE DEVANT ET NET --- */
-  /* Pour s'assurer que le texte blanc soit ultra-lisible,
-     on ajoute une ombre portée (text-shadow) noire et discrète. */
-  #accueil h1, #accueil p {
+  /* --- LE RÉGLAGE CHIRURGICAL DU BANDEAU D'ACCUEIL --- */
+  /* J'ai fait 3 choses :
+     1. J'ai ajouté un masque sombre dégradé (linear-gradient) pour faire ressortir le texte blanc.
+     2. J'ai étiré la zone vers le bas (padding-bottom: 200px) pour baisser la photo.
+     3. J'ai centré la photo (background-position: center) pour qu'on voie les gens. */
+  .hero {
+    background-image: 
+      linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%), /* Voile sombre graduel */
+      url('hero-background.png') !important; /* Ta photo png */
+    background-size: cover !important;
+    background-position: center !important; /* Centrage pour voir les gens */
+    background-repeat: no-repeat !important;
+    padding-top: 100px !important; /* De l'espace en haut */
+    padding-bottom: 200px !important; /* ON FAIT BAISSER LA PHOTO ICI */
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- L'ASTUCE POUR LE TEXTE NET ET CLAIR --- */
+  /* J'ai ajouté une ombre portée (text-shadow) noire et discrète
+     pour que chaque lettre blanche se détache parfaitement du fond. */
+  .hero h1, .hero p, .hero .subtitle {
     color: white !important;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; /* L'ombre magique */
     margin-left: auto;
     margin-right: auto;
-    max-width: 800px;
+    max-width: 800px; /* Pour un texte centré et propre */
   }
-  
-  #accueil h1 {
+
+  .hero h1 {
     margin-bottom: 30px;
+    font-size: 2.2em !important; /* Titre un peu plus grand pour l'impact */
   }
 </style>
 </head>
