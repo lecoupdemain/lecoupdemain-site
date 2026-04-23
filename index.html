@@ -19,26 +19,20 @@
     background-color: #ECE3BD !important;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
     background-repeat: repeat !important;
-    position: relative;
-    z-index: 1;
   }
 
-  /* --- SEULE LIGNE AJOUTÉE POUR LA PHOTO --- */
-  /* J'applique l'image hero-bg.jpg uniquement sur le bandeau d'accueil,
-     avec un voile sombre (linear-gradient) pour que ton texte reste bien lisible. */
-  #accueil {
-    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.jpg') !important;
+  /* LA CORRECTION POUR TA PHOTO D'ACCUEIL */
+  .hero {
+    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-bg.jpg') !important;
     background-size: cover !important;
     background-position: center !important;
-    background-attachment: scroll !important;
-    color: white !important; /* On force le texte en blanc sur la photo */
-    padding: 100px 0 !important; /* On donne de l'air à ta photo */
+    background-repeat: no-repeat !important;
+    color: white !important;
+    padding: 100px 0 !important;
   }
 
-  /* On s'assure que le titre et le texte dans l'accueil sont bien blancs */
-  #accueil h1, #accueil .subtitle {
+  .hero h1, .hero p, .hero .subtitle {
     color: white !important;
-    text-align: center;
   }
 </style>
 
