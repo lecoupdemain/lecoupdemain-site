@@ -29,18 +29,35 @@
     background-repeat: repeat !important;
   }
 
-  /* AJOUT DE TA PHOTO D'ACCUEIL */
+  /* AJOUT ET RÉGLAGE DE TA PHOTO D'ACCUEIL */
+  /* J'ai augmenté les paddings (haut et bas) pour baisser la photo
+     et ajouté un linear-gradient plus sombre pour le contraste. */
   #accueil {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('hero-background.png') !important;
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-background.png') !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;
-    color: white !important;
-    padding: 100px 0 !important;
+    /* J'augmente le padding-bottom pour "faire descendre" la photo */
+    padding-top: 100px !important;
+    padding-bottom: 200px !important; 
+    position: relative;
+    z-index: 1;
   }
 
+  /* --- L'ASTUCE POUR LE TEXTE DEVANT ET NET --- */
+  /* Pour s'assurer que le texte blanc soit ultra-lisible,
+     on ajoute une ombre portée (text-shadow) noire et discrète. */
   #accueil h1, #accueil p {
     color: white !important;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; /* L'ombre magique */
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 800px;
+  }
+  
+  #accueil h1 {
+    margin-bottom: 30px;
   }
 </style>
 </head>
