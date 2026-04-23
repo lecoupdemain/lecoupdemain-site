@@ -38,16 +38,22 @@
      3. J'ai centré la photo (background-position: center) pour qu'on voie les gens. */
   .hero {
     background-image: 
-      linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%), /* Voile sombre graduel */
-      url('hero-background.png') !important; /* Ta photo png */
+      linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%), 
+      url('hero-background.png') !important;
     background-size: cover !important;
-    background-position: center !important; /* Centrage pour voir les gens */
+    
+    /* ICI LE RÉGLAGE : On dit à l'image de se caler sur le bas (bottom) */
+    background-position: center bottom !important; 
+    
     background-repeat: no-repeat !important;
-    padding-top: 100px !important; /* De l'espace en haut */
-    padding-bottom: -800px !important; /* ON FAIT BAISSER LA PHOTO ICI */
+    
+    /* Augmente cette valeur pour agrandir la fenêtre de vue (la hauteur du bandeau) */
+    padding-top: 150px !important;
+    padding-bottom: 350px !important; 
+    
     position: relative;
     z-index: 1;
-  }
+}
 
   /* --- L'ASTUCE POUR LE TEXTE NET ET CLAIR --- */
   /* J'ai ajouté une ombre portée (text-shadow) noire et discrète
