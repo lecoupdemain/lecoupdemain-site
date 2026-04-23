@@ -36,23 +36,27 @@
      1. J'ai ajouté un masque sombre dégradé (linear-gradient) pour faire ressortir le texte blanc.
      2. J'ai étiré la zone vers le bas (padding-bottom: 200px) pour baisser la photo.
      3. J'ai centré la photo (background-position: center) pour qu'on voie les gens. */
-  .hero {
+ .hero {
     background-image: 
-      linear-gradient(rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.7) 100%), 
+      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
       url('hero-background.png') !important;
-    background-size: cover !important;
     
-    /* ICI LE RÉGLAGE : On dit à l'image de se caler sur le bas (bottom) */
-    background-position: center bottom !important; 
+    /* 1. RÉGLAGE DU ZOOM : Change le '110%' pour zoomer (+) ou dézoomer (-) */
+    background-size: 110% auto !important; 
+    
+    /* 2. RÉGLAGE DE LA POSITION : 'center' pour la largeur, '80%' pour la hauteur. 
+       Augmente le '80%' pour faire descendre la photo (voir plus le bas). */
+    background-position: center 80% !important; 
     
     background-repeat: no-repeat !important;
+
+    /* 3. RÉGLAGE DE LA HAUTEUR DU BANDEAU : Change le '600px' pour agrandir la fenêtre. */
+    min-height: 600px !important; 
     
-    /* Augmente cette valeur pour agrandir la fenêtre de vue (la hauteur du bandeau) */
-    padding-top: 150px !important;
-    padding-bottom: 350px !important; 
-    
-    position: relative;
-    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px !important;
 }
 
   /* --- L'ASTUCE POUR LE TEXTE NET ET CLAIR --- */
