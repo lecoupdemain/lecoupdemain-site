@@ -14,11 +14,31 @@
     font-weight: normal !important;
   }
   
-  /* Fond beige sable #ECE3BD avec texture relief chaleureuse */
+  /* Fond beige sable #ECE3BD appliqué partout avec texture */
   section, .section, .section-alt {
     background-color: #ECE3BD !important;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
     background-repeat: repeat !important;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* --- SEULE LIGNE AJOUTÉE POUR LA PHOTO --- */
+  /* J'applique l'image hero-bg.jpg uniquement sur le bandeau d'accueil,
+     avec un voile sombre (linear-gradient) pour que ton texte reste bien lisible. */
+  #accueil {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('hero-bg.jpg') !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-attachment: scroll !important;
+    color: white !important; /* On force le texte en blanc sur la photo */
+    padding: 100px 0 !important; /* On donne de l'air à ta photo */
+  }
+
+  /* On s'assure que le titre et le texte dans l'accueil sont bien blancs */
+  #accueil h1, #accueil .subtitle {
+    color: white !important;
+    text-align: center;
   }
 </style>
 
@@ -55,7 +75,7 @@
 <main>
 <section id="accueil" class="hero">
 <div class="container">
-<div class="hero-content">
+<div class="hero-content" style="text-align: center;">
 <h1>Votre maison mérite un expert. La tranquillité en une intervention.</h1>
 <p class="subtitle">
 Serrurerie, plomberie et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.
@@ -63,9 +83,9 @@ Serrurerie, plomberie et maintenance : je mets 26 ans de savoir-faire technique 
 <p class="subtitle">
 Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.
 </p>
-<div class="hero-buttons">
-<a href="#contact" class="btn btn-primary" style="background-color: #33555F; border: none;">Demander mon intervention</a>
-<a href="#prestations" class="btn btn-secondary">Voir mes spécialités</a>
+<div class="hero-buttons" style="margin-top: 25px; text-align: center;">
+ <a href="#contact" class="btn btn-primary" style="background-color: #33555F; border: none; padding: 15px 30px; color: white; text-decoration: none; display: inline-block; border-radius: 4px;">Demander mon intervention</a>
+ <a href="#prestations" class="btn btn-secondary" style="color: white; text-decoration: underline; margin-left: 15px;">Voir mes spécialités</a>
 </div>
 </div>
 </div>
@@ -101,23 +121,23 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 <div class="container">
 <h2>Mes domaines d'excellence</h2>
 <div class="services-grid">
-<div class="service-card">
-<i class="fas fa-key icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+<i class="fas fa-key icon-service" style="color: #33555F; font-size: 2.5em; display: block; margin-bottom: 10px;"></i>
 <h3>Serrurerie & Sécurisation</h3>
 <p>Ma spécialité. Ouverture de porte, remplacement de cylindre haute sécurité et blindage. Je règle vos portes et fenêtres au millimètre pour que tout soit parfait et fluide. La sécurité d'un travail d'expert.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-faucet icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+<i class="fas fa-faucet icon-service" style="color: #33555F; font-size: 2.5em; display: block; margin-bottom: 10px;"></i>
 <h3>Plomberie & Sanitaire</h3>
 <p>Intervention experte : réparation de fuites, remplacement de robinetterie, entretien des joints et installation d'appareils. Pas de bricolage, juste de la précision.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-lightbulb icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+<i class="fas fa-lightbulb icon-service" style="color: #33555F; font-size: 2.5em; display: block; margin-bottom: 10px;"></i>
 <h3>Électricité Domestique</h3>
 <p>Petits travaux et mise en sécurité : remplacement de prises, pose de luminaires, diagnostic de pannes simples et remise aux normes de vos installations.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-couch icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); text-align: center;">
+<i class="fas fa-couch icon-service" style="color: #33555F; font-size: 2.5em; display: block; margin-bottom: 10px;"></i>
 <h3>Montage & Aménagement</h3>
 <p>Assemblage soigné de meubles IKEA ou étagères. Je m'occupe des fixations complexes pour que rien ne bouge, même avec le temps.</p>
 </div>
@@ -149,7 +169,7 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 </div>
 <div style="text-align: center; margin-top: 40px;">
     <p style="font-size: 1.2em; margin-bottom: 20px;">Est-ce qu'il reste une place pour vous ?</p>
-    <a href="https://wa.me/33646664222?text=Bonjour%20Julien,%20je%20m'appelle%20(votre%20nom)%20et%20je%20souhaite%20r%C3%A9server%20l'une%20des%2050%20places%20pour%20le%20Contrat%20S%C3%A9r%C3%A9nit%C3%A9." target="_blank" class="btn btn-primary" style="background-color: #25D366; border: none; padding: 18px 35px; font-size: 1.2em; text-decoration: none; color: white; display: inline-block; border-radius: 6px;">Vérifier la disponibilité par WhatsApp</a>
+    <a href="https://wa.me/33646664222" target="_blank" class="btn btn-primary" style="background-color: #25D366; border: none; padding: 18px 35px; font-size: 1.2em; text-decoration: none; color: white; display: inline-block; border-radius: 6px;">Vérifier la disponibilité par WhatsApp</a>
 </div>
 </div>
 </section>
@@ -188,7 +208,7 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 <div><label>Téléphone *</label><input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
 </div>
   <div style="margin-bottom: 15px;">
-  <label style="display: block; margin-bottom: 5px;">Adresse de l'intervention (Rue, Ville) *</label>
+  <label>Adresse de l'intervention (Rue, Ville) *</label>
   <input type="text" name="adresse" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Ex: 12 rue de la Paix, Kembs">
 </div>
 <div style="margin-bottom: 15px;">
@@ -203,7 +223,7 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi tout..."></textarea>
 <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
     <p style="color: #128C7E; margin-bottom: 15px;">📸 Pour un devis ultra-rapide :</p>
-    <a href="https://wa.me/33646664222?text=Bonjour%20Julien..." target="_blank" style="background-color: #25D366; color: white; display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
+    <a href="https://wa.me/33646664222" target="_blank" style="background-color: #25D366; color: white; display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
 </div>
 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; background-color: #33555F; color: white; border: none; cursor: pointer; border-radius: 4px;">VALIDER MA DEMANDE</button>
 </form>
@@ -214,8 +234,7 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 <div class="container">
 <div class="footer-content" style="margin-bottom: 30px;">
 <h3>Disponibilité de l'artisan</h3>
-<p>Lundi - Vendredi : 08h00 - 19h00</p>
-<p>Samedi : 09h00 - 17h00 (Tarif spécial)</p>
+<p>Lundi - Vendredi : 08h00 - 19h00 | Samedi : 09h00 - 17h00</p>
 <p>Dimanche & Jours fériés : Fermé (Repos de l'artisan)</p>
 <p style="margin-top: 15px; font-size: 1.2em; color: #007bff;">Urgence Directe : 06 46 66 42 22</p>
 </div>
