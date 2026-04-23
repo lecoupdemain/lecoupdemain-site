@@ -14,66 +14,110 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-
 <style>
-  /* Unification de la police sans gras */
-  body, h1, h2, h3, p, a, li {
+  /* UNIFORMITÉ TOTALE DE LA POLICE ET DES COULEURS */
+  body, h1, h2, h3, p, a, li, label, input, textarea, button {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
-  
-  /* Fond beige sable #ECE3BD appliqué partout avec texture relief chaleureuse */
+
+  body {
+    line-height: 1.6;
+    color: #333;
+  }
+
+  /* FOND BEIGE SABLE ET TEXTURE PARTOUT */
   section, .section, .section-alt {
     background-color: #ECE3BD !important;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
     background-repeat: repeat !important;
-    position: relative;
-    z-index: 1;
+    padding: 60px 20px;
   }
 
-  /* --- LE RÉGLAGE CHIRURGICAL DU BANDEAU D'ACCUEIL --- */
-  /* J'ai fait 3 choses :
-     1. J'ai ajouté un masque sombre dégradé (linear-gradient) pour faire ressortir le texte blanc.
-     2. J'ai étiré la zone vers le bas (padding-bottom: 200px) pour baisser la photo.
-     3. J'ai centré la photo (background-position: center) pour qu'on voie les gens. */
- .hero {
-    background-image: 
-      linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-      url('hero-background.png') !important;
-    
-    /* 1. RÉGLAGE DU ZOOM : Change le '110%' pour zoomer (+) ou dézoomer (-) */
-    background-size: 100% auto !important; 
-    
-    /* 2. RÉGLAGE DE LA POSITION : 'center' pour la largeur, '80%' pour la hauteur. 
-       Augmente le '80%' pour faire descendre la photo (voir plus le bas). */
-    background-position: center 80% !important; 
-    
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  /* BANDEAU ACCUEIL - PHOTO DÉZOOMÉE ET CLAIRE */
+  #accueil {
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('hero-background.png') !important;
+    background-size: cover !important;
+    background-position: center !important;
     background-repeat: no-repeat !important;
-
-    /* 3. RÉGLAGE DE LA HAUTEUR DU BANDEAU : Change le '600px' pour agrandir la fenêtre. */
-    min-height: 600px !important; 
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px !important;
-}
-
-  /* --- L'ASTUCE POUR LE TEXTE NET ET CLAIR --- */
-  /* J'ai ajouté une ombre portée (text-shadow) noire et discrète
-     pour que chaque lettre blanche se détache parfaitement du fond. */
-  .hero h1, .hero p, .hero .subtitle {
-    color: white !important;
+    padding: 120px 20px !important;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8) !important; /* L'ombre magique */
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 800px; /* Pour un texte centré et propre */
+    color: white !important;
   }
 
-  .hero h1 {
-    margin-bottom: 30px;
-    font-size: 2.2em !important; /* Titre un peu plus grand pour l'impact */
+  #accueil h1, #accueil p {
+    color: white !important;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.8) !important;
+    max-width: 850px;
+    margin: 0 auto 20px auto;
+  }
+
+  /* BOUTONS ET COULEUR PRINCIPALE : BLEU CANARD */
+  .btn-primary, header, footer, .service-card i {
+    background-color: #048B9A !important; /* LE VRAI BLEU CANARD */
+    color: white !important;
+  }
+
+  .btn {
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+    transition: 0.3s;
+    border: none;
+  }
+
+  /* CARTES PRESTATIONS */
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center;
+  }
+
+  .service-card i {
+    background: transparent !important;
+    color: #048B9A !important; /* ICÔNES EN BLEU CANARD */
+    font-size: 2.5em;
+    margin-bottom: 15px;
+  }
+
+  /* FORMULAIRE */
+  form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #048B9A; /* LIBELLÉS EN BLEU CANARD */
+  }
+
+  /* RESPONSIVE MOBILE */
+  @media (max-width: 768px) {
+    #accueil { padding: 60px 20px !important; }
+    #accueil h1 { font-size: 1.6em !important; }
+    div[style*="display: grid"] { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
