@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
-  body, h1, h2, h3, p, a, li, label, input, textarea, button {
+  /* AUCUN TEXTE EN GRAS PARTOUT */
+  body, h1, h2, h3, p, a, li, label, input, textarea, button, span {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
     margin: 0;
@@ -20,6 +21,7 @@
     color: #333;
   }
 
+  /* COULEUR SABLE ET TEXTURE */
   section, .section, .section-alt {
     background-color: #ECE3BD !important;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
@@ -32,6 +34,7 @@
     margin: 0 auto;
   }
 
+  /* BANDEAU ACCUEIL */
   #accueil {
     background-image: url('fond.jpeg') !important;
     background-size: cover !important;
@@ -56,6 +59,7 @@
     margin: 0 auto 20px auto;
   }
 
+  /* COULEURS ET BOUTONS */
   .btn-primary, header, footer {
     background-color: #33555F !important;
     color: white !important;
@@ -68,6 +72,7 @@
     display: inline-block;
     transition: 0.3s;
     border: none;
+    text-align: center;
   }
 
   .services-grid {
@@ -109,7 +114,7 @@
   @media (max-width: 768px) {
     #accueil { padding: 60px 20px !important; }
     #accueil h1 { font-size: 1.6em !important; }
-    div[style*="display: grid"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -130,6 +135,7 @@
         <nav>
             <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
                 <li><a href="#accueil" style="color: white; text-decoration: none; font-size: 0.95em;">Accueil</a></li>
+                <li><a href="#a-propos" style="color: white; text-decoration: none; font-size: 0.95em;">Expertise</a></li>
                 <li><a href="#prestations" style="color: white; text-decoration: none; font-size: 0.95em;">Prestations</a></li>
                 <li><a href="#offres" style="color: white; text-decoration: none; font-size: 0.95em;">Abonnements</a></li>
                 <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em;">Tarifs</a></li>
@@ -148,10 +154,36 @@
 <p class="subtitle">Serrurerie, plomberie et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.</p>
 <p class="subtitle">Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.</p>
 <div class="hero-buttons">
-<a href="#contact" class="btn btn-primary" style="background-color: #33555F; border: none; margin-right: 10px;">Demander mon intervention</a>
-<a href="#prestations" class="btn btn-secondary" style="background-color: white; color: #33555F; border: none; padding: 12px 25px; text-decoration: none; border-radius: 4px; display: inline-block;">Voir mes spécialités</a>
+<a href="#contact" class="btn btn-primary" style="margin-right: 10px;">Demander mon intervention</a>
+<a href="#prestations" class="btn btn-secondary" style="background-color: white; color: #33555F;">Voir mes spécialités</a>
 </div>
 </div>
+</div>
+</section>
+
+<section id="a-propos" class="section">
+<div class="container">
+    <h2 style="text-align: center; color: #33555F; margin-bottom: 50px;">L'exigence aéroportuaire au service de votre foyer</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 3em; margin-bottom: 20px;">✈️</div>
+            <h3 style="color: #33555F;">26 ans d'expertise</h3>
+            <p style="color: #666;">J'ai passé deux décennies à maintenir l'EuroAirport. Dans cet environnement de classe internationale, l'erreur n'est pas une option. La rigueur des normes est devenue mon ADN.</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #33555F;">
+            <div style="font-size: 3em; margin-bottom: 20px;">🛠️</div>
+            <h3 style="color: #33555F;">Le réflexe préventif</h3>
+            <p style="color: #666;">Un aéroport ne s'arrête jamais car on anticipe les pannes. Pourquoi attendre la fuite ou la porte bloquée ? J'applique cette même méthode chez vous pour éviter les urgences.</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 3em; margin-bottom: 20px;">🏠</div>
+            <h3 style="color: #33555F;">Votre terminal privé</h3>
+            <p style="color: #666;">Je ne me contente pas de bricoler, je sécurise et je pérennise. Votre domicile mérite une maintenance sans compromis, avec le soin d'un terminal professionnel.</p>
+        </div>
+    </div>
+    <div style="margin-top: 50px; padding: 30px; background: #ffffff; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <p style="font-size: 1.2em; color: #444; font-style: italic;">"D’un terminal de classe internationale à votre porte d’entrée : je mets l'exigence de la maintenance professionnelle au service des habitants de Kembs."</p>
+    </div>
 </div>
 </section>
 
@@ -194,35 +226,39 @@
 <section id="offres" class="section">
 <div class="container">
 <h2 style="color: #33555F; text-align: center; margin-bottom: 40px;">Votre sérénité sur mesure</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: start;">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: stretch;">
     
-    <div style="background: white; padding: 30px; border-radius: 15px; border: 2px solid #33555F; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative;">
-        <div style="background: #33555F; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%);">VOTRE ARTISAN DE PROXIMITÉ</div>
-        <h3 style="color: #33555F; margin-top: 10px;">Pack Résidentiel</h3>
-        <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">La solution idéale pour les habitants de Kembs</p>
-        <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">19 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
-        <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
-            <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> 2 visites de contrôle préventives par an</li>
-            <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Priorité intervention sous 24h</li>
-            <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Diagnostic technique complet inclus</li>
-            <li><i class="fas fa-gift" style="color: #33555F; margin-right: 10px;"></i> 30 min de main-d'œuvre offertes par an</li>
-        </ul>
+    <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #33555F; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #33555F; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">VOTRE ARTISAN DE PROXIMITÉ</div>
+        <div>
+            <h3 style="color: #33555F; margin-top: 10px;">Pack Résidentiel</h3>
+            <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">La solution idéale pour les habitants de Kembs</p>
+            <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">19 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
+                <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> 2 visites de contrôle préventives par an</li>
+                <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Priorité intervention sous 24h</li>
+                <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Diagnostic technique complet inclus</li>
+                <li><i class="fas fa-gift" style="color: #33555F; margin-right: 10px;"></i> 30 min de main-d'œuvre offertes par an</li>
+            </ul>
+        </div>
         <a href="#contact" class="btn btn-primary" style="width: 100%;">Choisir la proximité</a>
     </div>
 
-    <div style="background: white; padding: 30px; border-radius: 15px; border: 1px solid #eee; text-align: center; position: relative;">
-        <div style="background: #FFD700; color: #333; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%);">SPÉCIAL INVESTISSEUR</div>
-        <h3 style="color: #33555F; margin-top: 10px;">Pack Business & Airbnb</h3>
-        <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Le secret de vos 5 étoiles voyageur</p>
-        <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">30 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
-        <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
-            <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Satisfaction voyageur garantie : image de marque préservée</li>
-            <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire 7j/7 : je réponds toujours présent</li>
-            <li><i class="fas fa-user-shield" style="color: #33555F; margin-right: 10px;"></i> Un interlocuteur unique : vous m'appelez, je gère tout</li>
-            <li><i class="fas fa-camera" style="color: #33555F; margin-right: 10px;"></i> Compte-rendu photo : suivez mes interventions à distance</li>
-            <li><i class="fas fa-tools" style="color: #33555F; margin-right: 10px;"></i> Savoir-vivre et discrétion auprès de vos locataires</li>
-        </ul>
-        <a href="#contact" class="btn" style="background-color: #f4f4f4; color: #333; width: 100%;">Démarrer le partenariat</a>
+    <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 1px solid #eee; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: space-between;">
+        <div style="background: #FFD700; color: #333; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">SPÉCIAL INVESTISSEUR</div>
+        <div>
+            <h3 style="color: #33555F; margin-top: 10px;">Pack Business & Airbnb</h3>
+            <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Le secret de vos 5 étoiles voyageur</p>
+            <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">30 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
+            <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
+                <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Satisfaction voyageur garantie</li>
+                <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire 7j/7</li>
+                <li><i class="fas fa-user-shield" style="color: #33555F; margin-right: 10px;"></i> Interlocuteur unique : Julien</li>
+                <li><i class="fas fa-camera" style="color: #33555F; margin-right: 10px;"></i> Compte-rendu photo systématique</li>
+                <li><i class="fas fa-tools" style="color: #33555F; margin-right: 10px;"></i> Savoir-vivre et discrétion totale</li>
+            </ul>
+        </div>
+        <a href="#contact" class="btn" style="background-color: #FFD700; color: #333; width: 100%;">Démarrer le partenariat</a>
     </div>
 </div>
 </div>
@@ -245,7 +281,7 @@
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Samedis</h3>
         <p style="font-size: 1.2em; margin: 10px 0;">Majoration 25%</p>
-        <p style="font-size: 0.9em; color: #666;">Pour les interventions programmées le samedi.</p>
+        <p style="font-size: 0.9em; color: #666;">Pour les interventions le samedi.</p>
     </div>
 </div>
 </div>
