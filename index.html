@@ -7,7 +7,8 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
-  body, h1, h2, h3, p, a, li, label, input, textarea, button {
+  /* AUCUN TEXTE EN GRAS PARTOUT */
+  body, h1, h2, h3, p, a, li, label, input, textarea, button, span {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
     margin: 0;
@@ -20,6 +21,7 @@
     color: #333;
   }
 
+  /* COULEUR SABLE ET TEXTURE */
   section, .section, .section-alt {
     background-color: #ECE3BD !important;
     background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
@@ -32,6 +34,7 @@
     margin: 0 auto;
   }
 
+  /* BANDEAU ACCUEIL */
   #accueil {
     background-image: url('fond.jpeg') !important;
     background-size: cover !important;
@@ -56,6 +59,7 @@
     margin: 0 auto 20px auto;
   }
 
+  /* COULEURS ET BOUTONS */
   .btn-primary, header, footer {
     background-color: #33555F !important;
     color: white !important;
@@ -68,6 +72,7 @@
     display: inline-block;
     transition: 0.3s;
     border: none;
+    text-align: center;
   }
 
   .services-grid {
@@ -109,7 +114,7 @@
   @media (max-width: 768px) {
     #accueil { padding: 60px 20px !important; }
     #accueil h1 { font-size: 1.6em !important; }
-    div[style*="display: grid"] { grid-template-columns: 1fr !important; }
+    div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
   }
 </style>
 </head>
@@ -130,6 +135,7 @@
         <nav>
             <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
                 <li><a href="#accueil" style="color: white; text-decoration: none; font-size: 0.95em;">Accueil</a></li>
+                <li><a href="#a-propos" style="color: white; text-decoration: none; font-size: 0.95em;">Expertise</a></li>
                 <li><a href="#prestations" style="color: white; text-decoration: none; font-size: 0.95em;">Prestations</a></li>
                 <li><a href="#offres" style="color: white; text-decoration: none; font-size: 0.95em;">Abonnements</a></li>
                 <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em;">Tarifs</a></li>
@@ -148,10 +154,36 @@
 <p class="subtitle">Serrurerie, plomberie et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.</p>
 <p class="subtitle">Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.</p>
 <div class="hero-buttons">
-<a href="#contact" class="btn btn-primary" style="background-color: #33555F; border: none; margin-right: 10px;">Demander mon intervention</a>
-<a href="#prestations" class="btn btn-secondary" style="background-color: white; color: #33555F; border: none; padding: 12px 25px; text-decoration: none; border-radius: 4px; display: inline-block;">Voir mes spécialités</a>
+<a href="#contact" class="btn btn-primary" style="margin-right: 10px;">Demander mon intervention</a>
+<a href="#prestations" class="btn btn-secondary" style="background-color: white; color: #33555F;">Voir mes spécialités</a>
 </div>
 </div>
+</div>
+</section>
+
+<section id="a-propos" class="section">
+<div class="container">
+    <h2 style="text-align: center; color: #33555F; margin-bottom: 50px;">L'exigence aéroportuaire au service de votre foyer</h2>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 3em; margin-bottom: 20px;">✈️</div>
+            <h3 style="color: #33555F;">26 ans d'expertise</h3>
+            <p style="color: #666;">J'ai passé deux décennies à maintenir l'EuroAirport. Dans cet environnement de classe internationale, l'erreur n'est pas une option. La rigueur des normes est devenue mon ADN.</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #33555F;">
+            <div style="font-size: 3em; margin-bottom: 20px;">🛠️</div>
+            <h3 style="color: #33555F;">Le réflexe préventif</h3>
+            <p style="color: #666;">Un aéroport ne s'arrête jamais car on anticipe les pannes. Pourquoi attendre la fuite ou la porte bloquée ? J'applique cette même méthode chez vous pour éviter les urgences.</p>
+        </div>
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
+            <div style="font-size: 3em; margin-bottom: 20px;">🏠</div>
+            <h3 style="color: #33555F;">Votre terminal privé</h3>
+            <p style="color: #666;">Je ne me contente pas de bricoler, je sécurise et je pérennise. Votre domicile mérite une maintenance sans compromis, avec le soin d'un terminal professionnel.</p>
+        </div>
+    </div>
+    <div style="margin-top: 50px; padding: 30px; background: #ffffff; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+        <p style="font-size: 1.2em; color: #444; font-style: italic;">"D’un terminal de classe internationale à votre porte d’entrée : je mets l'exigence de la maintenance professionnelle au service des habitants de Kembs."</p>
+    </div>
 </div>
 </section>
 
