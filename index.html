@@ -8,24 +8,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <style>
-  /* Unification de la police et suppression du gras partout */
-  body, h1, h2, h3, p, a, li, span, label, input, textarea, button {
+  /* On unifie la police et on enlève le gras partout */
+  body, h1, h2, h3, p, a, li, label, input, textarea, button {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
   }
 
-  /* Ton Bleu Pétrole de référence pour tous les titres h2 */
-  h2 {
+  /* Harmonisation de la couleur Bleu Pétrole pour tous les titres */
+  h2, h3 {
     color: #0056b3 !important;
-    text-align: center;
-    font-weight: normal;
-    margin-bottom: 40px;
-  }
-  
-  /* Harmonisation des h3 pour la cohérence */
-  h3 {
-    color: #0056b3 !important;
-    font-weight: normal;
   }
 
   header {
@@ -51,11 +42,11 @@
         </div>
         <nav>
             <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
-                <li><a href="#accueil" style="color: white; text-decoration: none; font-size: 0.95em;">Accueil</a></li>
-                <li><a href="#prestations" style="color: white; text-decoration: none; font-size: 0.95em;">Prestations</a></li>
-                <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em;">Tarifs</a></li>
-                <li><a href="#serenite" style="color: white; text-decoration: none; font-size: 0.95em;">Abonnement</a></li>
-                <li><a href="#contact" style="color: white; text-decoration: none; font-size: 0.95em;">Contact</a></li>
+                <li><a href="#about" style="color: white; text-decoration: none; font-size: 0.95em; font-weight: normal;">Accueil</a></li>
+                <li><a href="#prestations" style="color: white; text-decoration: none; font-size: 0.95em; font-weight: normal;">Prestations</a></li>
+                <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em; font-weight: normal;">Tarifs</a></li>
+                <li><a href="#serenite" style="color: white; text-decoration: none; font-size: 0.95em; font-weight: normal;">Abonnement</a></li>
+                <li><a href="#contact" style="color: white; text-decoration: none; font-size: 0.95em; font-weight: normal;">Contact</a></li>
             </ul>
         </nav>
     </div>
@@ -67,7 +58,7 @@
 <section id="accueil" class="hero">
 <div class="container">
 <div class="hero-content">
-<h1>Votre maison mérite un expert. La tranquillité en une intervention.</h1>
+<h1 style="color: white !important;">Votre maison mérite un expert. La tranquillité en une intervention.</h1>
 <p class="subtitle">Serrurerie, plomberie et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.</p>
 <p class="subtitle">Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.</p>
 <div class="hero-buttons">
@@ -78,76 +69,76 @@
 </div>
 </section>
 
-<section id="a-propos" class="section" style="padding: 60px 0;">
+<section id="a-propos" class="section">
 <div class="container">
-    <h2>L'exigence aéroportuaire au service de votre foyer</h2>
+    <h2 style="text-align: center; margin-bottom: 50px;">L'exigence aéroportuaire au service de votre foyer</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
             <div style="font-size: 3em; margin-bottom: 20px;">✈️</div>
             <h3>26 ans d'expertise</h3>
-            <p style="color: #666; line-height: 1.6;">La rigueur des normes ERP de l'EuroAirport est devenue mon ADN. L'erreur n'est pas une option.</p>
+            <p style="color: #666; line-height: 1.6;">J'ai passé deux décennies à maintenir l'EuroAirport. Dans cet environnement de classe internationale, l'erreur n'est pas une option. La rigueur des normes ERP est devenue mon ADN.</p>
         </div>
         <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #0056b3;">
             <div style="font-size: 3em; margin-bottom: 20px;">🛠️</div>
             <h3>Le réflexe préventif</h3>
-            <p style="color: #666; line-height: 1.6;">On n'attend pas la panne pour agir. J'anticipe vos besoins pour vous éviter les urgences coûteuses.</p>
+            <p style="color: #666; line-height: 1.6;">Un aéroport ne s'arrête jamais car on anticipe les pannes. Pourquoi attendre la fuite ou la porte bloquée ? J'applique cette même méthode chez vous pour éviter les urgences coûteuses.</p>
         </div>
         <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
             <div style="font-size: 3em; margin-bottom: 20px;">🏠</div>
             <h3>Votre terminal privé</h3>
-            <p style="color: #666; line-height: 1.6;">Je sécurise et je pérennise. Votre domicile mérite une maintenance avec le même soin qu'un terminal de passagers.</p>
+            <p style="color: #666; line-height: 1.6;">Je ne me contente pas de bricoler, je sécurise et je pérennise. Votre domicile mérite une maintenance sans compromis, avec le même soin qu'un terminal de passagers.</p>
         </div>
     </div>
 </div>
 </section>
 
-<section id="prestations" class="section-alt" style="padding: 60px 0; background-color: #f8f9fa;">
+<section id="prestations" class="section-alt">
 <div class="container">
-    <h2>Mes domaines d'excellence</h2>
+    <h2 style="text-align: center;">Mes domaines d'excellence</h2>
     <div class="services-grid">
         <div class="service-card">
             <i class="fas fa-key icon-service" style="color: #0056b3; font-size: 2.5em; margin-bottom: 15px; display: block; text-align: center;"></i>
             <h3 style="text-align: center;">Serrurerie & Sécurisation</h3>
-            <p>Ouverture de porte, remplacement de cylindre haute sécurité et blindage. Précision d'expert.</p>
+            <p>Ma spécialité. Ouverture de porte, remplacement de cylindre haute sécurité et blindage. Précision d'expert.</p>
         </div>
         <div class="service-card">
             <i class="fas fa-faucet icon-service" style="color: #0056b3; font-size: 2.5em; margin-bottom: 15px; display: block; text-align: center;"></i>
             <h3 style="text-align: center;">Plomberie & Sanitaire</h3>
-            <p>Réparation de fuites, robinetterie, joints et installation d'appareils. Pas de bricolage.</p>
+            <p>Intervention experte : réparation de fuites, robinetterie, joints et installation d'appareils.</p>
         </div>
         <div class="service-card">
             <i class="fas fa-lightbulb icon-service" style="color: #0056b3; font-size: 2.5em; margin-bottom: 15px; display: block; text-align: center;"></i>
             <h3 style="text-align: center;">Électricité Domestique</h3>
-            <p>Mise en sécurité, prises, luminaires et diagnostic de pannes simples aux normes.</p>
+            <p>Petits travaux et mise en sécurité : prises, luminaires, diagnostic de pannes simples.</p>
         </div>
         <div class="service-card">
             <i class="fas fa-couch icon-service" style="color: #0056b3; font-size: 2.5em; margin-bottom: 15px; display: block; text-align: center;"></i>
             <h3 style="text-align: center;">Montage & Aménagement</h3>
-            <p>Assemblage de meubles et fixations complexes pour une durabilité maximale.</p>
+            <p>Assemblage soigné de meubles et fixations complexes pour que rien ne bouge.</p>
         </div>
     </div>
 </div>
 </section>
 
-<section id="serenite" class="section" style="padding: 60px 0; background-color: #f0f7ff;">
+<section id="serenite" class="section" style="background-color: #f0f7ff; padding: 60px 0;">
 <div class="container">
-    <h2>Le Contrat Sérénité : Votre maison sous haute protection</h2>
-    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1em;">Une offre unique limitée à 50 foyers à Kembs pour une réactivité totale.</p>
+    <h2 style="text-align: center;">Le Contrat Sérénité : Votre maison sous haute protection</h2>
+    <p style="text-align: center; max-width: 800px; margin: 0 auto 40px; font-size: 1.1em;">Une offre unique limitée à 50 foyers à Kembs pour garantir une réactivité totale.</p>
     <div style="background: white; padding: 40px; border-radius: 15px; border: 1px solid #0056b3; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;">
             <div>
-                <h3 style="margin-bottom: 20px;">Tout ce qui est inclus :</h3>
+                <h3>Tout ce qui est inclus :</h3>
                 <ul style="list-style: none; padding: 0;">
-                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #25D366; margin-right: 10px;"></i> 2 visites de contrôle / an</li>
-                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #25D366; margin-right: 10px;"></i> Carnet de santé maison</li>
-                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #25D366; margin-right: 10px;"></i> Priorité intervention 24h</li>
-                    <li style="margin-bottom: 12px;"><i class="fas fa-shield-alt" style="color: #0056b3; margin-right: 10px;"></i> Déplacement + 30 min offerts</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #25D366; margin-right: 10px;"></i> 2 visites de contrôle préventives par an</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #25D366; margin-right: 10px;"></i> Votre carnet de santé maison personnalisé</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-check-circle" style="color: #25D366; margin-right: 10px;"></i> Priorité absolue : intervention sous 24h</li>
+                    <li style="margin-bottom: 12px;"><i class="fas fa-shield-alt" style="color: #128C7E; margin-right: 10px;"></i> Premier dépannage : déplacement et 30 min offerts</li>
                 </ul>
             </div>
             <div style="background: #e6f9ed; padding: 30px; border-radius: 12px; text-align: center;">
-                <h3 style="color: #128C7E !important; margin-bottom: 10px;">VOTRE ABONNEMENT</h3>
+                <h3 style="color: #128C7E !important;">VOTRE ABONNEMENT</h3>
                 <div style="margin-top: 20px;"><span style="font-size: 2.5em; color: #333;">19 €</span> <span style="color: #666;">/ mois</span></div>
-                <p style="font-size: 0.9em; margin-top: 15px; color: #555;">Surveillance et disponibilité garanties.</p>
+                <p style="font-size: 0.9em; margin-top: 15px; color: #555;">Ce tarif couvre ma surveillance et ma disponibilité.</p>
             </div>
         </div>
     </div>
@@ -159,47 +150,66 @@
 
 <section id="tarifs" class="section-alt" style="padding: 60px 0;">
 <div class="container">
-    <h2>Des tarifs simples et sans surprise</h2>
+    <h2 style="text-align: center;">Des tarifs simples et sans surprise</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px;">
         <div style="background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; text-align: center;">
             <h3 style="margin-bottom: 10px;">Forfait Arrivée</h3>
-            <p style="font-size: 2em; margin: 10px 0; color: #333;">45 €</p>
-            <p style="font-size: 0.9em; color: #666;">Déplacement et diagnostic (zone Kembs).</p>
+            <p style="font-size: 2em; margin: 10px 0;">45 €</p>
+            <p style="font-size: 0.9em; color: #666;">Déplacement (zone Kembs) et diagnostic précis.</p>
         </div>
         <div style="background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; text-align: center;">
             <h3 style="margin-bottom: 10px;">Main d'œuvre</h3>
-            <p style="font-size: 2em; margin: 10px 0; color: #333;">60 € <span style="font-size: 0.5em;">/ h</span></p>
+            <p style="font-size: 2em; margin: 10px 0;">60 € <span style="font-size: 0.5em;">/ h</span></p>
             <p style="font-size: 0.9em; color: #666;">Facturation au temps réel passé.</p>
         </div>
         <div style="background: white; padding: 25px; border-radius: 8px; border: 1px solid #eee; text-align: center;">
             <h3 style="margin-bottom: 10px;">Déplacement</h3>
-            <p style="font-size: 1.2em; margin: 10px 0; color: #333;">Inclus autour de Kembs</p>
+            <p style="font-size: 1.2em; margin: 10px 0;">Inclus autour de Kembs</p>
             <p style="font-size: 0.9em; color: #666;">Supplément calculé au-delà de 15 km.</p>
         </div>
     </div>
+    <p style="text-align: center; margin-top: 25px; font-style: italic; color: #888;">Note : Majoration de 25% pour les interventions prévues le samedi.</p>
 </div>
 </section>
 
-<section id="contact" class="section" style="padding: 60px 0;">
+<section id="contact" class="section">
 <div class="container">
-    <h2>Contactez Julien</h2>
+    <h2 style="text-align: center;">Contactez Julien</h2>
+    <p style="text-align: center; margin-bottom: 20px;">Décrivez votre problème et je reviens vers vous avec une solution d'expert sous 24h.</p>
     <form action="https://formspree.io/f/xyzrndwa" method="POST" style="background: #fdfdfd; padding: 30px; border-radius: 8px; border: 1px solid #eee; max-width: 800px; margin: 0 auto;">
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
             <input type="text" name="nom" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Votre Nom et Prénom">
             <input type="tel" name="telephone" required style="padding: 10px; border: 1px solid #ccc; border-radius: 4px;" placeholder="Téléphone">
         </div>
-        <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Description de votre besoin..."></textarea>
-        <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 15px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
-            <a href="https://wa.me/33646664222" target="_blank" style="background-color: #25D366; color: white; display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
+        <div style="margin-bottom: 15px;">
+            <label style="display: block; margin-bottom: 5px;">Nature de l'urgence :</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+                <label><input type="checkbox" name="type" value="Serrurerie"> Serrurerie</label>
+                <label><input type="checkbox" name="type" value="Plomberie"> Plomberie</label>
+                <label><input type="checkbox" name="type" value="Serenite"> Contrat Sérénité</label>
+                <label><input type="checkbox" name="type" value="Autre"> Autre</label>
+            </div>
+        </div>
+        <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Description du problème..."></textarea>
+        <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
+            <p style="color: #128C7E; margin-bottom: 10px;">📸 Pour un devis ultra-rapide :</p>
+            <a href="https://wa.me/33646664222" target="_blank" style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
         </div>
         <button type="submit" style="width: 100%; padding: 15px; background-color: #0056b3; color: white; border: none; border-radius: 4px; cursor: pointer;">VALIDER MA DEMANDE</button>
     </form>
 </div>
 </section>
 
-<footer style="background-color: #333; color: white; padding: 40px 0; text-align: center;">
-    <p>Le Coup de Main Services – Expert à Kembs | 06 46 66 42 22</p>
-    <p style="opacity: 0.7; margin-top: 10px;">&copy; 2026 Julien - Tous droits réservés.</p>
+<footer>
+<div class="container" style="text-align: center; padding: 40px 0; background-color: #333; color: white;">
+    <h3>Disponibilité de l'artisan</h3>
+    <p>Lundi - Vendredi : 08h00 - 19h00</p>
+    <p>Samedi : 09h00 - 17h00 (Tarif spécial)</p>
+    <p>Dimanche & Jours fériés : Fermé (Repos de l'artisan)</p>
+    <p style="margin-top: 15px; font-size: 1.2em; color: #0056b3 !important; font-weight: bold;">Urgence Directe : 06 46 66 42 22</p>
+    <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.1); margin: 20px 0;">
+    <p>&copy; 2026 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
+</div>
 </footer>
 
 </body>
