@@ -8,19 +8,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
 <style>
-  /* On unifie la police sans forcer sur la structure */
+  /* Unification de la police sans forcer sur la structure */
   body, h1, h2, h3, p, a, li {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
   }
   
-  /* Application du fond bleu clair partout comme demandé */
+  /* Ton fond beige sable #ECE3BD appliqué partout */
   section, .section, .section-alt {
-    background-color: #f0f7ff !important;
-  }
-  
-  footer {
-    background-color: #333;
+    background-color: #ECE3BD !important;
   }
 </style>
 
@@ -29,6 +25,7 @@
 
 <header style="padding: 15px 0; background-color: #33555F;">
 <div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
+    
     <div style="display: flex; align-items: center; gap: 15px;">
         <img src="logo.jpg" alt="Logo Le Coup de Main" style="height: 60px; width: auto; border-radius: 50%;">
         <img src="FRANCE.jpg" alt="Drapeau France" style="height: 25px; width: auto;">
@@ -150,7 +147,7 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 </div>
 <div style="text-align: center; margin-top: 40px;">
     <p style="font-size: 1.2em; margin-bottom: 20px;">Est-ce qu'il reste une place pour vous ?</p>
-    <a href="https://wa.me/33646664222" target="_blank" class="btn btn-primary" style="background-color: #25D366; border: none; padding: 18px 35px; font-size: 1.2em; text-decoration: none; color: white; display: inline-block; border-radius: 6px;">Vérifier la disponibilité par WhatsApp</a>
+    <a href="https://wa.me/33646664222?text=Bonjour%20Julien,%20je%20m'appelle%20(votre%20nom)%20et%20je%20souhaite%20r%C3%A9server%20l'une%20des%2050%20places%20pour%20le%20Contrat%20S%C3%A9r%C3%A9nit%C3%A9." target="_blank" class="btn btn-primary" style="background-color: #25D366; border: none; padding: 18px 35px; font-size: 1.2em; text-decoration: none; color: white; display: inline-block; border-radius: 6px;">Vérifier la disponibilité par WhatsApp</a>
 </div>
 </div>
 </section>
@@ -175,29 +172,48 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
         <p style="font-size: 0.9em; color: #666;">Au-delà de 15 km, un petit supplément est calculé.</p>
     </div>
 </div>
+<p style="text-align: center; margin-top: 25px; font-style: italic; color: #888;">Note : Majoration de 25% pour les interventions prévues le samedi.</p>
 </div>
 </section>
 
 <section id="contact" class="section">
 <div class="container">
 <h2 style="color: #33555F; text-align: center;">Contactez Julien</h2>
+<p style="text-align: center; margin-bottom: 20px;">Décrivez votre problème et je reviens vers vous avec une solution d'expert sous 24h.</p>
 <form action="https://formspree.io/f/xyzrndwa" method="POST" style="background: #ffffff; padding: 20px; border-radius: 8px; border: 1px solid #eee; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-<div><label>Nom et Prénom *</label><input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
+<div><label>Votre Nom et Prénom *</label><input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
 <div><label>Téléphone *</label><input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
 </div>
-<textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;"></textarea>
+<div style="margin-bottom: 15px;">
+<label>Nature de l'urgence :</label>
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; background: #fff; padding: 10px; border: 1px solid #eee; border-radius: 4px;">
+<label><input type="checkbox" name="type_travaux" value="Serrurerie"> Serrurerie d'urgence</label>
+<label><input type="checkbox" name="type_travaux" value="Plomberie"> Plomberie/Fuite</label>
+<label><input type="checkbox" name="type_travaux" value="Serenite"> Contrat Sérénité</label>
+<label><input type="checkbox" name="type_travaux" value="Autre"> Autre besoin</label>
+</div>
+</div>
+<textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi tout..."></textarea>
+<div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
+    <p style="color: #128C7E; margin-bottom: 15px;">📸 Pour un devis ultra-rapide :</p>
+    <a href="https://wa.me/33646664222?text=Bonjour%20Julien,%20voici%20les%20photos%20pour%20mon%20intervention%20:" target="_blank" style="background-color: #25D366; color: white; display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
+</div>
 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; background-color: #33555F; color: white; border: none; cursor: pointer; border-radius: 4px;">VALIDER MA DEMANDE</button>
 </form>
 </div>
 </section>
 
-<footer style="padding: 40px 0; text-align: center; color: white;">
+<footer style="background-color: #333; padding: 40px 0; text-align: center; color: white;">
 <div class="container">
+<div class="footer-content" style="margin-bottom: 30px;">
 <h3>Disponibilité de l'artisan</h3>
 <p>Lundi - Vendredi : 08h00 - 19h00 | Samedi : 09h00 - 17h00</p>
-<p style="margin-top: 15px; font-size: 1.2em; color: #33555F; background: white; display: inline-block; padding: 5px 15px; border-radius: 4px;">Urgence Directe : 06 46 66 42 22</p>
-<p style="margin-top: 20px;">&copy; 2026 Le Coup de Main Services. Votre expert à Kembs.</p>
+<p>Dimanche & Jours fériés : Fermé (Repos de l'artisan)</p>
+<p style="margin-top: 15px; font-size: 1.2em; color: #33555F; background: white; display: inline-block; padding: 5px 15px; border-radius: 4px; font-weight: bold;">Urgence Directe : 06 46 66 42 22</p>
+</div>
+<hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
+<p>&copy; 2026 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
 </div>
 </footer>
 </body>
