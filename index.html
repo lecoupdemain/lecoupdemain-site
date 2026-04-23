@@ -14,11 +14,15 @@
     font-weight: normal !important;
   }
   
-  /* Fond beige sable #ECE3BD avec texture relief chaleureuse */
+  /* L'ASTUCE POUR UN RELIEF PLUS ACCENTUÉ */
+  /* 1. J'applique une texture de tissu plus grossière (lin épais/canevas) en fond.
+     2. Je garde ton beige sable #ECE3BD.
+     3. J'ajoute une ombre interne (box-shadow) pour donner de la profondeur. */
   section, .section, .section-alt {
     background-color: #ECE3BD !important;
-    background-image: url('https://www.transparenttextures.com/patterns/natural-paper.png') !important;
+    background-image: url('https://www.transparenttextures.com/patterns/linen.png') !important; /* Texture lin plus marquée */
     background-repeat: repeat !important;
+    box-shadow: inset 0 0 100px rgba(0,0,0,0.05) !important; /* Ombre interne discrète pour le relief */
   }
 </style>
 
@@ -101,23 +105,23 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 <div class="container">
 <h2>Mes domaines d'excellence</h2>
 <div class="services-grid">
-<div class="service-card">
-<i class="fas fa-key icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+<i class="fas fa-key icon-service" style="color: #33555F;"></i>
 <h3>Serrurerie & Sécurisation</h3>
 <p>Ma spécialité. Ouverture de porte, remplacement de cylindre haute sécurité et blindage. Je règle vos portes et fenêtres au millimètre pour que tout soit parfait et fluide. La sécurité d'un travail d'expert.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-faucet icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+<i class="fas fa-faucet icon-service" style="color: #33555F;"></i>
 <h3>Plomberie & Sanitaire</h3>
 <p>Intervention experte : réparation de fuites, remplacement de robinetterie, entretien des joints et installation d'appareils. Pas de bricolage, juste de la précision.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-lightbulb icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+<i class="fas fa-lightbulb icon-service" style="color: #33555F;"></i>
 <h3>Électricité Domestique</h3>
 <p>Petits travaux et mise en sécurité : remplacement de prises, pose de luminaires, diagnostic de pannes simples et remise aux normes de vos installations.</p>
 </div>
-<div class="service-card">
-<i class="fas fa-couch icon-service"></i>
+<div class="service-card" style="background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+<i class="fas fa-couch icon-service" style="color: #33555F;"></i>
 <h3>Montage & Aménagement</h3>
 <p>Assemblage soigné de meubles IKEA ou étagères. Je m'occupe des fixations complexes pour que rien ne bouge, même avec le temps.</p>
 </div>
@@ -203,7 +207,7 @@ Un service haut de gamme, une transparence totale et la garantie d'un travail so
 <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi tout..."></textarea>
 <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
     <p style="color: #128C7E; margin-bottom: 15px;">📸 Pour un devis ultra-rapide :</p>
-    <a href="https://wa.me/33646664222?text=Bonjour%20Julien..." target="_blank" style="background-color: #25D366; color: white; display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
+    <a href="https://wa.me/33646664222" target="_blank" style="background-color: #25D366; color: white; display: inline-block; padding: 12px 24px; text-decoration: none; border-radius: 6px;">Envoyer mes photos par WhatsApp</a>
 </div>
 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; background-color: #33555F; color: white; border: none; cursor: pointer; border-radius: 4px;">VALIDER MA DEMANDE</button>
 </form>
