@@ -147,7 +147,7 @@
 <div class="container">
 <div class="hero-content">
 <h1>Votre maison mérite un expert. La tranquillité en une intervention.</h1>
-<p class="subtitle">Serrurerie, plomberie et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.</p>
+<p class="subtitle">Serrurerie, réparation de volets et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.</p>
 <p class="subtitle">Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.</p>
 <div class="hero-buttons">
 <a href="#contact" class="btn btn-primary" style="margin-right: 10px;">Demander mon intervention</a>
@@ -189,10 +189,17 @@
 <div class="services-grid">
 <div class="service-card" style="cursor: pointer;" onclick="var img = document.getElementById('photo-serrure'); img.style.display = (img.style.display === 'none' ? 'block' : 'none');">
 <i class="fas fa-key icon-service"></i>
-<h3>Serrurerie & Sécurisation</h3>
-<p>Ouverture de porte, remplacement de cylindre haute sécurité et blindage. Je règle vos portes et fenêtres au millimètre. La sécurité d'un travail d'expert.</p>
+<h3>Serrurerie & Contrôle d'accès</h3>
+<p>Ouverture de porte, remplacement de cylindre haute sécurité, blindage et installation de serrures électroniques innovantes pour sécuriser vos accès.</p>
 <div style="font-size: 0.8em; color: #888; margin-top: 15px; font-style: italic;">Cliquez pour voir ma réalisation 👇</div>
 <img id="photo-serrure" src="porte.jpg" style="display: none; width: 100%; border-radius: 8px; margin-top: 15px; border: 2px solid #33555F;" alt="Serrurerie">
+</div>
+<div class="service-card" style="cursor: pointer;" onclick="var img = document.getElementById('photo-volet'); img.style.display = (img.style.display === 'none' ? 'block' : 'none');">
+<i class="fas fa-scroll icon-service"></i>
+<h3>Volets Roulants & Ouvrants</h3>
+<p>Dépannage mécanique ou électrique, remplacement de tabliers, motorisation et réglage millimétré de vos volets, portes et fenêtres pour un confort thermique idéal.</p>
+<div style="font-size: 0.8em; color: #888; margin-top: 15px; font-style: italic;">Cliquez pour voir ma réalisation 👇</div>
+<img id="photo-volet" src="volet.jpg" style="display: none; width: 100%; border-radius: 8px; margin-top: 15px; border: 2px solid #33555F;" alt="Volets Roulants">
 </div>
 <div class="service-card" style="cursor: pointer;" onclick="var img = document.getElementById('photo-plomb'); img.style.display = (img.style.display === 'none' ? 'block' : 'none');">
 <i class="fas fa-faucet icon-service"></i>
@@ -204,16 +211,9 @@
 <div class="service-card" style="cursor: pointer;" onclick="var img = document.getElementById('photo-elec'); img.style.display = (img.style.display === 'none' ? 'block' : 'none');">
 <i class="fas fa-lightbulb icon-service"></i>
 <h3>Électricité Domestique</h3>
-<p>Petits travaux et mise en sécurité : prises, luminaires, diagnostic de pannes simples et remise aux normes.</p>
+<p>Petits travaux et mise en sécurité : raccordement de prises, pose de luminaires, diagnostic de pannes simples et interventions rapides.</p>
 <div style="font-size: 0.8em; color: #888; margin-top: 15px; font-style: italic;">Cliquez pour voir ma réalisation 👇</div>
 <img id="photo-elec" src="elec.jpg" style="display: none; width: 100%; border-radius: 8px; margin-top: 15px; border: 2px solid #33555F;" alt="Électricité">
-</div>
-<div class="service-card" style="cursor: pointer;" onclick="var img = document.getElementById('photo-meuble'); img.style.display = (img.style.display === 'none' ? 'block' : 'none');">
-<i class="fas fa-couch icon-service"></i>
-<h3>Montage & Aménagement</h3>
-<p>Assemblage soigné de meubles IKEA ou étagères. Je m'occupe des fixations complexes pour que rien ne bouge.</p>
-<div style="font-size: 0.8em; color: #888; margin-top: 15px; font-style: italic;">Cliquez pour voir ma réalisation 👇</div>
-<img id="photo-meuble" src="meuble.jpg" style="display: none; width: 100%; border-radius: 8px; margin-top: 15px; border: 2px solid #33555F;" alt="Montage">
 </div>
 </div>
 </div>
@@ -233,7 +233,7 @@
         <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
             <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> 2 visites de contrôle préventives / an</li>
             <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Priorité intervention sous 24h</li>
-            <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Diagnostic technique complet inclus</li>
+            <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Inspection des volets et serrures incluse</li>
             <li><i class="fas fa-gift" style="color: #33555F; margin-right: 10px;"></i> 30 min de main-d'œuvre offertes / an</li>
         </ul>
     </div>
@@ -247,11 +247,11 @@
             <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Le secret de vos 5 étoiles voyageur</p>
             <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">30 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
             <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
-                <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Satisfaction voyageur garantie</li>
-                <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire 7j/7</li>
+                <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Zéro perte de nuitée (accès & volets opérationnels)</li>
+                <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire dépannage serrure 7j/7</li>
                 <li><i class="fas fa-user-shield" style="color: #33555F; margin-right: 10px;"></i> Interlocuteur unique : Julien</li>
                 <li><i class="fas fa-camera" style="color: #33555F; margin-right: 10px;"></i> Compte-rendu photo systématique</li>
-                <li><i class="fas fa-tools" style="color: #33555F; margin-right: 10px;"></i> Savoir-vivre et discrétion totale</li>
+                <li><i class="fas fa-tools" style="color: #33555F; margin-right: 10px;"></i> Maintenance des accès connectés voyageurs</li>
             </ul>
         </div>
         <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20solution%20d%27entretien%20Business%20pour%20mon%20bien%20en%20location" target="_blank" class="btn" style="background-color: #FFD700; color: #333; width: 100%;">Démarrer le partenariat</a>
@@ -295,10 +295,8 @@
 <label>Adresse de l'intervention *</label>
 <input type="text" name="adresse" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 </div>
-<textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi votre besoin..."></textarea>
+<textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi votre besoin (serrurerie, volet bloqué, fuite, etc.)..."></textarea>
 <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
-    <p style="color: #128C7E; margin-bottom: 15px;">📸 Pour un devis ultra-rapide :</p>
-    <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
   <p style="color: #128C7E; margin-bottom: 15px;"><i class="fas fa-camera" style="margin-right: 10px;"></i> Pour un devis ultra-rapide par photos :</p>
   <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20suis%20%28votre%20nom%29%20et%20je%20vous%20joins%20les%20photos%20comme%20pr%C3%A9vu%20pour%20recevoir%20votre%20devis" target="_blank" style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Envoyer mes photos sur WhatsApp</a>
 </div>
