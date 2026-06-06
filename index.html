@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <style>
-  body, h1, h2, h3, p, a, li, label, input, textarea, button, span {
+  body, h1, h2, h3, p, a, li, label, input, textarea, button, span, strong, b {
     font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
     font-weight: normal !important;
     margin: 0;
@@ -125,7 +125,7 @@
     margin: 40px auto;
     padding: 30px;
     border-radius: 12px;
-    max-width: 680px;
+    max-width: 650px;
     width: 90%;
     box-shadow: 0 5px 25px rgba(0,0,0,0.2);
     position: relative;
@@ -137,7 +137,6 @@
     top: 15px;
     right: 20px;
     font-size: 28px;
-    font-weight: bold;
     color: #aaa;
     cursor: pointer;
     transition: 0.2s;
@@ -147,26 +146,81 @@
     color: #333;
   }
 
-  .modal-section-title {
-    color: #33555F;
-    border-bottom: 2px solid #33555F;
-    padding-bottom: 5px;
-    margin: 20px 0 10px 0;
-    font-weight: bold !important;
+  /* Styles pour les accordéons tranchants */
+  details {
+    background: #fdfdfd;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
   }
 
-  .modal-list {
+  details[open] {
+    border-color: #33555F;
+    box-shadow: 0 2px 10px rgba(51,85,95,0.1);
+  }
+
+  summary {
+    padding: 16px 20px;
+    cursor: pointer;
+    font-size: 1.05em;
+    color: #33555F;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #f8f9fa;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::after {
+    content: '+';
+    font-size: 1.5em;
+    color: #33555F;
+    transition: transform 0.3s;
+  }
+
+  details[open] summary::after {
+    content: '-';
+    transform: rotate(180deg);
+  }
+
+  details[open] summary {
+    background: #fff;
+    border-bottom: 1px solid #eee;
+  }
+
+  .details-content {
+    padding: 20px;
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.6;
+    background: #fff;
+  }
+
+  ul.clean-list {
     list-style: none;
     padding: 0;
-    margin-bottom: 20px;
   }
 
-  .modal-list li {
-    margin-bottom: 12px;
+  ul.clean-list li {
+    margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    line-height: 1.5;
+  }
+
+  .highlight-box {
+    background: #f4f6f7;
+    padding: 15px;
+    border-left: 4px solid #33555F;
+    margin-bottom: 20px;
+    color: #333;
+    font-size: 1.05em;
   }
 
   @media (max-width: 768px) {
@@ -329,60 +383,43 @@
 <div id="modal-19" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('modal-19')">&times;</span>
-    <h2 style="color: #33555F; margin-bottom: 10px;">🛠️ Pack Résidentiel — 19 € / mois</h2>
+    <h2 style="color: #33555F; margin-bottom: 20px; font-size: 1.5em; text-align: center;">Pack Résidentiel — 19 € / mois</h2>
     
-    <p style="font-size: 1em; color: #333; font-weight: bold !important; margin-bottom: 15px; line-height: 1.5; background: #f4f6f7; padding: 12px; border-left: 4px solid #33555F;">
-      💡 Pourquoi choisir cet abonnement ?<br>
-      Mon expertise repose sur 26 ans de maintenance technique dans des infrastructures de haute sécurité. Ce savoir-faire rare et ultra-qualitatif est très demandé sur la région. Pour maintenir ce niveau d'exigence sans jamais brader la qualité de mon travail, mon planning est volontairement limité. Sans abonnement, les délais peuvent être longs. En choisissant ce Pack, vous achetez un droit d'accès prioritaire : dès qu'un créneau se libère dans mes heures de travail, vous passez immédiatement devant tous les clients classiques.
-    </p>
-    
-    <div class="modal-section-title">🔍 Ce que je vérifie lors des 2 visites préventives annuelles :</div>
-    <ul class="modal-list">
-      <li><div><i class="fas fa-clipboard-check" style="color: #33555F; margin-top: 5px;"></i> <strong>Serrurerie & Menuiserie</strong> : Vérification du jeu des portes, lubrification des cylindres, alignement des gâches et contrôle d'usure mécanique.</div></li>
-      <li><div><i class="fas fa-clipboard-check" style="color: #33555F; margin-top: 5px;"></i> <strong>Volets roulants & Ouvrants</strong> : Inspection des coulisses, des attaches de tablier et vérification des fins de course moteurs ou mécanismes manuels.</div></li>
-      <li><div><i class="fas fa-clipboard-check" style="color: #33555F; margin-top: 5px;"></i> <strong>Plomberie & Sanitaire</strong> : Détection de micro-fuites invisibles, examen visuel des joints d'étanchéité et état des robinetteries.</div></li>
-      <li><div><i class="fas fa-clipboard-check" style="color: #33555F; margin-top: 5px;"></i> <strong>Électricité</strong> : Test des disjoncteurs différentiels au tableau, serrage des connexions principales et contrôle visuel des prises sensibles.</div></li>
-    </ul>
-
-    <div class="modal-section-title">📋 Le Rapport Complet de la Maison (Inclus) :</div>
-    <p style="font-size: 0.95em; color: #444; margin-bottom: 15px; line-height: 1.5;">
-      Après chaque visite préventive, je vous remets un <strong>Rapport de Maintenance Complet</strong>. Ce document détaille l'état exact de votre logement, les points de vigilance identifiés et les préconisations techniques à prévoir. Un véritable carnet de santé pour valoriser votre patrimoine.
-    </p>
-
-    <div class="modal-section-title">✅ Ce qui est couvert par votre abonnement (Philosophie Préventive) :</div>
-    <ul class="modal-list">
-      <li><i class="fas fa-check-circle" style="color: #25D366; margin-top: 5px;"></i> L'intégralité du diagnostic, du contrôle technique et de la maintenance préventive de votre habitation.</li>
-      <li><i class="fas fa-check-circle" style="color: #25D366; margin-top: 5px;"></i> Les petits ajustements immédiats ne nécessitant aucune pièce (réglages de gonds, visserie, graissage).</li>
-      <li><i class="fas fa-check-circle" style="color: #25D366; margin-top: 5px;"></i> Priorité absolue sur mon planning du lundi au vendredi en cas de besoin d'intervention.</li>
-    </ul>
-
-    <div class="modal-section-title">🛠️ Comment fonctionne la prise en charge des réparations lourdes ?</div>
-    <p style="font-size: 0.95em; color: #444; margin-bottom: 15px; line-height: 1.5;">
-      <strong>Cet abonnement est axé sur la préservation et la prévention pour éviter les pannes. Je répare tout ce qui est possible tant qu'il n'y a pas de matériel à remplacer.</strong> Si une anomalie majeure ou une pièce défectueuse est détectée :
-    </p>
-    <ul class="modal-list" style="padding-left: 15px;">
-      <li>⚙️ <strong>Travaux soumis à devis</strong> : Tout remplacement de composant mécanique ou quincaillerie (un nouveau cylindre de serrure, un moteur de volet, une pièce de robinetterie) fait systématiquement l'objet d'un devis transparent. Les travaux ne sont lancés qu'après votre accord écrit.</li>
-    </ul>
-
-    <div class="modal-section-title">❌ Ce qui n'est pas inclus :</div>
-    <ul class="modal-list">
-      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Les interventions de nuit et de week-end (soumises à tarification d'urgence spécifique).</li>
-      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Les gros chantiers de rénovation complète de plomberie ou d'électricité.</li>
-    </ul>
-
-    <div class="modal-section-title">⚠️ Gestion des Congés & Organisation :</div>
-    <p style="font-size: 0.9em; color: #666; margin-bottom: 15px; line-height: 1.5;">
-      <strong>Heures d'intervention</strong> : Les créneaux prioritaires s'organisent du lundi au vendredi, de 8h à 18h.<br>
-      <strong>Délai de carence</strong> : Actif 15 jours après signature pour garantir l'intégrité du système préventif.<br>
-      <strong>🌟 Atout Continuité (Présence Vacances Scolaires)</strong> : Pour votre confort, **je ne prends aucun congé durant les périodes officielles de vacances scolaires** (juillet, août, Noël, Pâques). Je reste disponible au moment où la majorité des services sont fermés.<br>
-      <strong>Déplacements Hors Saison</strong> : Je prends mes vacances uniquement hors saison pour recharger les batteries. Vous serez systématiquement prévenu bien à l'avance de mes dates de fermeture afin que nous puissions planifier et organiser sereinement vos besoins avant mon départ.
-    </p>
-
-    <div style="background: #e6f9ed; border: 1px dashed #25D366; padding: 10px; border-radius: 6px; text-align: center; font-size: 0.9em; color: #128C7E; margin-bottom: 15px;">
-      ⏳ <strong>Places strictement limitées</strong> : Pour maintenir cette qualité premium, le quota d'abonnés est volontairement restreint sur Kembs.
+    <div class="highlight-box">
+      Attendre une panne coûte toujours plus cher en temps et en argent. Ce pack, c'est l'accès prioritaire à mon planning et la garantie d'une maison entretenue avant que les problèmes n'arrivent.
     </div>
 
-    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20R%C3%A9sidentiel%20%C3%A0%2019%E2%82%AC%20en%20ayant%20pris%20connaissance%20des%20conditions." target="_blank" class="btn btn-primary" style="width: 100%;">Tout est clair, je m'abonne via WhatsApp</a>
+    <details>
+      <summary>Ce que vous achetez (L'expertise préventive)</summary>
+      <div class="details-content">
+        <ul class="clean-list">
+          <li><i class="fas fa-check" style="color: #25D366;"></i> 2 visites annuelles pour auditer vos serrures, volets, plomberie et électricité.</li>
+          <li><i class="fas fa-check" style="color: #25D366;"></i> La main-d'œuvre pour les petits réglages immédiats sur place.</li>
+          <li><i class="fas fa-check" style="color: #25D366;"></i> Le rapport de santé complet de votre maison après mon passage.</li>
+          <li><i class="fas fa-check" style="color: #25D366;"></i> Votre statut coupe-file sur mon planning du lundi au vendredi.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>Le contrat de transparence (Quand payez-vous ?)</summary>
+      <div class="details-content">
+        Ma philosophie est simple : je répare sans frais tout ce qui peut l'être mécaniquement. L'abonnement finance ce travail de préservation. 
+        <br><br>
+        Vous sortez votre portefeuille uniquement s'il faut remplacer une pièce défectueuse (cylindre, moteur, robinetterie) ou pour un chantier lourd. Dans ce cas, aucun travail n'est commencé sans un devis chiffré et validé par vos soins. Aucune dépense cachée.
+      </div>
+    </details>
+
+    <details>
+      <summary>Mes limites assumées (Horaires et Congés)</summary>
+      <div class="details-content">
+        Je garantis un service d'excellence parce que je ne m'éparpille pas. Mon planning est réservé à un nombre limité de clients sur Kembs. 
+        <br><br>
+        Je suis sur le pont pendant toutes les vacances scolaires pour vous sauver la mise quand les autres ferment. Mes coupures se font hors saison pour tailler la route avec Neneche, mon fourgon. Vous êtes systématiquement prévenu à l'avance pour qu'on anticipe vos besoins.
+      </div>
+    </details>
+
+    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20R%C3%A9sidentiel%20%C3%A0%2019%E2%82%AC%20en%20ayant%20pris%20connaissance%20des%20conditions." target="_blank" class="btn btn-primary" style="width: 100%; margin-top: 20px; font-size: 1.1em; padding: 15px;">Je m'abonne en toute sérénité</a>
   </div>
 </div>
 
@@ -390,56 +427,43 @@
 <div id="modal-32" class="modal">
   <div class="modal-content">
     <span class="close-modal" onclick="closeModal('modal-32')">&times;</span>
-    <h2 style="color: #33555F; margin-bottom: 10px;">🏢 Pack Business & Airbnb — 32 € / mois</h2>
+    <h2 style="color: #33555F; margin-bottom: 20px; font-size: 1.5em; text-align: center;">Pack Business & Airbnb — 32 € / mois</h2>
     
-    <p style="font-size: 1em; color: #333; font-weight: bold !important; margin-bottom: 15px; line-height: 1.5; background: #fffdf3; padding: 12px; border-left: 4px solid #FFD700;">
-      💼 Le positionnement de votre partenaire technique :<br>
-      Une maintenance de niveau aéroportuaire appliquée au bâtiment est une denrée rare. Pour garantir la sérénité de vos locaux ou de vos voyageurs Airbnb, vous bénéficiez d'une priorité absolue sur les créneaux disponibles de mon planning professionnel. Prendre cet abonnement, c'est l'assurance qu'en cas de coup dur durant mes heures d'ouverture, mes outils se déploient en priorité pour votre business, là où un client standard devra patienter plusieurs jours.
-    </p>
-    
-    <div class="modal-section-title">🔍 Ce que je vérifie et entretiens de manière préventive :</div>
-    <ul class="modal-list">
-      <li><div><i class="fas fa-clipboard-check" style="color: #FFD700; margin-top: 5px;"></i> <strong>Systèmes d'accès</strong> : Audit complet des serrures connectées, boîtes à clés voyageurs, gâches électriques et poignées haute fréquence.</div></li>
-      <li><div><i class="fas fa-clipboard-check" style="color: #FFD700; margin-top: 5px;"></i> <strong>Ouvrants & Sécurité</strong> : Contrôle mécanique des fermetures, rideaux métalliques ou volets roulants pour éviter toute perte de nuitée ou blocage de boutique.</div></li>
-      <li><div><i class="fas fa-clipboard-check" style="color: #FFD700; margin-top: 5px;"></i> <strong>Équipements à risque</strong> : Chasses d'eau, mitigeurs, siphons et circuits électriques des appareils pour anticiper les plaintes des clients.</div></li>
-    </ul>
-
-    <div class="modal-section-title">📋 Le Rapport Complet Pro & Audit Photos (Inclus) :</div>
-    <p style="font-size: 0.95em; color: #444; margin-bottom: 15px; line-height: 1.5;">
-      Après chaque audit ou intervention d'urgence, vous recevez un <strong>Rapport Technique Exhaustif avec photos à l'appui</strong>. Indispensable pour votre gestion à distance, votre comptabilité ou pour faire valoir vos droits auprès des assurances en cas de dégradation par un tiers.
-    </p>
-
-    <div class="modal-section-title">✅ Ce qui est couvert par vos mensualités :</div>
-    <ul class="modal-list">
-      <li><i class="fas fa-check-circle" style="color: #FFD700; margin-top: 5px;"></i> Disponibilité et traitement prioritaire de vos demandes sous un planning optimisé du lundi au vendredi.</li>
-      <li><i class="fas fa-check-circle" style="color: #FFD700; margin-top: 5px;"></i> Main-d'œuvre incluse sur toute la partie réglages mécaniques fins et sécurisation préventive des accès.</li>
-    </ul>
-
-    <div class="modal-section-title">🛠️ Cadre technique des interventions curatives :</div>
-    <p style="font-size: 0.95em; color: #444; margin-bottom: 15px; line-height: 1.5;">
-      <strong>L'abonnement Business achète votre accès prioritaire permanent et la maintenance de vos infrastructures.</strong> Ma philosophie est de réparer immédiatement sans frais tout ce qui est possible mécaniquement. Si une pièce lourde est hors d'usage :
-    </p>
-    <ul class="modal-list" style="padding-left: 15px;">
-      <li>⚙️ <strong>Changement de pièces sur devis</strong> : Si la quincaillerie ou le matériel doit être entièrement remplacé (boîtier connecté détérioré, serrure forcée, robinetterie endommagée), un devis précis de fourniture vous est immédiatement soumis pour validation.</li>
-    </ul>
-
-    <div class="modal-section-title">❌ Ce qui n'est pas inclus :</div>
-    <ul class="modal-list">
-      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Les restructurations lourdes ou chantiers de rénovation complète de bâtiments industriels.</li>
-    </ul>
-
-    <div class="modal-section-title">⚠️ Gestion des Congés & Organisation Pro :</div>
-    <p style="font-size: 0.9em; color: #666; margin-bottom: 15px; line-height: 1.5;">
-      <strong>Philosophie Mutuelle</strong> : Vous achetez une priorité et un savoir-faire rare, pas une exclusivité 24h/24. Les interventions prioritaires s'effectuent de 8h à 18h, du lundi au vendredi.<br>
-      <strong>🌟 Disponibilité Totale Saison Haute</strong> : Pour coller aux exigences de la location saisonnière et du commerce, **je garantis une disponibilité totale sans interruption pendant toutes les vacances scolaires** (juillet, août, fêtes de fin d'année). Votre activité ne s'arrête pas, mon suivi non plus.<br>
-      <strong>Fermetures Hors Saison</strong> : Mes coupures se font exclusivement hors saison. Vous serez prévenu de manière anticipée avant chaque période de repos afin de planifier et d'ajuster l'organisation technique de vos locaux avant mon départ.
-    </p>
-
-    <div style="background: #fffdf3; border: 1px dashed #FFD700; padding: 10px; border-radius: 6px; text-align: center; font-size: 0.9em; color: #b8860b; margin-bottom: 15px;">
-      ⏳ <strong>Quota d'abonnés limité</strong> : Une fois le nombre maximum de partenariats atteint sur Kembs, les souscriptions seront closes pour préserver la qualité de service.
+    <div class="highlight-box" style="border-color: #FFD700;">
+      Une porte bloquée, c'est un voyageur perdu ou une boutique fermée. Ce pack est le bouclier technique de votre rentabilité.
     </div>
 
-    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20Business%20%C3%A0%2032%E2%82%AC%20pour%20mon%20activit%C3%A9%20%2F%20Airbnb." target="_blank" class="btn" style="background-color: #FFD700; color: #333; width: 100%; font-weight: bold !important;">Tout est clair, je lance le partenariat</a>
+    <details>
+      <summary>Ce qui sécurise votre chiffre d'affaires</summary>
+      <div class="details-content">
+        <ul class="clean-list">
+          <li><i class="fas fa-check" style="color: #FFD700;"></i> Priorité d'intervention absolue en semaine sur mon planning.</li>
+          <li><i class="fas fa-check" style="color: #FFD700;"></i> Audit mécanique de vos équipements sensibles, boîtes à clés et accès.</li>
+          <li><i class="fas fa-check" style="color: #FFD700;"></i> Un interlocuteur technique unique qui connaît vos locaux.</li>
+          <li><i class="fas fa-check" style="color: #FFD700;"></i> Rapport photo systématique après chaque intervention pour votre gestion à distance.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details>
+      <summary>La facturation sans zone d'ombre</summary>
+      <div class="details-content">
+        L'abonnement mensualise l'entretien préventif et votre droit d'urgence. Ma règle est de solutionner le problème mécaniquement à chaque fois que c'est possible.
+        <br><br>
+        Le curatif lourd fonctionne sur devis : si une serrure est forcée par un client ou qu'un mécanisme doit être intégralement remplacé, la pièce neuve vous est chiffrée immédiatement. Le travail ne démarre qu'avec votre validation.
+      </div>
+    </details>
+
+    <details>
+      <summary>Le pacte de réactivité (Saison haute et congés)</summary>
+      <div class="details-content">
+        L'engagement est mutuel. Je garantis ma disponibilité totale sans aucune interruption pendant toutes les vacances scolaires (été, Noël, etc.) pour soutenir votre activité quand elle tourne à plein régime.
+        <br><br>
+        Pour maintenir ce niveau, mes pauses se font hors saison avec Neneche sur les routes. Les dates vous sont communiquées très en amont pour que l'on sécurise vos installations avant mon départ. Quota d'abonnés strictement limité pour conserver ma vitesse d'action.
+      </div>
+    </details>
+
+    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20Business%20%C3%A0%2032%E2%82%AC%20pour%20mon%20activit%C3%A9%20%2F%20Airbnb." target="_blank" class="btn" style="background-color: #FFD700; color: #333; width: 100%; margin-top: 20px; font-size: 1.1em; padding: 15px;">Je sécurise mon business</a>
   </div>
 </div>
 
@@ -449,17 +473,17 @@
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Forfait Arrivée</h3>
-        <p style="font-size: 2em; margin: 10px 0;">45 €</p>
+        <p style="font-size: 2em; margin: 10px 0; color: #33555F;">45 €</p>
         <p style="font-size: 0.9em; color: #666;">Déplacement (Kembs) et diagnostic précis.</p>
     </div>
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Main-d'œuvre</h3>
-        <p style="font-size: 2em; margin: 10px 0;">60 € <span style="font-size: 0.5em;">/ h</span></p>
+        <p style="font-size: 2em; margin: 10px 0; color: #33555F;">60 € <span style="font-size: 0.5em;">/ h</span></p>
         <p style="font-size: 0.9em; color: #666;">Facturation au temps réel passé.</p>
     </div>
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Samedis</h3>
-        <p style="font-size: 1.2em; margin: 10px 0;">Majoration 25%</p>
+        <p style="font-size: 1.2em; margin: 10px 0; color: #33555F;">Majoration 25%</p>
         <p style="font-size: 0.9em; color: #666;">Pour les interventions le samedi.</p>
     </div>
 </div>
@@ -471,16 +495,16 @@
 <h2 style="color: #33555F; text-align: center;">Contactez Julien</h2>
 <form action="https://formspree.io/f/xyzrndwa" method="POST">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
-<div><label>Votre Nom et Prénom *</label><input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
-<div><label>Téléphone *</label><input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
+<div><label>Votre Nom et Prénom</label><input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
+<div><label>Téléphone</label><input type="tel" name="telephone" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
 </div>
 <div style="margin-bottom: 15px;">
-<label>Adresse de l'intervention *</label>
+<label>Adresse de l'intervention</label>
 <input type="text" name="adresse" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 </div>
 <textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi votre besoin (serrurerie, volet bloqué, fuite, etc.)..."></textarea>
 <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
-  <p style="color: #128C7E; margin-bottom: 15px;"><i class="fas fa-camera" style="margin-right: 10px;"></i> Pour un devis ultra-rapide par photos :</p>
+  <p style="color: #128C7E; margin-bottom: 15px; font-size: 1.1em;"><i class="fas fa-camera" style="margin-right: 10px;"></i> Pour un devis ultra-rapide par photos :</p>
   <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20suis%20%28votre%20nom%29%20et%20je%20vous%20joins%20les%20photos%20comme%20pr%C3%A9vu%20pour%20recevoir%20votre%20devis" target="_blank" style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Envoyer mes photos sur WhatsApp</a>
 </div>
 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; cursor: pointer;">VALIDER MA DEMANDE</button>
