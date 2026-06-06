@@ -107,10 +107,72 @@
     color: #33555F;
   }
 
+  /* Styles pour les fenêtres explicatives (Modales) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+  }
+
+  .modal-content {
+    background-color: #fff;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 650px;
+    width: 90%;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.2);
+    position: relative;
+    text-align: left;
+  }
+
+  .close-modal {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    transition: 0.2s;
+  }
+
+  .close-modal:hover {
+    color: #333;
+  }
+
+  .modal-section-title {
+    color: #33555F;
+    border-bottom: 2px solid #33555F;
+    padding-bottom: 5px;
+    margin: 20px 0 10px 0;
+    font-weight: bold !important;
+  }
+
+  .modal-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 20px;
+  }
+
+  .modal-list li {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
   @media (max-width: 768px) {
     #accueil { padding: 60px 20px !important; }
     #accueil h1 { font-size: 1.6em !important; }
     div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
+    .modal-content { margin: 20px auto; padding: 20px; }
   }
 </style>
 </head>
@@ -224,6 +286,7 @@
 <h2 style="color: #33555F; text-align: center; margin-bottom: 40px;">Votre sérénité sur mesure</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: stretch;">
     
+    <!-- Carte 19€ Particulier -->
     <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #33555F; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; display: flex; flex-direction: column; justify-content: space-between;">
     <div style="background: #33555F; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">VOTRE ARTISAN DE PROXIMITÉ</div>
     <div>
@@ -237,15 +300,16 @@
             <li><i class="fas fa-gift" style="color: #33555F; margin-right: 10px;"></i> 30 min de main-d'œuvre offertes / an</li>
         </ul>
     </div>
-    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20offre%20d%27entretien%20pour%20ma%20maison" target="_blank" class="btn btn-primary" style="width: 100%;">Choisir la proximité</a>
+    <button type="button" class="btn btn-primary" style="width: 100%; cursor: pointer;" onclick="openModal('modal-19')">Découvrir l'offre à 19€</button>
 </div>
 
+    <!-- Carte 32€ Pro & Airbnb -->
     <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #FFD700; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         <div style="background: #FFD700; color: #333; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">SPÉCIAL INVESTISSEUR</div>
         <div>
             <h3 style="color: #33555F; margin-top: 10px;">Pack Business & Airbnb</h3>
             <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Le secret de vos 5 étoiles voyageur</p>
-            <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">30 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
+            <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">32 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
             <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
                 <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Zéro perte de nuitée (accès & volets opérationnels)</li>
                 <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire dépannage serrure 7j/7</li>
@@ -254,11 +318,89 @@
                 <li><i class="fas fa-tools" style="color: #33555F; margin-right: 10px;"></i> Maintenance des accès connectés voyageurs</li>
             </ul>
         </div>
-        <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20suis%20int%C3%A9ress%C3%A9%20par%20votre%20solution%20d%27entretien%20Business%20pour%20mon%20bien%20en%20location" target="_blank" class="btn" style="background-color: #FFD700; color: #333; width: 100%;">Démarrer le partenariat</a>
+        <button type="button" class="btn" style="background-color: #FFD700; color: #333; width: 100%; cursor: pointer;" onclick="openModal('modal-32')">Découvrir l'offre à 32€</button>
     </div>
 </div>
 </div>
 </section>
+
+<!-- Fenêtre Pop-up Explicative Offre 19€ -->
+<div id="modal-19" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal('modal-19')">&times;</span>
+    <h2 style="color: #33555F; margin-bottom: 10px;">🛠️ Pack Résidentiel — 19 € / mois</h2>
+    
+    <p style="font-size: 1em; color: #333; font-weight: bold !important; margin-bottom: 15px; line-height: 1.5; background: #f4f6f7; padding: 12px; border-left: 4px solid #33555F;">
+      💡 Pourquoi choisir cet abonnement ?<br>
+      Mon expertise repose sur 26 ans de maintenance technique dans des infrastructures de haute sécurité. Ce savoir-faire rare et ultra-qualitatif est très demandé sur la région. Pour maintenir ce niveau d'exigence sans jamais brader la qualité de mon travail, mon planning est volontairement limité. Sans abonnement, les délais peuvent être longs. En choisissant ce Pack, vous achetez un droit d'accès prioritaire : dès qu'un créneau se libère dans mes heures de travail, vous passez immédiatement devant tous les clients classiques.
+    </p>
+    
+    <div class="modal-section-title">✅ Ce qui est strictement inclus :</div>
+    <ul class="modal-list">
+      <li><i class="fas fa-check-circle" style="color: #25D366; margin-top: 5px;"></i> 2 interventions de petite maintenance par an (jusqu'à 1h max par intervention).</li>
+      <li><i class="fas fa-check-circle" style="color: #25D366; margin-top: 5px;"></i> Les dépannages courants : un joint qui fuit, un réglage de gond de porte, une prise à remplacer, un volet roulant qui coince.</li>
+      <li><i class="fas fa-check-circle" style="color: #25D366; margin-top: 5px;"></i> Priorité absolue sur le planning d'intervention en semaine par rapport aux clients non-abonnés.</li>
+    </ul>
+
+    <div class="modal-section-title">❌ Ce qui n'est pas inclus :</div>
+    <ul class="modal-list">
+      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Les interventions d'urgence de nuit et le week-end (ex: porte claquée un dimanche soir). Elles restent possibles mais font l'objet d'une tarification spéciale.</li>
+      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Le coût du matériel et des pièces de rechange (qui restent à votre charge).</li>
+      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Les gros travaux de rénovation ou chantiers de grande envergure.</li>
+    </ul>
+
+    <div class="modal-section-title">⚠️ Les Règles du Jeu (La clé de mon efficacité) :</div>
+    <p style="font-size: 0.9em; color: #666; margin-bottom: 15px; line-height: 1.5;">
+      <strong>Horaires classiques</strong> : Les interventions prioritaires liées à l'abonnement sont planifiées exclusivement durant mes heures de travail officielles (du lundi au vendredi, de 8h à 18h).<br>
+      <strong>Délai de carence</strong> : L'abonnement devient actif 15 jours après la signature pour éviter les souscriptions opportunistes lors d'une panne déjà existante.<br>
+      <strong>Congés & Fourgon</strong> : J'aime tailler la route avec mon fourgon pour couper et recharger les batteries ! Durant mes fermetures annuelles (signalées à l'avance), les interventions non-urgentes sont suspendues et traitées en priorité absolue à mon retour. En cas d'urgence majeure pendant mes vacances, un contact confrère de confiance vous sera communiqué.
+    </p>
+
+    <div style="background: #e6f9ed; border: 1px dashed #25D366; padding: 10px; border-radius: 6px; text-align: center; font-size: 0.9em; color: #128C7E; margin-bottom: 15px;">
+      ⏳ <strong>Places strictement limitées</strong> : Afin de garantir cette qualité premium, je n'accepte qu'un nombre restreint d'abonnés sur le secteur de Kembs.
+    </div>
+
+    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20R%C3%A9sidentiel%20%C3%A0%2019%E2%82%AC%20en%20ayant%20pris%20connaissance%20des%20conditions." target="_blank" class="btn btn-primary" style="width: 100%;">Tout est clair, je m'abonne via WhatsApp</a>
+  </div>
+</div>
+
+<!-- Fenêtre Pop-up Explicative Offre 32€ -->
+<div id="modal-32" class="modal">
+  <div class="modal-content">
+    <span class="close-modal" onclick="closeModal('modal-32')">&times;</span>
+    <h2 style="color: #33555F; margin-bottom: 10px;">🏢 Pack Business & Airbnb — 32 € / mois</h2>
+    
+    <p style="font-size: 1em; color: #333; font-weight: bold !important; margin-bottom: 15px; line-height: 1.5; background: #fffdf3; padding: 12px; border-left: 4px solid #FFD700;">
+      💼 Le positionnement de votre partenaire technique :<br>
+      Une maintenance de niveau aéroportuaire appliquée au bâtiment est une denrée rare. Pour garantir la sérénité de vos locaux ou de vos voyageurs Airbnb, vous bénéficiez d'une priorité absolue sur les créneaux disponibles de mon planning professionnel. Prendre cet abonnement, c'est l'assurance qu'en cas de coup dur durant mes heures d'ouverture, mes outils se déploient en priorité pour votre business, là où un client standard devra patienter plusieurs jours.
+    </p>
+    
+    <div class="modal-section-title">✅ Ce qui est strictement inclus :</div>
+    <ul class="modal-list">
+      <li><i class="fas fa-check-circle" style="color: #FFD700; margin-top: 5px;"></i> Surveillance préventive et maintenance des accès connectés ou boîtes à clés pour vos voyageurs.</li>
+      <li><i class="fas fa-check-circle" style="color: #FFD700; margin-top: 5px;"></i> Intervention prioritaire d'urgence sous un délai réduit pour débloquer une situation critique mettant en péril votre activité.</li>
+      <li><i class="fas fa-check-circle" style="color: #FFD700; margin-top: 5px;"></i> Compte-rendu photo systématique envoyé après chaque intervention pour vos assurances ou votre gestion à distance.</li>
+    </ul>
+
+    <div class="modal-section-title">❌ Ce qui n'est pas inclus :</div>
+    <ul class="modal-list">
+      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Le remplacement complet de grosses installations ou les chantiers de rénovation industrielle.</li>
+      <li><i class="fas fa-times-circle" style="color: #d9534f; margin-top: 5px;"></i> Le coût des pièces et quincailleries lourdes (à la charge du propriétaire).</li>
+    </ul>
+
+    <div class="modal-section-title">⚠️ Les Règles du Jeu (Engagement Réciproque) :</div>
+    <p style="font-size: 0.9em; color: #666; margin-bottom: 15px; line-height: 1.5;">
+      <strong>Engagement Mutuel</strong> : Vous achetez une priorité et un savoir-faire rare, pas un droit de propriété 24h/24. Les demandes abusives ou hors cadre ne seront pas tolérées. Les interventions prioritaires s'effectuent strictement durant mes heures d'ouverture (du lundi au vendredi, de 8h à 18h).<br>
+      <strong>Congés & Vadrouille</strong> : Quand Myriam et moi partons explorer les routes avec notre fourgon, l'entreprise tourne au ralenti. Les urgences absolues (ex: voyageur coincé dehors) seront redirigées vers un artisan confrère de confiance sélectionné par mes soins dans la région, afin de préserver vos 5 étoiles sans coupure de service.
+    </p>
+
+    <div style="background: #fffdf3; border: 1px dashed #FFD700; padding: 10px; border-radius: 6px; text-align: center; font-size: 0.9em; color: #b8860b; margin-bottom: 15px;">
+      ⏳ <strong>Quota d'abonnés limité</strong> : Une fois le nombre maximum de partenariats atteint sur Kembs, les souscriptions seront closes pour préserver la qualité de service.
+    </div>
+
+    <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20Business%20%C3%A0%2032%E2%82%AC%20pour%20mon%20activit%C3%A9%20%2F%20Airbnb." target="_blank" class="btn" style="background-color: #FFD700; color: #333; width: 100%; font-weight: bold !important;">Tout est clair, je lance le partenariat</a>
+  </div>
+</div>
 
 <section id="tarifs" class="section-alt">
 <div class="container">
@@ -313,6 +455,27 @@
 <p style="color: white;">&copy; 2026 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
 </div>
 </footer>
+
+</main>
+
+<script>
+  function openModal(modalId) {
+    document.getElementById(modalId).style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeModal(modalId) {
+    document.getElementById(modalId).style.display = "none";
+    document.body.style.overflow = "auto";
+  }
+
+  window.onclick = function(event) {
+    if (event.target.className === "modal") {
+      event.target.style.display = "none";
+      document.body.style.overflow = "auto";
+    }
+  }
+</script>
 
 </body>
 </html>
