@@ -56,6 +56,46 @@
     margin: 0 auto 20px auto;
   }
 
+  .countdown-banner {
+    background: rgba(255, 255, 255, 0.95);
+    border: 2px solid #33555F;
+    border-radius: 12px;
+    padding: 20px;
+    max-width: 650px;
+    margin: 30px auto 0 auto;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    text-align: center;
+  }
+
+  .countdown-grid {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+  }
+
+  .countdown-box {
+    background: #33555F;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    min-width: 70px;
+  }
+
+  .countdown-number {
+    font-size: 1.8em;
+    line-height: 1;
+    color: #fff;
+  }
+
+  .countdown-label {
+    font-size: 0.75em;
+    color: #ECE3BD;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
   .btn-primary, header, footer {
     background-color: #33555F !important;
     color: white !important;
@@ -107,7 +147,6 @@
     color: #33555F;
   }
 
-  /* Styles pour les fenêtres explicatives (Modales) */
   .modal {
     display: none;
     position: fixed;
@@ -146,7 +185,6 @@
     color: #333;
   }
 
-  /* Layout Lecture en Z */
   .z-top {
     display: flex;
     justify-content: space-between;
@@ -167,7 +205,6 @@
     gap: 15px;
   }
 
-  /* Styles pour les accordéons tranchants */
   details {
     background: #fdfdfd;
     border: 1px solid #e0e0e0;
@@ -250,6 +287,8 @@
     .modal-content { margin: 20px auto; padding: 20px; }
     .z-top, .z-bottom { flex-direction: column; align-items: flex-start; }
     .btn { width: 100%; }
+    .countdown-grid { gap: 8px; }
+    .countdown-box { min-width: 60px; padding: 8px 10px; }
   }
 </style>
 </head>
@@ -292,6 +331,34 @@
 <a href="#contact" class="btn btn-primary" style="margin-right: 10px;">Demander mon intervention</a>
 <a href="#prestations" class="btn btn-secondary" style="background-color: white; color: #33555F;">Voir mes spécialités</a>
 </div>
+
+<div id="bloc-compte-rebours" class="countdown-banner">
+  <p style="color: #33555F; font-size: 1.15em; margin: 0 0 6px 0; text-shadow: none;">
+    Lancement officiel des interventions le 10 janvier 2027
+  </p>
+  <p style="color: #666; font-size: 0.9em; margin: 0; text-shadow: none;">
+    Vous avez croisé le fourgon à Kembs ? L'atelier ouvre ses plannings dans :
+  </p>
+  <div class="countdown-grid">
+    <div class="countdown-box">
+      <div class="countdown-number" id="cd-jours">--</div>
+      <div class="countdown-label">Jours</div>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-number" id="cd-heures">--</div>
+      <div class="countdown-label">Heures</div>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-number" id="cd-minutes">--</div>
+      <div class="countdown-label">Min</div>
+    </div>
+    <div class="countdown-box">
+      <div class="countdown-number" id="cd-secondes">--</div>
+      <div class="countdown-label">Sec</div>
+    </div>
+  </div>
+</div>
+
 </div>
 </div>
 </section>
@@ -563,13 +630,44 @@
 <p>Lundi - Vendredi : 08h00 - 19h00 | Samedi : 09h00 - 17h00</p>
 <p style="margin-top: 15px; font-size: 1.2em; color: white;">Urgence Directe : 06 46 66 42 22</p>
 <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
-<p style="color: white;">&copy; 2026 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
+<p style="color: white;">&copy; 2026-2027 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
 </div>
 </footer>
 
 </main>
 
 <script>
+  function updateCountdown() {
+    const launchDate = new Date("January 10, 2027 08:00:00").getTime();
+    const now = new Date().getTime();
+    const diff = launchDate - now;
+
+    const banner = document.getElementById("bloc-compte-rebours");
+
+    if (diff <= 0) {
+      if (banner) banner.style.display = "none";
+      return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+    const elDays = document.getElementById("cd-jours");
+    const elHours = document.getElementById("cd-heures");
+    const elMins = document.getElementById("cd-minutes");
+    const elSecs = document.getElementById("cd-secondes");
+
+    if (elDays) elDays.textContent = days;
+    if (elHours) elHours.textContent = hours;
+    if (elMins) elMins.textContent = minutes;
+    if (elSecs) elSecs.textContent = seconds;
+  }
+
+  setInterval(updateCountdown, 1000);
+  updateCountdown();
+
   function openModal(modalId) {
     document.getElementById(modalId).style.display = "block";
     document.body.style.overflow = "hidden";
