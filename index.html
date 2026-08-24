@@ -280,6 +280,67 @@
     font-size: 0.9em;
   }
 
+  /* Simulateur Code Postal Déplacement */
+  .calc-container {
+    background: white;
+    border: 2px solid #33555F;
+    border-radius: 12px;
+    padding: 25px 30px;
+    max-width: 650px;
+    margin: 35px auto 0 auto;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-align: center;
+  }
+
+  .calc-input-wrapper {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    justify-content: center;
+  }
+
+  .calc-input-wrapper input {
+    flex: 1;
+    max-width: 250px;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    outline: none;
+  }
+
+  .calc-input-wrapper input:focus {
+    border-color: #33555F;
+  }
+
+  .calc-result-box {
+    margin-top: 20px;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 0.95em;
+    text-align: left;
+    display: none;
+    line-height: 1.5;
+  }
+
+  .res-z1 {
+    background-color: #e6f9ed;
+    border: 1px solid #25D366;
+    color: #0c6b37;
+  }
+
+  .res-z2 {
+    background-color: #eef6f9;
+    border: 1px solid #33555F;
+    color: #1c363e;
+  }
+
+  .res-other {
+    background-color: #fff9e6;
+    border: 1px solid #e0a800;
+    color: #7d5b00;
+  }
+
   @media (max-width: 768px) {
     #accueil { padding: 60px 20px !important; }
     #accueil h1 { font-size: 1.6em !important; }
@@ -289,6 +350,8 @@
     .btn { width: 100%; }
     .countdown-grid { gap: 8px; }
     .countdown-box { min-width: 60px; padding: 8px 10px; }
+    .calc-input-wrapper { flex-direction: column; align-items: stretch; }
+    .calc-input-wrapper input { max-width: 100%; }
   }
 </style>
 </head>
@@ -586,8 +649,8 @@
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Forfait Arrivée</h3>
-        <p style="font-size: 2em; margin: 10px 0; color: #33555F;">45 €</p>
-        <p style="font-size: 0.9em; color: #666;">Déplacement (Kembs) et diagnostic précis.</p>
+        <p style="font-size: 2em; margin: 10px 0; color: #33555F;">50 €</p>
+        <p style="font-size: 0.9em; color: #666;">Déplacement (Kembs & 20 km) et diagnostic précis.</p>
     </div>
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Main-d'œuvre</h3>
@@ -600,6 +663,20 @@
         <p style="font-size: 0.9em; color: #666;">Pour les interventions le samedi.</p>
     </div>
 </div>
+
+<!-- Simulateur Frais de Déplacement -->
+<div class="calc-container">
+  <h3 style="color: #33555F; margin-bottom: 6px; font-size: 1.2em;"><i class="fas fa-calculator" style="margin-right: 8px;"></i> Estimer mon Forfait Déplacement</h3>
+  <p style="color: #666; font-size: 0.9em; margin-bottom: 12px;">Entrez votre code postal pour connaître instantanément le tarif d'arrivée :</p>
+  
+  <div class="calc-input-wrapper">
+    <input type="text" id="cpInput" placeholder="Ex : 68680, 68300, 68100..." maxlength="5">
+    <button type="button" class="btn btn-primary" onclick="calculerDeplacement()" style="cursor: pointer;">Vérifier</button>
+  </div>
+
+  <div id="resultBox" class="calc-result-box"></div>
+</div>
+
 </div>
 </section>
 
@@ -684,6 +761,50 @@
       document.body.style.overflow = "auto";
     }
   }
+
+  // Calculateur Déplacement par Code Postal
+  function calculerDeplacement() {
+    const cp = document.getElementById('cpInput').value.trim();
+    const resultBox = document.getElementById('resultBox');
+
+    if (!cp || cp.length !== 5 || isNaN(cp)) {
+      resultBox.style.display = 'block';
+      resultBox.className = 'calc-result-box res-other';
+      resultBox.innerHTML = '<i class="fas fa-exclamation-circle"></i> Merci de saisir un code postal valide à 5 chiffres.';
+      return;
+    }
+
+    const zone1 = [
+      '68680', '68300', '68510', '68128', '68330', 
+      '68220', '68440', '68870', '68730', '68490', 
+      '68390', '68170'
+    ];
+
+    const zone2 = [
+      '68100', '68200', '68110', '68120', '68260', 
+      '68270', '68790', '68350', '68720', '68130', 
+      '68640', '68560', '68210', '68740'
+    ];
+
+    resultBox.style.display = 'block';
+
+    if (zone1.includes(cp)) {
+      resultBox.className = 'calc-result-box res-z1';
+      resultBox.innerHTML = '<strong style="font-size: 1.1em; display:block; margin-bottom: 4px;"><i class="fas fa-check-circle"></i> Forfait Arrivée : 50 € HT (60 € TTC)</strong>Zone de proximité (Kembs & 3 Frontières jusqu\'à 20 km). Comprend l\'aller-retour et le diagnostic initial sur place.';
+    } else if (zone2.includes(cp)) {
+      resultBox.className = 'calc-result-box res-z2';
+      resultBox.innerHTML = '<strong style="font-size: 1.1em; display:block; margin-bottom: 4px;"><i class="fas fa-map-marker-alt"></i> Forfait Arrivée : 60 € HT (72 € TTC)</strong>Zone étendue (Mulhouse Agglomération & Sundgau). Comprend l\'aller-retour et le diagnostic initial sur place.';
+    } else {
+      resultBox.className = 'calc-result-box res-other';
+      resultBox.innerHTML = '<strong style="font-size: 1.1em; display:block; margin-bottom: 4px;"><i class="fas fa-info-circle"></i> Intervention hors zone standard</strong>Pour les interventions au-delà de 35 km, contactez-moi directement au 06 46 66 42 22 pour convenir d\'un forfait adapté.';
+    }
+  }
+
+  document.getElementById('cpInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') {
+      calculerDeplacement();
+    }
+  });
 </script>
 
 </body>
