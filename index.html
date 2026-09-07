@@ -341,6 +341,40 @@
     color: #7d5b00;
   }
 
+  /* Style Réseaux Sociaux */
+  .social-link-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 1.1em;
+  }
+
+  .social-link-icon:hover {
+    background-color: white;
+    color: #33555F;
+    transform: translateY(-2px);
+  }
+
+  .social-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+
+  .social-card:hover {
+    transform: translateY(-5px);
+  }
+
   @media (max-width: 768px) {
     #accueil { padding: 60px 20px !important; }
     #accueil h1 { font-size: 1.6em !important; }
@@ -365,17 +399,24 @@
         <h1 style="color: white; font-size: 1.6em; margin: 0;">Le Coup de Main</h1>
     </div>
     <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
-        <div style="color: white; font-size: 1.1em;">
-            <i class="fas fa-phone-alt" style="margin-right: 8px; color: #25D366;"></i>
-            Une urgence ? <a href="tel:0646664222" style="color: white; text-decoration: none;">06 46 66 42 22</a>
+        <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
+            <div style="color: white; font-size: 1.1em;">
+                <i class="fas fa-phone-alt" style="margin-right: 8px; color: #25D366;"></i>
+                Une urgence ? <a href="tel:0646664222" style="color: white; text-decoration: none;">06 46 66 42 22</a>
+            </div>
+            <div style="display: flex; gap: 8px;">
+                <a href="https://www.facebook.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Page Facebook Le Coup de Main Services"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" class="social-link-icon" title="Instagram Le Coup de Main Services"><i class="fab fa-instagram"></i></a>
+            </div>
         </div>
         <nav>
-            <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0;">
+            <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; flex-wrap: wrap;">
                 <li><a href="#accueil" style="color: white; text-decoration: none; font-size: 0.95em;">Accueil</a></li>
                 <li><a href="#a-propos" style="color: white; text-decoration: none; font-size: 0.95em;">Expertise</a></li>
                 <li><a href="#prestations" style="color: white; text-decoration: none; font-size: 0.95em;">Prestations</a></li>
                 <li><a href="#offres" style="color: white; text-decoration: none; font-size: 0.95em;">Abonnements</a></li>
                 <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em;">Tarifs</a></li>
+                <li><a href="#reseaux" style="color: white; text-decoration: none; font-size: 0.95em;">Actualités</a></li>
                 <li><a href="#contact" style="color: white; text-decoration: none; font-size: 0.95em;">Contact</a></li>
             </ul>
         </nav>
@@ -479,6 +520,7 @@
 </div>
 </div>
 </section>
+
 <section id="offres" class="section">
 <div class="container">
 <h2 style="color: #33555F; text-align: center; margin-bottom: 40px;">Votre sérénité sur mesure</h2>
@@ -671,7 +713,47 @@
 </div>
 </section>
 
-<section id="contact" class="section">
+<!-- Section Réseaux Sociaux & Vie d'Artisan -->
+<section id="reseaux" class="section">
+<div class="container">
+  <h2 style="color: #33555F; text-align: center; margin-bottom: 15px;">Suivez le quotidien de l'atelier sur le terrain</h2>
+  <p style="text-align: center; max-width: 750px; margin: 0 auto 40px auto; color: #555;">
+    Retrouvez mes chantiers en direct, les coulisses des dépannages en serrurerie et plomberie, et repérez le fourgon dans les rues de Kembs et ses environs !
+  </p>
+
+  <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+    
+    <div class="social-card">
+      <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #1877F2; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.8em; margin: 0 auto 15px auto;">
+        <i class="fab fa-facebook-f"></i>
+      </div>
+      <h3 style="color: #33555F; margin-bottom: 10px;">Facebook Officiel</h3>
+      <p style="color: #666; font-size: 0.95em; margin-bottom: 20px;">
+        Avis clients, actus locales, conseils sécurité pour vos serrures et photos des interventions terminées.
+      </p>
+      <a href="https://www.facebook.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: #1877F2 !important; width: 100%;">
+        <i class="fab fa-facebook-f" style="margin-right: 8px;"></i> Rejoindre la page Facebook
+      </a>
+    </div>
+
+    <div class="social-card">
+      <div style="width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.8em; margin: 0 auto 15px auto;">
+        <i class="fab fa-instagram"></i>
+      </div>
+      <h3 style="color: #33555F; margin-bottom: 10px;">Instagram en direct</h3>
+      <p style="color: #666; font-size: 0.95em; margin-bottom: 20px;">
+        Stories chantiers, avant/après en vidéo, outillage pro et astuces pour entretenir votre maison au quotidien.
+      </p>
+      <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background-color: #E1306C !important; width: 100%;">
+        <i class="fab fa-instagram" style="margin-right: 8px;"></i> Suivre sur Instagram
+      </a>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section id="contact" class="section-alt">
 <div class="container">
 <h2 style="color: #33555F; text-align: center;">Contactez Julien</h2>
 <form action="https://formspree.io/f/xyzrndwa" method="POST">
@@ -696,7 +778,19 @@
 <footer style="padding: 40px 20px; text-align: center; background-color: #33555F;">
 <div class="container">
 <p>Lundi - Vendredi : 08h00 - 19h00 | Samedi : 09h00 - 17h00</p>
-<p style="margin-top: 15px; font-size: 1.2em; color: white;">Urgence Directe : 06 46 66 42 22</p>
+<p style="margin-top: 10px; font-size: 1.2em; color: white;">Urgence Directe : 06 46 66 42 22</p>
+
+<!-- Liens Réseaux Footer -->
+<div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
+  <a href="https://www.facebook.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.1em; display: inline-flex; align-items: center; gap: 8px;">
+    <i class="fab fa-facebook-f" style="font-size: 1.2em;"></i> Facebook
+  </a>
+  <span style="color: rgba(255,255,255,0.4);">|</span>
+  <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.1em; display: inline-flex; align-items: center; gap: 8px;">
+    <i class="fab fa-instagram" style="font-size: 1.2em;"></i> Instagram
+  </a>
+</div>
+
 <hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
 <p style="color: white;">&copy; 2026-2027 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
 </div>
