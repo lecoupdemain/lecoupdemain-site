@@ -342,26 +342,6 @@
   }
 
   /* Style Réseaux Sociaux */
-  .social-link-icon {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.15);
-    color: white;
-    text-decoration: none;
-    transition: 0.3s;
-    font-size: 1.1em;
-  }
-
-  .social-link-icon:hover {
-    background-color: white;
-    color: #33555F;
-    transform: translateY(-2px);
-  }
-
   .social-card {
     background: white;
     padding: 30px;
@@ -373,6 +353,42 @@
 
   .social-card:hover {
     transform: translateY(-5px);
+  }
+
+  /* Section CGV */
+  .cgv-box {
+    background: white;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    padding: 35px 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 0.95em;
+    color: #444;
+    line-height: 1.7;
+    text-align: left;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+
+  .cgv-box h3 {
+    color: #33555F;
+    margin-top: 25px;
+    margin-bottom: 8px;
+    font-size: 1.15em;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 5px;
+  }
+
+  .cgv-box h3:first-of-type {
+    margin-top: 0;
+  }
+
+  .cgv-box p, .cgv-box ul {
+    margin-bottom: 12px;
+  }
+
+  .cgv-box ul {
+    padding-left: 20px;
   }
 
   @media (max-width: 768px) {
@@ -404,11 +420,9 @@
                 Une urgence ? <a href="tel:0646664222" style="color: white; text-decoration: none;">06 46 66 42 22</a>
             </div>
             <div style="display: flex; gap: 10px; align-items: center;">
-                <!-- Bouton Officiel Facebook -->
                 <a href="https://www.facebook.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: #1877F2; color: white; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.25); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Suivez-nous sur Facebook">
                     <i class="fab fa-facebook-f" style="font-size: 1.1em;"></i>
                 </a>
-                <!-- Bouton Officiel Instagram -->
                 <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.25); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Suivez-nous sur Instagram">
                     <i class="fab fa-instagram" style="font-size: 1.2em;"></i>
                 </a>
@@ -423,6 +437,7 @@
                 <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em;">Tarifs</a></li>
                 <li><a href="#reseaux" style="color: white; text-decoration: none; font-size: 0.95em;">Actualités</a></li>
                 <li><a href="#contact" style="color: white; text-decoration: none; font-size: 0.95em;">Contact</a></li>
+                <li><a href="#cgv" style="color: #ECE3BD; text-decoration: none; font-size: 0.95em;">CGV</a></li>
             </ul>
         </nav>
     </div>
@@ -531,7 +546,6 @@
 <h2 style="color: #33555F; text-align: center; margin-bottom: 40px;">Votre sérénité sur mesure</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: stretch;">
     
-    <!-- Carte 19€ Particulier -->
     <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #33555F; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; display: flex; flex-direction: column; justify-content: space-between;">
     <div style="background: #33555F; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">VOTRE ARTISAN DE PROXIMITÉ</div>
     <div>
@@ -548,7 +562,6 @@
     <button type="button" class="btn btn-primary" style="width: 100%; cursor: pointer;" onclick="openModal('modal-19')">Découvrir l'offre à 19€</button>
 </div>
 
-    <!-- Carte 32€ Pro & Airbnb -->
     <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #FFD700; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         <div style="background: #FFD700; color: #333; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">SPÉCIAL INVESTISSEUR</div>
         <div>
@@ -780,6 +793,65 @@
 </div>
 </section>
 
+<!-- Section Conditions Générales de Vente (CGV) -->
+<section id="cgv" class="section">
+<div class="container">
+  <h2 style="color: #33555F; text-align: center; margin-bottom: 30px;">Conditions Générales de Vente (CGV)</h2>
+  
+  <div class="cgv-box">
+    <p style="text-align: right; font-size: 0.85em; color: #888;">En vigueur au 1er janvier 2027</p>
+
+    <h3>Article 1 – Identification et Champ d'application</h3>
+    <p>Les présentes Conditions Générales de Vente et de Prestations de Services régissent les relations contractuelles entre la SASU <strong>LE COUP DE MAIN SERVICES</strong> (22a rue du Rhin, 68680 Kembs, RCS Mulhouse, représentée par Julien Cohen) et ses clients, particuliers ou professionnels.</p>
+    <p>Toute commande, validation de devis ou souscription d'abonnement implique l'adhésion entière et sans réserve du Client aux présentes CGV.</p>
+
+    <h3>Article 2 – Prestations Proposées</h3>
+    <p>Le Prestataire propose des services d'artisanat, dépannage, entretien et maintenance technique :</p>
+    <ul>
+      <li>Serrurerie et contrôle d'accès (dépannage, ouverture de porte, remplacement de cylindres et serrures connectées).</li>
+      <li>Volets roulants et ouvrants (remplacement de tabliers, motorisation, réglages).</li>
+      <li>Dépannage et maintenance sanitaire de base (recherche de fuite, robinetterie, joints).</li>
+      <li>Petits travaux d'électricité domestique et mise en sécurité.</li>
+      <li>Abonnements de suivi et maintenance préventive.</li>
+    </ul>
+
+    <h3>Article 3 – Commandes, Devis et Pré-diagnostic</h3>
+    <p>Tout devis est gratuit et valable 30 jours. L'accord est conclu dès signature du devis ou acceptation expresse par écrit ou messagerie instantanée.</p>
+    <p>Les estimations réalisées sur la base de photographies restent indicatives et ne deviennent fermes qu'après vérification visuelle de l'état réel des installations sur place par le technicien.</p>
+
+    <h3>Article 4 – Tarifs et Déplacements</h3>
+    <p>Les tarifs applicables sont ceux en vigueur au jour de la demande :</p>
+    <ul>
+      <li><strong>Forfait Arrivée (Zone 1 - Kembs &amp; 3 Frontières jusqu'à 20 km) :</strong> 50 € HT (60 € TTC). Comprend le déplacement aller-retour et le diagnostic initial sur place.</li>
+      <li><strong>Forfait Arrivée (Zone 2 - Agglomération mulhousienne &amp; Sundgau) :</strong> 60 € HT (72 € TTC).</li>
+      <li><strong>Main-d'œuvre standard :</strong> 60 € HT / heure (toute heure entamée étant due au prorata).</li>
+      <li><strong>Interventions du samedi :</strong> Majoration de 25 %.</li>
+      <li><strong>Matériel et fournitures :</strong> Facturés en sus sur devis préalable.</li>
+    </ul>
+
+    <h3>Article 5 – Abonnements Préventifs</h3>
+    <p><strong>Pack Résidentiel (19 € TTC/mois) :</strong> Comprend deux visites annuelles de contrôle, priorité sous 24h ouvrées et 30 minutes de main-d'œuvre offertes par an. Les pièces de rechange restent sur devis.</p>
+    <p><strong>Pack Business &amp; Airbnb (32 € HT/mois) :</strong> Audit mécanique régulier, priorité d'intervention 7j/7 sur urgences bloquantes et compte-rendu photographique systématique.</p>
+    <p>Le Prestataire assure une présence continue durant toutes les vacances scolaires. Les périodes de congés annuels se déroulent hors saison et sont notifiées au moins 30 jours à l'avance.</p>
+
+    <h3>Article 6 – Modalités de Paiement</h3>
+    <p>Le règlement s'effectue au comptant dès la fin de l'intervention (CB / TPE, virement instantané ou chèque). En cas de retard de paiement, des pénalités au taux légal majoré s'appliquent de plein droit, ainsi qu'une indemnité forfaitaire de 40 € pour frais de recouvrement pour les professionnels.</p>
+
+    <h3>Article 7 – Droit de Rétractation et Urgence</h3>
+    <p>Pour les contrats conclus hors établissement, le consommateur bénéficie d'un délai de 14 jours. Conformément à l'article L.221-28 du Code de la consommation, le droit de rétractation ne s'applique pas aux travaux d'entretien ou de réparation réalisés en urgence au domicile du consommateur et expressément sollicités par lui.</p>
+
+    <h3>Article 8 – Justification d'Occupation (Serrurerie)</h3>
+    <p>Pour toute ouverture de porte ou remplacement de serrure, le Client doit impérativement justifier de son identité et de son droit légitime d'occuper les lieux (titre de propriété, bail ou pièce officielle à l'adresse concernée).</p>
+
+    <h3>Article 9 – Assurances et Responsabilité</h3>
+    <p>Le Prestataire est titulaire d'une assurance Responsabilité Civile Professionnelle couvrant ses activités. Les matériels installés bénéficient des garanties légales en vigueur.</p>
+
+    <h3>Article 10 – Règlement des Litiges et Médiation</h3>
+    <p>En cas de réclamation non résolue à l'amiable, le client particulier peut recourir gratuitement à un médiateur de la consommation agréé. Pour les professionnels, attribution exclusive est faite aux tribunaux compétents du ressort du siège social.</p>
+  </div>
+</div>
+</section>
+
 <footer style="padding: 40px 20px; text-align: center; background-color: #33555F;">
 <div class="container">
 <p>Lundi - Vendredi : 08h00 - 19h00 | Samedi : 09h00 - 17h00</p>
@@ -793,6 +865,10 @@
   <span style="color: rgba(255,255,255,0.4);">|</span>
   <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.1em; display: inline-flex; align-items: center; gap: 8px;">
     <i class="fab fa-instagram" style="font-size: 1.2em;"></i> Instagram
+  </a>
+  <span style="color: rgba(255,255,255,0.4);">|</span>
+  <a href="#cgv" style="color: white; text-decoration: underline; font-size: 1.1em;">
+    Consulter les CGV
   </a>
 </div>
 
