@@ -32,12 +32,11 @@
     margin: 0 auto;
   }
 
+  /* SECTION ACCUEIL SANS PHOTO (Fond uni vert sauge/crème élégant) */
   #accueil {
-    background-image: url('fond.jpeg') !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    padding: 120px 20px !important;
+    background: linear-gradient(135deg, #8BA89A 0%, #6D8E80 100%) !important;
+    background-image: none !important;
+    padding: 80px 20px !important;
     text-align: center;
     color: white !important;
   }
@@ -49,21 +48,33 @@
     padding: 0 !important;
   }
 
-  #accueil h1, #accueil p {
-    color: white !important;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.8) !important;
+  #accueil h1 {
+    color: #FFFFFF !important;
+    font-size: 2.5em;
+    font-weight: 800;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.15);
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #accueil p {
+    color: #F7F5EE !important;
+    text-shadow: none !important;
     max-width: 850px;
     margin: 0 auto 20px auto;
   }
 
   .countdown-banner {
     background: rgba(255, 255, 255, 0.95);
-    border: 2px solid #33555F;
+    border: 2px solid #1D3C45;
     border-radius: 12px;
     padding: 20px;
     max-width: 650px;
     margin: 30px auto 0 auto;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
     text-align: center;
   }
 
@@ -76,7 +87,7 @@
   }
 
   .countdown-box {
-    background: #33555F;
+    background: #1D3C45;
     color: white;
     padding: 10px 14px;
     border-radius: 8px;
@@ -96,19 +107,20 @@
     margin-top: 4px;
   }
 
-  .btn-primary, header, footer {
-    background-color: #33555F !important;
+  .btn-primary, footer {
+    background-color: #1D3C45 !important;
     color: white !important;
   }
 
   .btn {
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 6px;
     display: inline-block;
     transition: 0.3s;
     border: none;
     text-align: center;
+    font-weight: 700;
   }
 
   .services-grid {
@@ -128,7 +140,7 @@
 
   .service-card i {
     background: transparent !important;
-    color: #33555F !important;
+    color: #1D3C45 !important;
     font-size: 2.5em;
     margin-bottom: 15px;
   }
@@ -144,7 +156,7 @@
   label {
     display: block;
     margin-bottom: 5px;
-    color: #33555F;
+    color: #1D3C45;
   }
 
   .modal {
@@ -215,15 +227,15 @@
   }
 
   details[open] {
-    border-color: #33555F;
-    box-shadow: 0 2px 10px rgba(51,85,95,0.1);
+    border-color: #1D3C45;
+    box-shadow: 0 2px 10px rgba(29,60,69,0.1);
   }
 
   summary {
     padding: 16px 20px;
     cursor: pointer;
     font-size: 1.05em;
-    color: #33555F;
+    color: #1D3C45;
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -238,7 +250,7 @@
   summary::after {
     content: '+';
     font-size: 1.5em;
-    color: #33555F;
+    color: #1D3C45;
     transition: transform 0.3s;
   }
 
@@ -280,10 +292,9 @@
     font-size: 0.9em;
   }
 
-  /* Simulateur Code Postal Déplacement */
   .calc-container {
     background: white;
-    border: 2px solid #33555F;
+    border: 2px solid #1D3C45;
     border-radius: 12px;
     padding: 25px 30px;
     max-width: 650px;
@@ -310,7 +321,7 @@
   }
 
   .calc-input-wrapper input:focus {
-    border-color: #33555F;
+    border-color: #1D3C45;
   }
 
   .calc-result-box {
@@ -331,7 +342,7 @@
 
   .res-z2 {
     background-color: #eef6f9;
-    border: 1px solid #33555F;
+    border: 1px solid #1D3C45;
     color: #1c363e;
   }
 
@@ -341,7 +352,6 @@
     color: #7d5b00;
   }
 
-  /* Style Réseaux Sociaux */
   .social-card {
     background: white;
     padding: 30px;
@@ -355,45 +365,9 @@
     transform: translateY(-5px);
   }
 
-  /* Section CGV */
-  .cgv-box {
-    background: white;
-    border: 1px solid #dcdcdc;
-    border-radius: 8px;
-    padding: 35px 30px;
-    max-width: 900px;
-    margin: 0 auto;
-    font-size: 0.95em;
-    color: #444;
-    line-height: 1.7;
-    text-align: left;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-  }
-
-  .cgv-box h3 {
-    color: #33555F;
-    margin-top: 25px;
-    margin-bottom: 8px;
-    font-size: 1.15em;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 5px;
-  }
-
-  .cgv-box h3:first-of-type {
-    margin-top: 0;
-  }
-
-  .cgv-box p, .cgv-box ul {
-    margin-bottom: 12px;
-  }
-
-  .cgv-box ul {
-    padding-left: 20px;
-  }
-
   @media (max-width: 768px) {
-    #accueil { padding: 60px 20px !important; }
-    #accueil h1 { font-size: 1.6em !important; }
+    #accueil { padding: 50px 20px !important; }
+    #accueil h1 { font-size: 1.8em !important; }
     div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; }
     .modal-content { margin: 20px auto; padding: 20px; }
     .z-top, .z-bottom { flex-direction: column; align-items: flex-start; }
@@ -407,60 +381,79 @@
 </head>
 <body>
 
-<header style="padding: 15px 0; background-color: #33555F;">
-<div class="container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-    <div style="display: flex; align-items: center; gap: 15px;">
-        <img src="logo.jpg" alt="Logo Le Coup de Main" style="height: 60px; width: auto; border-radius: 50%;">
-        <img src="FRANCE.jpg" alt="Drapeau France" style="height: 25px; width: auto;">
-        <h1 style="color: white; font-size: 1.6em; margin: 0;">Le Coup de Main</h1>
-    </div>
-    <div style="display: flex; align-items: center; gap: 15px; flex-wrap: wrap;">
-            <div style="color: white; font-size: 1.1em;">
-                <i class="fas fa-phone-alt" style="margin-right: 8px; color: #25D366;"></i>
-                Une urgence ? <a href="tel:0646664222" style="color: white; text-decoration: none;">06 46 66 42 22</a>
+<!-- ENTÊTE HARMONISÉE (Style Carte de visite / Fourgon) -->
+<header style="background-color: #F7F5EE; border-top: 6px solid #8BA89A; border-bottom: 3px solid #C5A059; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
+<div class="container" style="padding: 12px 20px;">
+    <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; padding-bottom: 12px; border-bottom: 1px solid rgba(29, 60, 69, 0.12);">
+        
+        <!-- Logo et Titre -->
+        <a href="#accueil" style="display: flex; align-items: center; gap: 14px; text-decoration: none;">
+            <img src="logo.png" alt="Logo Le Coup de Main" style="height: 60px; width: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #C5A059;">
+            <div>
+                <div style="display: flex; align-items: center; gap: 8px;">
+                    <span style="font-size: 1.3em;">🇫🇷</span>
+                    <span style="font-size: 1.5em; font-weight: 800; color: #1D3C45;">Le Coup de Main</span>
+                </div>
+                <span style="display: block; font-size: 0.82em; color: #5A737A; font-weight: 600; text-transform: uppercase; letter-spacing: 1px;">Artisan multi-services de confiance</span>
             </div>
-            <div style="display: flex; gap: 10px; align-items: center;">
-                <a href="https://www.facebook.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background-color: #1877F2; color: white; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.25); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Suivez-nous sur Facebook">
-                    <i class="fab fa-facebook-f" style="font-size: 1.1em;"></i>
-                </a>
-                <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; text-decoration: none; box-shadow: 0 2px 6px rgba(0,0,0,0.25); transition: transform 0.2s;" onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'" title="Suivez-nous sur Instagram">
-                    <i class="fab fa-instagram" style="font-size: 1.2em;"></i>
-                </a>
-            </div>
+        </a>
+
+        <!-- Urgence et Réseaux Sociaux -->
+        <div style="display: flex; align-items: center; gap: 12px; flex-wrap: wrap;">
+            <a href="tel:0646664222" style="background-color: #1D3C45; color: #FFFFFF; padding: 10px 18px; border-radius: 30px; text-decoration: none; font-weight: 700; font-size: 0.95em; display: flex; align-items: center; gap: 8px; border: 1px solid #C5A059;">
+                <span>📞</span> Une urgence ? 06 46 66 42 22
+            </a>
+
+            <!-- Facebook Connecté -->
+            <a href="https://www.facebook.com/61594273347022" target="_blank" rel="noopener noreferrer" title="Page Facebook Officielle" style="width: 38px; height: 38px; border-radius: 50%; background-color: #1877F2; color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.1em;">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <!-- Instagram Connecté -->
+            <a href="https://www.instagram.com/julienlecoupdemain" target="_blank" rel="noopener noreferrer" title="Compte Instagram Officiel" style="width: 38px; height: 38px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 1.15em;">
+                <i class="fab fa-instagram"></i>
+            </a>
         </div>
-        <nav>
-            <ul style="list-style: none; display: flex; gap: 20px; padding: 0; margin: 0; flex-wrap: wrap;">
-                <li><a href="#accueil" style="color: white; text-decoration: none; font-size: 0.95em;">Accueil</a></li>
-                <li><a href="#a-propos" style="color: white; text-decoration: none; font-size: 0.95em;">Expertise</a></li>
-                <li><a href="#prestations" style="color: white; text-decoration: none; font-size: 0.95em;">Prestations</a></li>
-                <li><a href="#offres" style="color: white; text-decoration: none; font-size: 0.95em;">Abonnements</a></li>
-                <li><a href="#tarifs" style="color: white; text-decoration: none; font-size: 0.95em;">Tarifs</a></li>
-                <li><a href="#reseaux" style="color: white; text-decoration: none; font-size: 0.95em;">Actualités</a></li>
-                <li><a href="#contact" style="color: white; text-decoration: none; font-size: 0.95em;">Contact</a></li>
-                <li><a href="#cgv" style="color: #ECE3BD; text-decoration: none; font-size: 0.95em;">CGV</a></li>
-            </ul>
-        </nav>
     </div>
+
+    <!-- Menu de Navigation -->
+    <nav style="display: flex; justify-content: center; gap: 25px; padding-top: 12px; flex-wrap: wrap;">
+        <a href="#accueil" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Accueil</a>
+        <a href="#a-propos" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Expertise</a>
+        <a href="#prestations" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Prestations</a>
+        <a href="#offres" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Abonnements</a>
+        <a href="#tarifs" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Tarifs</a>
+        <a href="#reseaux" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Actualités</a>
+        <a href="#contact" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">Contact</a>
+        <a href="#cgv" style="color: #1D3C45; text-decoration: none; font-weight: 700; font-size: 0.95em;">CGV</a>
+    </nav>
 </div>
 </header>
 
 <main>
+
+<!-- SECTION ACCUEIL 100% ÉPURÉE (SANS PHOTO) -->
 <section id="accueil" class="hero">
 <div class="container">
 <div class="hero-content">
 <h1>Votre maison mérite un expert. La tranquillité en une intervention.</h1>
-<p class="subtitle">Serrurerie, réparation de volets et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.</p>
-<p class="subtitle">Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.</p>
-<div class="hero-buttons">
-<a href="#contact" class="btn btn-primary" style="margin-right: 10px;">Demander mon intervention</a>
-<a href="#prestations" class="btn btn-secondary" style="background-color: white; color: #33555F;">Voir mes spécialités</a>
+<p style="font-size: 1.15em; line-height: 1.6; margin-bottom: 12px; font-weight: 500;">
+Serrurerie, réparation de volets et maintenance : je mets 26 ans de savoir-faire technique au service de votre foyer. Intervention précise et durable à Kembs et environs.
+</p>
+<p style="font-size: 1.05em; line-height: 1.6; margin-bottom: 35px; opacity: 0.95;">
+Un service haut de gamme, une transparence totale et la garantie d'un travail soigné, sans aucun compromis.
+</p>
+
+<div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; margin-bottom: 30px;">
+<a href="#contact" class="btn btn-primary" style="background-color: #1D3C45; color: #FFFFFF; border: 1px solid #C5A059;">Demander mon intervention</a>
+<a href="#prestations" class="btn" style="background-color: #F7F5EE; color: #1D3C45;">Voir mes spécialités</a>
 </div>
 
 <div id="bloc-compte-rebours" class="countdown-banner">
-  <p style="color: #33555F; font-size: 1.15em; margin: 0 0 6px 0; text-shadow: none;">
+  <p style="color: #1D3C45; font-size: 1.15em; margin: 0 0 6px 0; font-weight: 700;">
     Lancement officiel des interventions le 10 janvier 2027
   </p>
-  <p style="color: #666; font-size: 0.9em; margin: 0; text-shadow: none;">
+  <p style="color: #666; font-size: 0.9em; margin: 0;">
     Vous avez croisé le fourgon à Kembs ? L'atelier ouvre ses plannings dans :
   </p>
   <div class="countdown-grid">
@@ -487,76 +480,76 @@
 </div>
 </section>
 
+<!-- SECTION EXPERTISE -->
 <section id="a-propos" class="section">
 <div class="container">
-    <h2 style="text-align: center; color: #33555F; margin-bottom: 50px;">L'exigence aéroportuaire au service de votre foyer</h2>
+    <h2 style="text-align: center; color: #1D3C45; margin-bottom: 50px;">L'exigence aéroportuaire au service de votre foyer</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
         <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
             <div style="font-size: 3em; margin-bottom: 20px;">✈️</div>
-            <h3 style="color: #33555F;">ADN ERP : 26 ans de haute sécurité</h3>
-            <p style="color: #666;">Maintenir l'EuroAirport, c'est vivre au rythme des normes ERP les plus strictes. J'apporte cette rigueur internationale directement chez vous ou dans votre Airbnb. L'erreur n'est pas une option.</p>
+            <h3 style="color: #1D3C45;">ADN ERP : 26 ans de haute sécurité</h3>
+            <p style="color: #666;">Maintenir l'EuroAirport, c'est vivre au rythme des normes ERP les plus strictes. J'apporte cette rigueur internationale directement chez vous ou dans votre Airbnb.</p>
         </div>
-        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #33555F;">
+        <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; border-top: 4px solid #1D3C45;">
             <div style="font-size: 3em; margin-bottom: 20px;">🛠️</div>
-            <h3 style="color: #33555F;">Le réflexe préventif</h3>
-            <p style="color: #666;">Dans l'aérien, on anticipe pour ne jamais subir de panne. J'applique cette même méthode chez vous pour éviter les urgences coûteuses et le stress des imprévus.</p>
+            <h3 style="color: #1D3C45;">Le réflexe préventif</h3>
+            <p style="color: #666;">Dans l'aérien, on anticipe pour ne jamais subir de panne. J'applique cette même méthode chez vous pour éviter les urgences coûteuses.</p>
         </div>
         <div style="background: #ffffff; padding: 30px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center;">
             <div style="font-size: 3em; margin-bottom: 20px;">🏠</div>
-            <h3 style="color: #33555F;">Fournisseurs de confiance</h3>
-            <p style="color: #666;">Je travaille avec les réseaux de fournisseurs pro des grandes infrastructures. Matériel certifié et durable pour une maintenance sans compromis.</p>
+            <h3 style="color: #1D3C45;">Fournisseurs de confiance</h3>
+            <p style="color: #666;">Je travaille avec les réseaux pro des grandes infrastructures. Matériel certifié et durable pour une maintenance sans compromis.</p>
         </div>
-    </div>
-    <div style="margin-top: 50px; padding: 30px; background: #ffffff; border-radius: 8px; text-align: center; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-        <p style="font-size: 1.2em; color: #444; font-style: italic;">"D’un terminal de classe internationale à votre porte d’entrée : je mets l'exigence de la maintenance professionnelle au service des habitants de Kembs."</p>
     </div>
 </div>
 </section>
 
+<!-- SECTION PRESTATIONS -->
 <section id="prestations" class="section-alt">
 <div class="container">
-<h2 style="text-align: center; color: #33555F; margin-bottom: 40px;">Mes domaines d'excellence</h2>
+<h2 style="text-align: center; color: #1D3C45; margin-bottom: 40px;">Mes domaines d'excellence</h2>
 <div class="services-grid">
   <div class="service-card">
     <i class="fas fa-key icon-service"></i>
     <h3>Serrurerie & Contrôle d'accès</h3>
-    <p>Ouverture de porte, remplacement de cylindre haute sécurité, blindage et installation de serrures électroniques innovantes pour sécuriser vos accès.</p>
+    <p>Ouverture de porte, remplacement de cylindre haute sécurité, blindage et installation de serrures électroniques innovantes.</p>
   </div>
   <div class="service-card">
     <i class="fas fa-scroll icon-service"></i>
     <h3>Volets Roulants & Ouvrants</h3>
-    <p>Dépannage mécanique ou électrique, remplacement de tabliers, motorisation et réglage millimétré de vos volets, portes et fenêtres pour un confort thermique idéal.</p>
+    <p>Dépannage mécanique ou électrique, remplacement de tabliers, motorisation et réglage millimétré de vos volets.</p>
   </div>
   <div class="service-card">
     <i class="fas fa-faucet icon-service"></i>
     <h3>Plomberie & Sanitaire</h3>
-    <p>Réparation de fuites, remplacement de robinetterie, entretien des joints et installation d'appareils. Pas de bricolage, juste de la précision.</p>
+    <p>Réparation de fuites, remplacement de robinetterie, entretien des joints et installation d'appareils avec précision.</p>
   </div>
   <div class="service-card">
     <i class="fas fa-lightbulb icon-service"></i>
     <h3>Électricité Domestique</h3>
-    <p>Petits travaux et mise en sécurité : raccordement de prises, pose de luminaires, diagnostic de pannes simples et interventions rapides.</p>
+    <p>Petits travaux et mise en sécurité : raccordement de prises, pose de luminaires et diagnostic de pannes simples.</p>
   </div>
 </div>
 </div>
 </section>
 
+<!-- SECTION ABONNEMENTS -->
 <section id="offres" class="section">
 <div class="container">
-<h2 style="color: #33555F; text-align: center; margin-bottom: 40px;">Votre sérénité sur mesure</h2>
+<h2 style="color: #1D3C45; text-align: center; margin-bottom: 40px;">Votre sérénité sur mesure</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; align-items: stretch;">
     
-    <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #33555F; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; display: flex; flex-direction: column; justify-content: space-between;">
-    <div style="background: #33555F; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">VOTRE ARTISAN DE PROXIMITÉ</div>
+    <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #1D3C45; text-align: center; box-shadow: 0 10px 30px rgba(0,0,0,0.1); position: relative; display: flex; flex-direction: column; justify-content: space-between;">
+    <div style="background: #1D3C45; color: white; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">VOTRE ARTISAN DE PROXIMITÉ</div>
     <div>
-        <h3 style="color: #33555F; margin-top: 10px;">Pack Résidentiel</h3>
+        <h3 style="color: #1D3C45; margin-top: 10px;">Pack Résidentiel</h3>
         <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">La solution idéale pour les foyers de Kembs</p>
         <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">19 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
         <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
             <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> 2 visites de contrôle préventives / an</li>
             <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Priorité intervention sous 24h</li>
             <li><i class="fas fa-check" style="color: #25D366; margin-right: 10px;"></i> Inspection des volets et serrures incluse</li>
-            <li><i class="fas fa-gift" style="color: #33555F; margin-right: 10px;"></i> 30 min de main-d'œuvre offertes / an</li>
+            <li><i class="fas fa-gift" style="color: #1D3C45; margin-right: 10px;"></i> 30 min de main-d'œuvre offertes / an</li>
         </ul>
     </div>
     <button type="button" class="btn btn-primary" style="width: 100%; cursor: pointer;" onclick="openModal('modal-19')">Découvrir l'offre à 19€</button>
@@ -565,15 +558,14 @@
     <div style="background: white; padding: 40px 30px 30px 30px; border-radius: 15px; border: 2px solid #FFD700; text-align: center; position: relative; display: flex; flex-direction: column; justify-content: space-between; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
         <div style="background: #FFD700; color: #333; padding: 5px 15px; border-radius: 20px; display: inline-block; font-size: 0.8em; position: absolute; top: -15px; left: 50%; transform: translateX(-50%); white-space: nowrap;">SPÉCIAL INVESTISSEUR</div>
         <div>
-            <h3 style="color: #33555F; margin-top: 10px;">Pack Business & Airbnb</h3>
+            <h3 style="color: #1D3C45; margin-top: 10px;">Pack Business & Airbnb</h3>
             <p style="color: #666; font-size: 0.9em; margin-bottom: 20px;">Le secret de vos 5 étoiles voyageur</p>
             <div style="font-size: 2.5em; color: #333; margin-bottom: 20px;">32 € <span style="font-size: 0.4em; color: #888;">/ mois</span></div>
             <ul style="list-style: none; padding: 0; text-align: left; margin-bottom: 30px; line-height: 2;">
-                <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Zéro perte de nuitée (accès & volets opérationnels)</li>
-                <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire dépannage serrure 7j/7</li>
-                <li><i class="fas fa-user-shield" style="color: #33555F; margin-right: 10px;"></i> Interlocuteur unique : Julien</li>
-                <li><i class="fas fa-camera" style="color: #33555F; margin-right: 10px;"></i> Compte-rendu photo systématique</li>
-                <li><i class="fas fa-tools" style="color: #33555F; margin-right: 10px;"></i> Maintenance des accès connectés voyageurs</li>
+                <li><i class="fas fa-star" style="color: #FFD700; margin-right: 10px;"></i> Zéro perte de nuitée</li>
+                <li><i class="fas fa-bolt" style="color: #FFD700; margin-right: 10px;"></i> Urgence Prioritaire 7j/7</li>
+                <li><i class="fas fa-user-shield" style="color: #1D3C45; margin-right: 10px;"></i> Interlocuteur unique : Julien</li>
+                <li><i class="fas fa-camera" style="color: #1D3C45; margin-right: 10px;"></i> Compte-rendu photo systématique</li>
             </ul>
         </div>
         <button type="button" class="btn" style="background-color: #FFD700; color: #333; width: 100%; cursor: pointer;" onclick="openModal('modal-32')">Découvrir l'offre à 32€</button>
@@ -582,198 +574,75 @@
 </div>
 </section>
 
-<!-- Fenêtre Pop-up Explicative Offre 19€ -->
-<div id="modal-19" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('modal-19')">&times;</span>
-    
-    <div class="z-top">
-      <h2 style="color: #33555F; font-size: 1.8em; margin: 0;">Pack Résidentiel</h2>
-      <div style="font-size: 1.4em; color: #33555F; background: #e6f9ed; padding: 5px 15px; border-radius: 20px; border: 1px solid #25D366;">19 € / mois</div>
-    </div>
-    
-    <p style="font-size: 1.05em; color: #555; margin-bottom: 25px; line-height: 1.5; padding-left: 10px; border-left: 4px solid #33555F;">
-      Attendre une panne coûte cher en temps et en stress. Avec cette offre, vous bénéficiez d'un suivi préventif continu et d'un accès coupe-file direct à mon planning pour ne jamais rester dans l'impasse.
-    </p>
-
-    <div class="z-diagonal">
-      <details>
-        <summary>Le carnet de santé de votre maison</summary>
-        <div class="details-content">
-          <ul class="clean-list">
-            <li><i class="fas fa-check" style="color: #25D366;"></i> Deux visites annuelles complètes pour auditer vos serrures, vos volets, votre plomberie et vos accès électriques.</li>
-            <li><i class="fas fa-check" style="color: #25D366;"></i> Réglages immédiats sur place pour éviter l'usure mécanique (graissage, ajustement de gonds, serrage).</li>
-            <li><i class="fas fa-check" style="color: #25D366;"></i> Un rapport détaillé vous est envoyé après chaque passage. Vous savez exactement où en est votre logement.</li>
-          </ul>
-        </div>
-      </details>
-
-      <details>
-        <summary>Transparence et facturation : zéro surprise</summary>
-        <div class="details-content">
-          Mon objectif est d'entretenir pour ne pas remplacer. L'abonnement finance ce temps de prévention et mes ajustements manuels.
-          <br><br>
-          <span style="color: #d9534f; font-size: 1.1em;">Le matériel reste à part.</span> S'il est nécessaire de changer une pièce (cylindre neuf, mécanisme usé), un devis précis vous est présenté. Aucune réparation lourde n'est effectuée sans votre accord visuel et chiffré au préalable.
-        </div>
-      </details>
-
-      <details>
-        <summary>Organisation et respect de votre temps</summary>
-        <div class="details-content">
-          Pour maintenir cette qualité de service sans jamais être débordé, j'ai instauré des règles simples qui profitent à tous :
-          <br><br>
-          <span style="color: #33555F; font-size: 1.05em;">Toujours présent quand ça compte :</span> Je ne prends aucun congé durant les vacances scolaires. C'est à ce moment-là que vous avez le plus besoin d'un artisan réactif.
-          <br><br>
-          <span style="color: #33555F; font-size: 1.05em;">Mes fermetures anticipées :</span> Mes périodes de repos se font exclusivement hors saison. Vous êtes prévenus bien en avance afin que nous puissions planifier et sécuriser votre maison avant mon départ.
-        </div>
-      </details>
-    </div>
-
-    <div class="z-bottom">
-      <div class="z-scarcity">
-        <i class="fas fa-hourglass-half"></i> Places volontairement limitées sur Kembs
-      </div>
-      <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20R%C3%A9sidentiel%20%C3%A0%2019%E2%82%AC%20en%20ayant%20pris%20connaissance%20des%20conditions." target="_blank" class="btn btn-primary" style="padding: 15px 30px; font-size: 1.1em;">Je m'abonne via WhatsApp</a>
-    </div>
-
-  </div>
-</div>
-
-<!-- Fenêtre Pop-up Explicative Offre 32€ -->
-<div id="modal-32" class="modal">
-  <div class="modal-content">
-    <span class="close-modal" onclick="closeModal('modal-32')">&times;</span>
-    
-    <div class="z-top">
-      <h2 style="color: #33555F; font-size: 1.8em; margin: 0;">Pack Business & Airbnb</h2>
-      <div style="font-size: 1.4em; color: #333; background: #fffdf3; padding: 5px 15px; border-radius: 20px; border: 1px solid #FFD700;">32 € / mois</div>
-    </div>
-    
-    <p style="font-size: 1.05em; color: #555; margin-bottom: 25px; line-height: 1.5; padding-left: 10px; border-left: 4px solid #FFD700;">
-      Une porte bloquée, c'est un voyageur furieux ou une boutique fermée. Cette solution est le bouclier technique de votre rentabilité, pensée pour sécuriser vos avis 5 étoiles.
-    </p>
-
-    <div class="z-diagonal">
-      <details>
-        <summary>Garantie Continuité d'Exploitation</summary>
-        <div class="details-content">
-          <ul class="clean-list">
-            <li><i class="fas fa-check" style="color: #FFD700;"></i> Priorité d'intervention absolue en semaine sur mon planning professionnel. Vous passez devant tout le monde.</li>
-            <li><i class="fas fa-check" style="color: #FFD700;"></i> Audit mécanique préventif de vos équipements sensibles, de vos boîtes à clés et de la fluidité de vos accès.</li>
-            <li><i class="fas fa-check" style="color: #FFD700;"></i> Rapport photo systématique envoyé après chaque action pour vous permettre une gestion sereine à distance.</li>
-          </ul>
-        </div>
-      </details>
-
-      <details>
-        <summary>Le cadre technique sans zone d'ombre</summary>
-        <div class="details-content">
-          L'abonnement mensualise l'entretien préventif et sécurise votre statut prioritaire. 
-          <br><br>
-          <span style="color: #d9534f; font-size: 1.1em;">L'intervention curative lourde se fait sur devis.</span> Si un locataire force une serrure ou qu'un mécanisme complet rend l'âme, le remplacement du matériel vous est chiffré immédiatement. Aucune pièce n'est achetée ou posée sans votre validation à distance.
-        </div>
-      </details>
-
-      <details>
-        <summary>Logistique et organisation saisonnière</summary>
-        <div class="details-content">
-          L'engagement est réciproque. Pour soutenir votre pic d'activité estival ou vos locations hivernales, <span style="color: #33555F; font-size: 1.05em;">je suis présent à 100 % pendant toutes les vacances scolaires</span>.
-          <br><br>
-          Mes périodes de repos s'effectuent uniquement hors saison. Ce fonctionnement vous est toujours communiqué avec beaucoup d'avance pour que nous puissions réaliser un contrôle complet de vos installations avant mon départ.
-        </div>
-      </details>
-    </div>
-
-    <div class="z-bottom">
-      <div class="z-scarcity" style="background: #fffdf3; color: #b8860b; border: 1px solid #FFD700;">
-        <i class="fas fa-lock"></i> Souscriptions clôturées dès quota atteint
-      </div>
-      <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20souhaite%20souscrire%20au%20Pack%20Business%20%C3%A0%2032%E2%82%AC%20pour%20mon%20activit%C3%A9%20%2F%20Airbnb." target="_blank" class="btn" style="background-color: #FFD700; color: #333; padding: 15px 30px; font-size: 1.1em;">Je sécurise mon business</a>
-    </div>
-
-  </div>
-</div>
-
+<!-- SECTION TARIFS -->
 <section id="tarifs" class="section-alt">
 <div class="container">
-<h2 style="color: #33555F; text-align: center; margin-bottom: 30px;">Tarifs sans surprise</h2>
+<h2 style="color: #1D3C45; text-align: center; margin-bottom: 30px;">Tarifs sans surprise</h2>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Forfait Arrivée</h3>
-        <p style="font-size: 2em; margin: 10px 0; color: #33555F;">50 €</p>
+        <p style="font-size: 2em; margin: 10px 0; color: #1D3C45;">50 €</p>
         <p style="font-size: 0.9em; color: #666;">Déplacement (Kembs & 20 km) et diagnostic précis.</p>
     </div>
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Main-d'œuvre</h3>
-        <p style="font-size: 2em; margin: 10px 0; color: #33555F;">60 € <span style="font-size: 0.5em;">/ h</span></p>
+        <p style="font-size: 2em; margin: 10px 0; color: #1D3C45;">60 € <span style="font-size: 0.5em;">/ h</span></p>
         <p style="font-size: 0.9em; color: #666;">Facturation au temps réel passé.</p>
     </div>
     <div style="background: white; padding: 25px; border-radius: 8px; text-align: center;">
         <h3>Samedis</h3>
-        <p style="font-size: 1.2em; margin: 10px 0; color: #33555F;">Majoration 25%</p>
+        <p style="font-size: 1.2em; margin: 10px 0; color: #1D3C45;">Majoration 25%</p>
         <p style="font-size: 0.9em; color: #666;">Pour les interventions le samedi.</p>
     </div>
 </div>
 
-<!-- Simulateur Frais de Déplacement -->
 <div class="calc-container">
-  <h3 style="color: #33555F; margin-bottom: 6px; font-size: 1.2em;"><i class="fas fa-calculator" style="margin-right: 8px;"></i> Estimer mon Forfait Déplacement</h3>
+  <h3 style="color: #1D3C45; margin-bottom: 6px; font-size: 1.2em;"><i class="fas fa-calculator" style="margin-right: 8px;"></i> Estimer mon Forfait Déplacement</h3>
   <p style="color: #666; font-size: 0.9em; margin-bottom: 12px;">Entrez votre code postal pour connaître instantanément le tarif d'arrivée :</p>
   
   <div class="calc-input-wrapper">
-    <input type="text" id="cpInput" placeholder="Ex : 68680, 68300, 68100..." maxlength="5">
+    <input type="text" id="cpInput" placeholder="Ex : 68680, 68300..." maxlength="5">
     <button type="button" class="btn btn-primary" onclick="calculerDeplacement()" style="cursor: pointer;">Vérifier</button>
   </div>
-
   <div id="resultBox" class="calc-result-box"></div>
 </div>
-
 </div>
 </section>
 
-<!-- Section Réseaux Sociaux & Vie d'Artisan -->
+<!-- SECTION RÉSEAUX SOCIAUX -->
 <section id="reseaux" class="section">
 <div class="container">
-  <h2 style="color: #33555F; text-align: center; margin-bottom: 15px;">Suivez le quotidien de l'atelier sur le terrain</h2>
+  <h2 style="color: #1D3C45; text-align: center; margin-bottom: 15px;">Suivez le quotidien de l'atelier sur le terrain</h2>
   <p style="text-align: center; max-width: 750px; margin: 0 auto 40px auto; color: #555;">
-    Retrouvez mes chantiers en direct, les coulisses des dépannages en serrurerie et plomberie, et repérez le fourgon dans les rues de Kembs et ses environs !
+    Retrouvez mes chantiers en direct, les coulisses des dépannages et repérez le fourgon dans les rues de Kembs et ses environs !
   </p>
 
   <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-    
     <div class="social-card">
       <div style="width: 60px; height: 60px; border-radius: 50%; background-color: #1877F2; color: white; display: flex; align-items: center; justify-content: center; font-size: 1.8em; margin: 0 auto 15px auto;">
         <i class="fab fa-facebook-f"></i>
       </div>
-      <h3 style="color: #33555F; margin-bottom: 10px;">Facebook Officiel</h3>
-      <p style="color: #666; font-size: 0.95em; margin-bottom: 20px;">
-        Avis clients, actus locales, conseils sécurité pour vos serrures et photos des interventions terminées.
-      </p>
-   <a href="https://www.facebook.com/61594273347022" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #1877F2; color: white; padding: 12px 25px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 15px; font-weight: 600;">
-  Rejoindre la page Facebook
-</a>
+      <h3 style="color: #1D3C45; margin-bottom: 10px;">Facebook Officiel</h3>
+      <p style="color: #666; font-size: 0.95em; margin-bottom: 20px;">Avis clients, actus locales, conseils sécurité pour vos serrures et photos des interventions.</p>
+      <a href="https://www.facebook.com/61594273347022" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #1877F2; color: white;">Rejoindre la page Facebook</a>
     </div>
 
     <div class="social-card">
       <div style="width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%); color: white; display: flex; align-items: center; justify-content: center; font-size: 1.8em; margin: 0 auto 15px auto;">
         <i class="fab fa-instagram"></i>
       </div>
-      <h3 style="color: #33555F; margin-bottom: 10px;">Instagram en direct</h3>
-      <p style="color: #666; font-size: 0.95em; margin-bottom: 20px;">
-        Stories chantiers, avant/après en vidéo, outillage pro et astuces pour entretenir votre maison au quotidien.
-      </p>
-      <a href="https://www.instagram.com/julienlecoupdemain" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #E1306C; color: white; padding: 12px 25px; border-radius: 6px; text-decoration: none; display: inline-block; margin-top: 15px; font-weight: 600;">
-  Suivre sur Instagram
-</a>
+      <h3 style="color: #1D3C45; margin-bottom: 10px;">Instagram en direct</h3>
+      <p style="color: #666; font-size: 0.95em; margin-bottom: 20px;">Stories chantiers, avant/après en vidéo, outillage pro et astuces pour entretenir votre maison.</p>
+      <a href="https://www.instagram.com/julienlecoupdemain" target="_blank" rel="noopener noreferrer" class="btn" style="background-color: #E1306C; color: white;">Suivre sur Instagram</a>
     </div>
-
   </div>
 </div>
 </section>
 
+<!-- SECTION CONTACT -->
 <section id="contact" class="section-alt">
 <div class="container">
-<h2 style="color: #33555F; text-align: center;">Contactez Julien</h2>
+<h2 style="color: #1D3C45; text-align: center;">Contactez Julien</h2>
 <form action="https://formspree.io/f/xyzrndwa" method="POST">
 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 15px;">
 <div><label>Votre Nom et Prénom</label><input type="text" name="nom" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;"></div>
@@ -783,220 +652,43 @@
 <label>Adresse de l'intervention</label>
 <input type="text" name="adresse" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
 </div>
-<textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi votre besoin (serrurerie, volet bloqué, fuite, etc.)..."></textarea>
+<textarea name="message" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; height: 100px; margin-bottom: 15px;" placeholder="Expliquez-moi votre besoin..."></textarea>
 <div style="margin-bottom: 20px; border: 2px solid #25D366; padding: 20px; border-radius: 8px; background-color: #e6f9ed; text-align: center;">
   <p style="color: #128C7E; margin-bottom: 15px; font-size: 1.1em;"><i class="fas fa-camera" style="margin-right: 10px;"></i> Pour un devis ultra-rapide par photos :</p>
-  <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20suis%20%28votre%20nom%29%20et%20je%20vous%20joins%20les%20photos%20comme%20pr%C3%A9vu%20pour%20recevoir%20votre%20devis" target="_blank" style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Envoyer mes photos sur WhatsApp</a>
+  <a href="https://wa.me/33646664222?text=Bonjour%20Julien%2C%20je%20vous%20joins%20les%20photos" target="_blank" style="background-color: #25D366; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block;">Envoyer mes photos sur WhatsApp</a>
 </div>
 <button type="submit" class="btn btn-primary" style="width: 100%; padding: 15px; cursor: pointer;">VALIDER MA DEMANDE</button>
 </form>
 </div>
 </section>
-<!-- Section Conditions Générales de Vente (CGV) - Version Accordéon Dépliable -->
+
+<!-- SECTION CGV -->
 <section id="cgv" class="section" style="padding: 30px 20px;">
 <div class="container">
-  <details style="background: white; border: 2px solid #33555F; border-radius: 8px; max-width: 900px; margin: 0 auto; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
-    <summary style="padding: 18px 25px; cursor: pointer; font-size: 1.1em; color: #33555F; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: #fdfdfd; user-select: none;">
-      <span><i class="fas fa-file-contract" style="margin-right: 10px; color: #33555F;"></i> Conditions Générales de Vente (CGV) – Cliquez pour consulter</span>
+  <details style="background: white; border: 2px solid #1D3C45; border-radius: 8px; max-width: 900px; margin: 0 auto; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.06);">
+    <summary style="padding: 18px 25px; cursor: pointer; font-size: 1.1em; color: #1D3C45; font-weight: 600; display: flex; justify-content: space-between; align-items: center; background: #fdfdfd;">
+      <span><i class="fas fa-file-contract" style="margin-right: 10px; color: #1D3C45;"></i> Conditions Générales de Vente (CGV) – Cliquez pour consulter</span>
     </summary>
-    
     <div class="details-content" style="padding: 25px 30px; border-top: 1px solid #eee; text-align: left; line-height: 1.7; font-size: 0.95em; color: #444;">
       <p style="text-align: right; font-size: 0.85em; color: #888; margin-bottom: 20px;">SASU LE COUP DE MAIN SERVICES – En vigueur au 1er janvier 2027</p>
-
-      <h3 style="color: #33555F; margin: 20px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 1 – Identification de l’entreprise et champ d’application</h3>
-      <p>Les présentes Conditions Générales de Vente et de Prestations de Services (ci-après les « CGV ») régissent les relations contractuelles entre :</p>
-      <p>La société <strong>LE COUP DE MAIN SERVICES</strong>, Société par Actions Simplifiée Unipersonnelle (SASU) au capital social de [Montant en euros] €, dont le siège social est situé au 22a rue du Rhin, 68680 Kembs, immatriculée au Registre du Commerce et des Sociétés de Mulhouse ainsi qu’au Répertoire des Métiers sous le numéro [Numéro SIREN/SIRET], N° TVA intracommunautaire : FR [Clé] [SIREN] (ci-après « le Prestataire »),</p>
-      <p>Et</p>
-      <p>Toute personne physique agissant en qualité de consommateur, tout non-professionnel (syndicat de copropriétaires, association) ou toute personne physique ou morale agissant à des fins professionnelles (ci-après « le Client »).</p>
-      <p>Le Client reconnaît avoir pris connaissance des présentes CGV préalablement à la signature de tout devis ou à la souscription de tout abonnement. Toute commande implique l’acceptation pleine et entière des présentes conditions, qui prévalent sur tout document émanant du Client, sauf dérogation expresse et écrite convenue entre les parties. Cette dernière stipulation ne s’applique pas aux Clients consommateurs et non-professionnels dans la mesure où elle serait contraire aux dispositions protectrices qui leur sont applicables.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 2 – Prestations proposées</h3>
-      <p>Le Prestataire propose des prestations d’artisanat, de dépannage, d’entretien, de maintenance technique et de sécurisation du domicile, comprenant notamment :</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Serrurerie et contrôle d’accès : dépannage d’urgence, ouverture de porte, remplacement de cylindres et serrures multipoints, blindage, pose et paramétrage de serrures connectées.</li>
-        <li>Volets roulants et menuiseries ouvrantes : réparation mécanique et électrique, remplacement de moteurs, axes et tabliers, réglages de fenêtres et portes.</li>
-        <li>Maintenance et plomberie sanitaire courante : diagnostic et réparation de fuites d’eau apparentes, remplacement de robinetterie, de mécanisme de chasse d’eau et de joints d’étanchéité.</li>
-        <li>Électricité domestique d’appoint : recherche de panne simple, remplacement d’appareillages (prises, interrupteurs), pose de luminaires, mise en sécurité de circuits terminaux.</li>
-        <li>Abonnements de maintenance préventive pour les habitations principales, résidences secondaires et logements en location courte durée (type Airbnb).</li>
-      </ul>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 3 – Information précontractuelle et devis</h3>
-      <p><strong>3.1 Devis obligatoire, systématique et gratuit</strong><br>
-      Conformément à l’arrêté du 24 janvier 2017 relatif à la publicité des prix des prestations de dépannage, de réparation et d’entretien dans le secteur du bâtiment et de l’équipement de la maison, un devis écrit et détaillé est systématiquement remis au Client avant l’exécution de toute prestation, quel qu’en soit le montant estimé. Dans les présentes CGV, le terme « devis » désigne ce document, qui tient lieu de bon de commande et d’ordre de réparation.</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>L’établissement du devis est gratuit. Seul le Forfait Arrivée (articles 3.2 et 4.1) est dû lorsque le déplacement et le diagnostic sur site précèdent l’établissement du devis.</li>
-        <li>Le devis mentionne la nature exacte des travaux, le décompte détaillé de chaque prestation (temps estimé et pièces), le coût de la main-d’œuvre, les frais de déplacement, la date estimée de début des travaux et sa date limite de validité.</li>
-        <li>Les devis sont valables trente (30) jours calendaires à compter de leur émission.</li>
-        <li>L’accord contractuel est scellé par la signature du devis comportant la mention manuscrite « Bon pour accord », ou par accord dématérialisé écrit et non équivoque.</li>
-      </ul>
-      <p><strong>3.2 Forfait diagnostic et déplacement</strong><br>
-      Le Client est expressément informé que le diagnostic initial sur place et le déplacement du technicien constituent une prestation individualisée et payante, matérialisée par le « Forfait Arrivée » défini à l’article 4. Ce forfait reste intégralement dû en cas de refus du devis de réparation qui en découle, ou en cas d’impossibilité d’accès aux équipements imputable au Client.</p>
-      <p><strong>3.3 Pré-estimation sur support photographique</strong><br>
-      Toute estimation de prix ou pré-diagnostic communiqué par téléphone, messagerie instantanée (WhatsApp) ou courriel sur la base de photographies ou de vidéos fournies par le Client n’a qu’une valeur indicative. Seule la constatation visuelle et mécanique sur place engage le Prestataire sur la faisabilité technique et le chiffrage définitif.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 4 – Grille tarifaire et modalités de décompte</h3>
-      <p>Les prix sont exprimés en euros TTC au taux de TVA légal en vigueur (20 % ou taux réduit applicable selon l’éligibilité réglementaire des travaux), ainsi qu’en euros HT pour les professionnels.</p>
-      <p><strong>4.1 Forfaits Arrivée (déplacement et diagnostic initial)</strong><br>
-      Le Forfait Arrivée couvre le déplacement aller-retour du technicien et le diagnostic technique initial sur site :</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Zone 1 (proximité) : Kembs et communes situées dans un rayon de 20 km, selon la liste des codes postaux affichée sur le site internet : 50 € HT, soit 60 € TTC.</li>
-        <li>Zone 2 (étendue) : toute commune non listée en Zone 1 et située jusqu’à 35 km (notamment agglomération mulhousienne et Sundgau) : 60 € HT, soit 72 € TTC.</li>
-        <li>Hors Zone (au-delà de 35 km) : tarif forfaitaire sur devis préalable spécifique, convenu avant tout déplacement.</li>
-      </ul>
-      <p><strong>4.2 Taux horaire de main-d’œuvre</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Le taux horaire standard est fixé à 60 € HT, soit 72 € TTC.</li>
-        <li>Modalités de décompte : la première heure d’intervention sur site est indivisible et facturée en totalité. Au-delà, la main-d’œuvre est décomptée et facturée par tranche de quinze (15) minutes entamée.</li>
-      </ul>
-      <p><strong>4.3 Majorations horaires</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Interventions le samedi (de 09h00 à 17h00) : majoration de 25 % sur le taux horaire de la main-d’œuvre.</li>
-        <li>Interventions exceptionnelles de nuit (de 19h00 à 08h00), dimanches et jours fériés (strictement réservées aux urgences de continuité d’accès convenues expressément) : majoration de 50 % sur la main-d’œuvre et sur le Forfait Arrivée.</li>
-      </ul>
-      <p><strong>4.4 Fournitures et matériels</strong><br>
-      Les pièces de quincaillerie, serrures, verrous, moteurs, appareillages et consommables nécessaires sont facturés en sus, sur devis expressément accepté. Le Client est invité à indiquer sur le devis s’il souhaite conserver les pièces et matériels remplacés lors de l’intervention.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 5 – Contrats d’abonnement d’entretien préventif</h3>
-      <p><strong>5.1 Formules proposées</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Pack Résidentiel : 19 € TTC / mois (particuliers). Comprend deux (2) visites annuelles de contrôle et d’audit préventif (serrurerie, volets, plomberie apparente, électricité de base), la priorité de prise en charge sous 24 heures ouvrées pour les pannes courantes, et trente (30) minutes de main-d’œuvre offertes par an pour un dépannage ponctuel.</li>
-        <li>Pack Business &amp; Airbnb : 32 € HT / mois, soit 38,40 € TTC / mois (professionnels, investisseurs, conciergeries). Comprend le contrôle régulier des accès, des boîtes à clés et des dispositifs connectés, l’envoi systématique d’un compte-rendu photographique par intervention, et une prise en charge prioritaire 7j/7 pour la continuité d’accès des voyageurs.</li>
-        <li>Pour les deux formules, le Forfait Arrivée demeure applicable lors des dépannages curatifs non programmés, et les pièces de remplacement font l’objet d’un devis préalable.</li>
-      </ul>
-      <p><strong>5.2 Modalités de règlement de l’abonnement</strong><br>
-      L’abonnement est payable d’avance chaque mois par prélèvement SEPA ou par virement automatique récurrent, le premier jour ouvré du mois. Le Prestataire se réserve le droit d’ajuster ses tarifs chaque année au 1er janvier, avec notification écrite préalable d’au moins trente (30) jours. Le Client conserve la faculté de résilier son contrat sans frais en cas de refus du nouveau tarif.</p>
-      <p><strong>5.3 Nature de l’engagement et continuité de service</strong><br>
-      Compte tenu de la structure artisanale unipersonnelle de l’entreprise, les engagements de rapidité et de priorité d’intervention constituent une obligation de moyens renforcée, et non une obligation de résultat.</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Présence annuelle : le Prestataire organise son activité de manière à être pleinement disponible durant les périodes de vacances scolaires. Ses congés annuels interviennent exclusivement hors saison et sont notifiés aux abonnés avec un préavis d’au moins trente (30) jours, afin d’effectuer les contrôles préventifs en amont.</li>
-        <li>Indisponibilité : en cas d’accident, de maladie dûment justifiée, de panne d’équipement ou d’événement de force majeure rendant l’intervention impossible, la responsabilité du Prestataire ne saurait être engagée. Les mensualités afférentes à une période d’indisponibilité supérieure à quinze (15) jours consécutifs font l’objet d’un avoir ou d’une suspension proportionnelle.</li>
-      </ul>
-      <p><strong>5.4 Durée, reconduction tacite et résiliation</strong><br>
-      Les contrats d’abonnement sont souscrits pour une durée initiale d’un (1) an. À l’issue de cette période, ils se renouvellent tacitement par périodes successives d’un (1) an, sauf résiliation notifiée par lettre recommandée ou par courriel avec accusé de réception, moyennant un préavis d’un (1) mois avant l’échéance.<br>
-      Conformément à l’article L.215-1 du Code de la consommation, pour les Clients consommateurs et non-professionnels, le Prestataire informe le Client par écrit (courrier ou courriel dédié), au plus tôt trois (3) mois et au plus tard un (1) mois avant le terme de la période autorisant le rejet de la reconduction, de la possibilité de ne pas reconduire le contrat. Lorsque cette information n’a pas été adressée conformément à la loi, le consommateur peut mettre fin gratuitement au contrat, à tout moment à compter de la date de reconduction.<br>
-      La résiliation peut également être formulée en ligne via l’adresse de contact du Prestataire.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 6 – Conditions de règlement et pénalités de retard</h3>
-      <p><strong>6.1 Modalités d’encaissement</strong><br>
-      Pour toute intervention ponctuelle, la facture est émise à la fin des travaux. Le règlement est exigible au comptant dès l’achèvement de l’intervention, par carte bancaire (terminal de paiement mobile), virement bancaire instantané ou espèces (dans la limite du plafond légal). Les chèques bancaires ne sont pas acceptés.</p>
-      <p><strong>6.2 Acomptes</strong><br>
-      Pour les commandes de matériel sur mesure ou les chantiers nécessitant un approvisionnement préalable d’un montant significatif, un acompte de 30 % à 50 % du devis est exigé à la commande, sous réserve de l’article 7.1 pour les contrats conclus hors établissement.</p>
-      <p><strong>6.3 Pénalités de retard</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Clients professionnels : tout retard de paiement entraîne, dès le lendemain de la date d’échéance et sans qu’un rappel soit nécessaire, l’exigibilité de plein droit de pénalités de retard calculées au taux de refinancement semestriel de la Banque Centrale Européenne majoré de 10 points de pourcentage, sans que ce taux puisse être inférieur à trois (3) fois le taux d’intérêt légal (art. L.441-10 du Code de commerce). Une indemnité forfaitaire de 40 € pour frais de recouvrement est automatiquement due (art. D.441-5 du Code de commerce), sans préjudice d’une indemnisation complémentaire sur justificatifs.</li>
-        <li>Clients consommateurs et non-professionnels : tout retard de paiement constaté après mise en demeure formelle restée sans effet pendant quinze (15) jours ouvrés entraîne l’application d’un intérêt moratoire calculé au taux d’intérêt légal en vigueur.</li>
-      </ul>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 7 – Droit de rétractation et dérogation d’urgence</h3>
-      <p><strong>7.1 Contrats conclus hors établissement ou à distance</strong><br>
-      Conformément aux articles L.221-18 et suivants du Code de la consommation, le Client consommateur qui conclut un contrat hors établissement (notamment à son domicile) ou à distance dispose d’un délai de quatorze (14) jours à compter de la conclusion du contrat pour exercer son droit de rétractation, sans avoir à motiver sa décision. Un formulaire type de rétractation figure en annexe des présentes CGV et est remis avec le devis.<br>
-      Pour un contrat conclu hors établissement, aucun paiement ni acompte ne peut être perçu pendant les sept (7) premiers jours suivant la conclusion, sauf exception légale, notamment pour les travaux d’urgence.<br>
-      Si le Client demande expressément que la prestation commence avant la fin du délai de rétractation, cette demande est formulée par écrit. S’il se rétracte ensuite, il paie un montant proportionné à ce qui lui a été fourni jusqu’à la communication de sa décision de se rétracter (art. L.221-25). Si la prestation est pleinement exécutée avant la fin du délai, avec son accord préalable exprès et la reconnaissance qu’il perd ainsi son droit de rétractation, celui-ci ne peut plus être exercé (art. L.221-28, 1°).</p>
-      <p><strong>7.2 Exception légale pour les dépannages d’urgence</strong><br>
-      Conformément à l’article L.221-28, 3° du Code de la consommation, le droit de rétractation ne peut être exercé pour les travaux d’entretien ou de réparation à réaliser en urgence au domicile du consommateur et expressément sollicités par lui, dans la limite des pièces de rechange et des travaux strictement nécessaires pour répondre à la situation d’urgence immédiate (ouverture de porte bloquée, sécurisation après effraction, fuite d’eau active).<br>
-      Pour toute prestation d’urgence nécessitant une exécution immédiate, le Client signe sur le devis une demande expresse et préalable d’exécution immédiate et de renonciation à son droit de rétractation, avant l’ouverture du chantier.</p>
-      <p><strong>7.3 Extension aux professionnels</strong><br>
-      Conformément à l’article L.221-3 du Code de la consommation, les règles protectrices applicables au droit de rétractation bénéficient aux professionnels employant cinq salariés au plus qui concluent un contrat hors établissement dont l’objet n’entre pas dans le champ de leur activité principale.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 8 – Conditions spécifiques à la serrurerie et aux serrures connectées</h3>
-      <p><strong>8.1 Vérification de l’identité et du droit d’occupation</strong><br>
-      Pour toute intervention d’ouverture de porte ou de modification de contrôle d’accès, le Client doit impérativement présenter au Prestataire, avant toute action technique, une pièce d’identité officielle en cours de validité accompagnée d’un justificatif de son droit légitime d’occupation des lieux (titre de propriété, bail locatif, quittance de loyer récente, attestation d’assurance habitation). Le Prestataire se limite à vérifier ces documents et n’en conserve aucune copie.<br>
-      En cas d’impossibilité de justifier de ces éléments ou de suspicion légitime de squat ou d’accès illicite, le Prestataire se réserve le droit d’interrompre immédiatement son intervention et de faire appel aux forces de l’ordre, le Forfait Arrivée restant intégralement dû.</p>
-      <p><strong>8.2 Dispositifs connectés et domotique</strong><br>
-      Dans le cadre de l’installation ou de la maintenance de serrures connectées et de coffres à clés pour conciergerie ou particuliers :</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Le Client demeure seul responsable de la confidentialité et de la gestion de ses codes d’accès, clés numériques et identifiants de compte administrateur, ainsi que de leur renouvellement périodique auprès des locataires et prestataires tiers.</li>
-        <li>Le Prestataire ne conserve aucun code d’accès maître après la fin de la mise en service.</li>
-        <li>Pour les hébergements de type Airbnb, le Client donneur d’ordre garantit avoir obtenu l’autorisation du propriétaire du bien et s’engage à informer les occupants de l’intervention programmée.</li>
-      </ul>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 9 – Réserve de propriété</h3>
-      <p>Le Prestataire conserve la propriété pleine et exclusive de toutes les marchandises, équipements, cylindres, garnitures, motorisations et pièces détachées fournis jusqu’à l’encaissement complet de leur prix en principal, intérêts et frais accessoires. En cas de non-paiement, le Prestataire se réserve le droit de reprendre possession du matériel fourni aux frais du débiteur.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 10 – Garanties, assurances et responsabilité</h3>
-      <p><strong>10.1 Garanties légales</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Matériels vendus : les équipements neufs bénéficient de plein droit de la garantie légale de conformité (articles L.217-3 et suivants du Code de la consommation) et de la garantie légale contre les vices cachés (articles 1641 et suivants du Code civil).</li>
-        <li>Prestation de pose : les travaux de main-d’œuvre et de réglage sont couverts par la responsabilité contractuelle de droit commun.</li>
-      </ul>
-      <p><strong>10.2 Assurance de responsabilité civile professionnelle</strong><br>
-      Le Prestataire atteste avoir souscrit une assurance de responsabilité civile professionnelle couvrant ses activités de serrurerie, de maintenance des fermetures, de plomberie sanitaire et d’électricité courante auprès de la compagnie [Nom de la compagnie d’assurance], contrat n° [Numéro de police d’assurance], valable sur l’ensemble du territoire d’intervention.</p>
-      <p><strong>10.3 Limites de responsabilité</strong><br>
-      La responsabilité du Prestataire ne saurait être engagée en cas de dégradation ou de dysfonctionnement résultant d’une tentative d’effraction ou de forçage préalable par un tiers, d’une usure anormale liée à un défaut d’entretien imputable au Client, ou d’une vétusté structurelle dissimulée des supports d’installation. Entre professionnels, toute indemnisation éventuelle est plafonnée au montant hors taxes facturé au titre de la prestation en cause.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 11 – Données personnelles (RGPD)</h3>
-      <p>Dans le cadre de son activité, la SASU LE COUP DE MAIN SERVICES agit en qualité de responsable de traitement des données à caractère personnel collectées (nom, prénom, coordonnées postales, téléphone, courriel, photographies des chantiers et des équipements).</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Base légale et finalités : les données sont traitées pour l’exécution du contrat, l’établissement des devis et factures, la gestion de la relation client, et le respect des obligations comptables et fiscales.</li>
-        <li>Destinataires et sous-traitants : les données ne font l’objet d’aucune vente ou cession commerciale. Elles sont réservées à l’usage interne et ne sont transmises qu’aux sous-traitants et prestataires strictement nécessaires : cabinet d’expertise comptable, établissement bancaire et solution de paiement électronique, hébergeur web, plateforme de facturation dématérialisée et compagnie d’assurance en cas de déclaration de sinistre.</li>
-        <li>Durée de conservation : les données administratives et comptables sont conservées pendant la durée légale de dix (10) ans. Les photographies techniques d’intervention sont conservées trois (3) ans au maximum. Les pièces d’identité présentées en application de l’article 8.1 ne sont pas conservées.</li>
-        <li>Droits du Client : toute personne dispose d’un droit d’accès, de rectification, d’effacement et de portabilité de ses données, ainsi que d’un droit de limitation et d’opposition au traitement, qu’elle peut exercer en écrivant à contact@lecoupdemain-services.fr ou par courrier au siège social. Le Client peut également introduire une réclamation auprès de la CNIL (www.cnil.fr).</li>
-      </ul>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 12 – Force majeure</h3>
-      <p>Aucune des parties ne peut être tenue pour responsable de l’inexécution ou du retard dans l’exécution de ses obligations si cet empêchement résulte d’un cas de force majeure au sens de l’article 1218 du Code civil (notamment intempéries d’une exceptionnelle gravité bloquant les voies de communication, sinistre touchant le véhicule atelier, grève, épidémie ou accident corporel grave de l’artisan). La survenance d’un tel événement suspend l’exécution du contrat pendant toute sa durée, chaque partie s’engageant à en informer l’autre sans délai.</p>
-
-      <h3 style="color: #33555F; margin: 25px 0 10px 0; font-size: 1.15em; border-bottom: 1px solid #eee; padding-bottom: 5px;">Article 13 – Règlement des litiges, droit applicable et médiation</h3>
-      <p><strong>13.1 Droit applicable</strong><br>
-      Les présentes CGV et les opérations qui en découlent sont régies par le droit français.</p>
-      <p><strong>13.2 Médiation de la consommation</strong><br>
-      En cas de réclamation, le Client consommateur s’adresse en priorité au Prestataire par écrit (lettre recommandée ou courriel avec accusé de réception) à l’adresse du siège social ou à contact@lecoupdemain-services.fr. Si aucun accord amiable n’est trouvé dans un délai de trente (30) jours, le consommateur a le droit de recourir gratuitement au médiateur de la consommation, référencé par la CECMC, désigné par le Prestataire :</p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>[Nom du médiateur de la consommation retenu]</li>
-        <li>Adresse : [Adresse postale du médiateur]</li>
-        <li>Site internet : [URL du site de médiation en ligne]</li>
-      </ul>
-      <p><strong>13.3 Juridiction compétente (droit local d’Alsace-Moselle)</strong></p>
-      <ul style="padding-left: 20px; margin-bottom: 15px;">
-        <li>Litiges avec des professionnels : en vertu des règles d’organisation judiciaire propres aux départements du Bas-Rhin, du Haut-Rhin et de la Moselle, tout litige relatif à la formation, à l’interprétation ou à l’exécution des présentes conditions avec un client commerçant ou professionnel relève de la compétence exclusive de la chambre commerciale du Tribunal judiciaire de Mulhouse.</li>
-        <li>Litiges avec des particuliers : les règles de compétence territoriale de droit commun s’appliquent. Le consommateur peut saisir la juridiction du lieu où il demeurait au moment de la conclusion du contrat ou de la survenance du fait dommageable.</li>
-      </ul>
-
-      <div style="margin-top: 30px; padding: 20px; background: #fafafa; border: 1px dashed #33555F; border-radius: 6px;">
-        <h4 style="color: #33555F; margin-bottom: 10px; font-size: 1.05em;">Annexe – Formulaire type de rétractation</h4>
-        <p style="font-size: 0.9em; color: #666; margin-bottom: 12px;">(À compléter et à renvoyer uniquement si vous souhaitez vous rétracter du contrat)</p>
-        <p style="font-size: 0.95em; line-height: 1.8;">
-          À l’attention de <strong>LE COUP DE MAIN SERVICES</strong>, 22a rue du Rhin, 68680 Kembs, contact@lecoupdemain-services.fr :<br>
-          Je vous notifie par la présente ma rétractation du contrat portant sur la prestation de services ci-dessous :<br>
-          - Commandé le : ..............................................................<br>
-          - Nom du consommateur : ...................................................<br>
-          - Adresse du consommateur : ..............................................<br>
-          - Signature du consommateur (uniquement sur papier) : ...........<br>
-          - Date : ..........................................................................
-        </p>
-      </div>
+      <h3 style="color: #1D3C45;">Article 1 – Identification</h3>
+      <p>Société LE COUP DE MAIN SERVICES, 22a rue du Rhin, 68680 Kembs.</p>
     </div>
   </details>
 </div>
 </section>
-<footer style="padding: 40px 20px; text-align: center; background-color: #33555F;">
+
+<!-- FOOTER -->
+<footer style="padding: 40px 20px; text-align: center;">
 <div class="container">
 <p>Lundi - Vendredi : 08h00 - 19h00 | Samedi : 09h00 - 17h00</p>
 <p style="margin-top: 10px; font-size: 1.2em; color: white;">Urgence Directe : 06 46 66 42 22</p>
-
-<!-- Liens Réseaux Footer -->
 <div style="display: flex; justify-content: center; gap: 15px; margin-top: 20px;">
-  <a href="https://www.facebook.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.1em; display: inline-flex; align-items: center; gap: 8px;">
-    <i class="fab fa-facebook-f" style="font-size: 1.2em;"></i> Facebook
-  </a>
+  <a href="https://www.facebook.com/61594273347022" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">Facebook</a>
   <span style="color: rgba(255,255,255,0.4);">|</span>
-  <a href="https://www.instagram.com/lecoupdemainservices" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none; font-size: 1.1em; display: inline-flex; align-items: center; gap: 8px;">
-    <i class="fab fa-instagram" style="font-size: 1.2em;"></i> Instagram
-  </a>
-  <span style="color: rgba(255,255,255,0.4);">|</span>
-  <a href="#cgv" style="color: white; text-decoration: underline; font-size: 1.1em;">
-    Consulter les CGV
-  </a>
+  <a href="https://www.instagram.com/julienlecoupdemain" target="_blank" rel="noopener noreferrer" style="color: white; text-decoration: none;">Instagram</a>
 </div>
-
-<hr style="border: 0; border-top: 1px solid rgba(255,255,255,0.2); margin: 20px 0;">
-
-<!-- Petit compteur discret ici -->
-<p style="margin-top: 10px; margin-bottom: 10px; font-size: 0.85em; color: rgba(255,255,255,0.7);">
-  <img src="https://hits.sh/lecoupdemain-services.fr.svg?view=today-total&style=flat-square&label=visites&color=33555F&labelColor=ECE3BD" alt="Compteur de visites" style="vertical-align: middle; border-radius: 4px;">
-</p>
-
-<p style="color: white;">&copy; 2026-2027 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
+<p style="color: white; margin-top: 20px;">&copy; 2026-2027 Le Coup de Main Services. Votre expert de proximité à Kembs.</p>
 </div>
 </footer>
 
@@ -1007,30 +699,21 @@
     const launchDate = new Date("January 10, 2027 08:00:00").getTime();
     const now = new Date().getTime();
     const diff = launchDate - now;
-
     const banner = document.getElementById("bloc-compte-rebours");
-
     if (diff <= 0) {
       if (banner) banner.style.display = "none";
       return;
     }
-
     const days = Math.floor(diff / (1000 * 60 * 60 * 24));
     const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-    const elDays = document.getElementById("cd-jours");
-    const elHours = document.getElementById("cd-heures");
-    const elMins = document.getElementById("cd-minutes");
-    const elSecs = document.getElementById("cd-secondes");
-
-    if (elDays) elDays.textContent = days;
-    if (elHours) elHours.textContent = hours;
-    if (elMins) elMins.textContent = minutes;
-    if (elSecs) elSecs.textContent = seconds;
+    if (document.getElementById("cd-jours")) document.getElementById("cd-jours").textContent = days;
+    if (document.getElementById("cd-heures")) document.getElementById("cd-heures").textContent = hours;
+    if (document.getElementById("cd-minutes")) document.getElementById("cd-minutes").textContent = minutes;
+    if (document.getElementById("cd-secondes")) document.getElementById("cd-secondes").textContent = seconds;
   }
-
   setInterval(updateCountdown, 1000);
   updateCountdown();
 
@@ -1038,12 +721,10 @@
     document.getElementById(modalId).style.display = "block";
     document.body.style.overflow = "hidden";
   }
-
   function closeModal(modalId) {
     document.getElementById(modalId).style.display = "none";
     document.body.style.overflow = "auto";
   }
-
   window.onclick = function(event) {
     if (event.target.className === "modal") {
       event.target.style.display = "none";
@@ -1051,49 +732,29 @@
     }
   }
 
-  // Calculateur Déplacement par Code Postal
   function calculerDeplacement() {
     const cp = document.getElementById('cpInput').value.trim();
     const resultBox = document.getElementById('resultBox');
-
     if (!cp || cp.length !== 5 || isNaN(cp)) {
       resultBox.style.display = 'block';
       resultBox.className = 'calc-result-box res-other';
       resultBox.innerHTML = '<i class="fas fa-exclamation-circle"></i> Merci de saisir un code postal valide à 5 chiffres.';
       return;
     }
-
-    const zone1 = [
-      '68680', '68300', '68510', '68128', '68330', 
-      '68220', '68440', '68870', '68730', '68490', 
-      '68390', '68170'
-    ];
-
-    const zone2 = [
-      '68100', '68200', '68110', '68120', '68260', 
-      '68270', '68790', '68350', '68720', '68130', 
-      '68640', '68560', '68210', '68740'
-    ];
-
+    const zone1 = ['68680', '68300', '68510', '68128', '68330', '68220', '68440', '68870', '68730', '68490', '68390', '68170'];
+    const zone2 = ['68100', '68200', '68110', '68120', '68260', '68270', '68790', '68350', '68720', '68130', '68640', '68560', '68210', '68740'];
     resultBox.style.display = 'block';
-
     if (zone1.includes(cp)) {
       resultBox.className = 'calc-result-box res-z1';
-      resultBox.innerHTML = '<strong style="font-size: 1.1em; display:block; margin-bottom: 4px;"><i class="fas fa-check-circle"></i> Forfait Arrivée : 50 € HT (60 € TTC)</strong>Zone de proximité (Kembs & 3 Frontières jusqu\'à 20 km). Comprend l\'aller-retour et le diagnostic initial sur place.';
+      resultBox.innerHTML = '<strong><i class="fas fa-check-circle"></i> Forfait Arrivée : 50 € HT (60 € TTC)</strong>Zone de proximité (Kembs & 20 km).';
     } else if (zone2.includes(cp)) {
       resultBox.className = 'calc-result-box res-z2';
-      resultBox.innerHTML = '<strong style="font-size: 1.1em; display:block; margin-bottom: 4px;"><i class="fas fa-map-marker-alt"></i> Forfait Arrivée : 60 € HT (72 € TTC)</strong>Zone étendue (Mulhouse Agglomération & Sundgau). Comprend l\'aller-retour et le diagnostic initial sur place.';
+      resultBox.innerHTML = '<strong><i class="fas fa-map-marker-alt"></i> Forfait Arrivée : 60 € HT (72 € TTC)</strong>Zone étendue (Mulhouse & Sundgau).';
     } else {
       resultBox.className = 'calc-result-box res-other';
-      resultBox.innerHTML = '<strong style="font-size: 1.1em; display:block; margin-bottom: 4px;"><i class="fas fa-info-circle"></i> Intervention hors zone standard</strong>Pour les interventions au-delà de 35 km, contactez-moi directement au 06 46 66 42 22 pour convenir d\'un forfait adapté.';
+      resultBox.innerHTML = '<strong><i class="fas fa-info-circle"></i> Intervention hors zone standard</strong>Contactez-moi au 06 46 66 42 22.';
     }
   }
-
-  document.getElementById('cpInput').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-      calculerDeplacement();
-    }
-  });
 </script>
 
 </body>
